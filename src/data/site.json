@@ -1,12 +1,12 @@
 {
   "theme": {
-    "primary": "#0967DE",
-    "accent": "#FF7A1A",
-    "background": "#F4F9FF",
-    "ink": "#192C4C",
-    "headingFont": "Kanit",
+    "primary": "#176F6B",
+    "accent": "#B88619",
+    "background": "#FFFEF8",
+    "ink": "#2F3338",
+    "headingFont": "Bai Jamjuree",
     "bodyFont": "Bai Jamjuree",
-    "radius": 18,
+    "radius": 10,
     "defaultView": "cards"
   },
   "pages": {

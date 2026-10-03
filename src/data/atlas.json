@@ -50974,6 +50974,4856 @@
       }
     ]
   },
+  "supplement": {
+    "schema_version": 1,
+    "dataset": "sdj-supplemental-games",
+    "updated": "2026-10-03",
+    "source": {
+      "url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+      "source_file": "SdJ_Wizard_Hat_Playground/src/data/games.js",
+      "source_sha256": "c7cd771bc99a1bf13104e75d6eda854c6322aa514ce3a37ab73be6f9bc0d2186",
+      "facts_file": "sdj-award-facts.json"
+    },
+    "evidence_boundary": "33 official awards; existing WoL design interpretations reused. No new UNICEF skill scores, verified learning outcomes or publisher durations inferred.",
+    "records": [
+      {
+        "game_id": "colt-express-2015",
+        "name": "Colt Express",
+        "aliases": [],
+        "family_id": "colt-express",
+        "publisher": "Ludonaute",
+        "players": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "publisher_play_duration_minutes": null,
+        "observed_session_time_minutes": null,
+        "organizer_listed_play_duration_minutes": {
+          "min": 40,
+          "max": 40,
+          "source_scope": "award organizer listing; not independently verified publisher duration or observed total time"
+        },
+        "medium": "tabletop",
+        "medium_provenance": {
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "locator": "game colt-express-2015 MAGIC action",
+          "source_layer": "analyst_classification_from_existing_physical_game_descriptions",
+          "read_scope": "WoL game description; not publisher component audit"
+        },
+        "format": null,
+        "genres": [],
+        "mechanisms": [
+          "Competitive",
+          "Fixed Turn Order",
+          "Victory Points",
+          "Fixed Number of Rounds",
+          "Programming, Action Selection",
+          "Point to point movement",
+          "Take That",
+          "Output Randomness"
+        ],
+        "collections": [
+          "sdj-2015-2025"
+        ],
+        "collection_scope_note": "Award benchmark supplement; not screened into the original strategy-card-games session-duration corpus.",
+        "awards": [
+          {
+            "category": "Spiel des Jahres",
+            "year": 2015,
+            "status": "winner",
+            "source_url": "https://www.spiel-des-jahres.de/spiele/colt-express/",
+            "source_locator": "| Spiel des Jahres | 2015",
+            "accessed_on": "2026-10-03"
+          }
+        ],
+        "external_cover": {
+          "url": null,
+          "source_url": "https://www.spiel-des-jahres.de/spiele/colt-express/",
+          "display_allowed": false,
+          "rights_status": "not_verified"
+        },
+        "design_analysis": {
+          "source_layer": "existing_wol_analyst_interpretation",
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "source_locator": "games.js game colt-express-2015",
+          "required_action": "วางคำสั่งล่วงหน้าแล้วยิง/ต่อย/ปีนตู้รถไฟ",
+          "design_lesson": "3D train ช่วยให้ movement, timing และ chaos อ่านออกทันที ผู้เล่นหัวเราะกับแผนที่พังเอง จึงเป็นตัวอย่างที่ดีของ programming ที่เข้ากับ fantasy.",
+          "table_moment": "Social Laugh",
+          "replay_engine": "Chaotic timing from programmed actions and player collision.",
+          "magic": {
+            "mood": "วุ่นวาย ตลก ลุ้น",
+            "action": "วางคำสั่งล่วงหน้าแล้วยิง/ต่อย/ปีนตู้รถไฟ",
+            "goal": "ปล้นสมบัติให้มากที่สุด",
+            "impediment": "คำสั่งของทุกคนชนกันจนแผนพัง",
+            "character": "โจรบนรถไฟ"
+          },
+          "wizard_hat": {
+            "core": [
+              {
+                "id": 1,
+                "stable_id": "WH-01",
+                "name": "Competitive",
+                "category": "Conflict"
+              },
+              {
+                "id": 5,
+                "stable_id": "WH-05",
+                "name": "Fixed Turn Order",
+                "category": "Order"
+              },
+              {
+                "id": 16,
+                "stable_id": "WH-16",
+                "name": "Victory Points",
+                "category": "Reward"
+              },
+              {
+                "id": 9,
+                "stable_id": "WH-09",
+                "name": "Fixed Number of Rounds",
+                "category": "Ending"
+              }
+            ],
+            "taste": [
+              {
+                "id": 35,
+                "stable_id": "WH-35",
+                "name": "Programming, Action Selection",
+                "category": "Strategy"
+              },
+              {
+                "id": 19,
+                "stable_id": "WH-19",
+                "name": "Point to point movement",
+                "category": "Touch"
+              },
+              {
+                "id": 29,
+                "stable_id": "WH-29",
+                "name": "Take That",
+                "category": "Engage"
+              },
+              {
+                "id": 45,
+                "stable_id": "WH-45",
+                "name": "Output Randomness",
+                "category": "Twist"
+              }
+            ],
+            "unmapped": [],
+            "success_condition_text": "Victory Points"
+          }
+        },
+        "transferable_skills": {
+          "skill_map": []
+        },
+        "bgg": null,
+        "sources": [
+          {
+            "url": "https://www.spiel-des-jahres.de/spiele/colt-express/",
+            "locator": "#sidebar: publisher; Personen; Dauer",
+            "read_scope": "award page metadata only; rulebook not read"
+          },
+          {
+            "url": "https://www.spiel-des-jahres.de/preiskat/spiel-des-jahres/page/2/",
+            "locator": "| Spiel des Jahres | 2015",
+            "read_scope": "winner name/category/year"
+          },
+          {
+            "url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+            "locator": "game colt-express-2015",
+            "read_scope": "existing WoL analyst design interpretation; not UNICEF skill assessment"
+          }
+        ]
+      },
+      {
+        "game_id": "broom-service-2015",
+        "name": "Broom Service",
+        "aliases": [],
+        "family_id": "broom-service",
+        "publisher": "Alea / Ravensburger",
+        "players": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "publisher_play_duration_minutes": null,
+        "observed_session_time_minutes": null,
+        "organizer_listed_play_duration_minutes": {
+          "min": 75,
+          "max": 75,
+          "source_scope": "award organizer listing; not independently verified publisher duration or observed total time"
+        },
+        "medium": "tabletop",
+        "medium_provenance": {
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "locator": "game broom-service-2015 MAGIC action",
+          "source_layer": "analyst_classification_from_existing_physical_game_descriptions",
+          "read_scope": "WoL game description; not publisher component audit"
+        },
+        "format": null,
+        "genres": [],
+        "mechanisms": [
+          "Competitive",
+          "Simultaneous Action Selection",
+          "Victory Points",
+          "Fixed Number of Rounds",
+          "Hand Management, Command",
+          "Betting and Bluffing",
+          "Take That"
+        ],
+        "collections": [
+          "sdj-2015-2025"
+        ],
+        "collection_scope_note": "Award benchmark supplement; not screened into the original strategy-card-games session-duration corpus.",
+        "awards": [
+          {
+            "category": "Kennerspiel des Jahres",
+            "year": 2015,
+            "status": "winner",
+            "source_url": "https://www.spiel-des-jahres.de/spiele/broom-service/",
+            "source_locator": "| Kennerspiel des Jahres | 2015",
+            "accessed_on": "2026-10-03"
+          }
+        ],
+        "external_cover": {
+          "url": null,
+          "source_url": "https://www.spiel-des-jahres.de/spiele/broom-service/",
+          "display_allowed": false,
+          "rights_status": "not_verified"
+        },
+        "design_analysis": {
+          "source_layer": "existing_wol_analyst_interpretation",
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "source_locator": "games.js game broom-service-2015",
+          "required_action": "เลือกบทบาทและตัดสินใจเล่นแบบกล้าหรือขี้ขลาด",
+          "design_lesson": "ความเสี่ยงทางสังคมถูกทำให้เป็นระบบ ผู้เล่นต้องอ่านใจคนอื่น ไม่ใช่แค่เลือก action ที่ดีที่สุดใน isolation.",
+          "table_moment": "Hard Trade-off",
+          "replay_engine": "Role selection and player reading change every round.",
+          "magic": {
+            "mood": "เจ้าเล่ห์ กดดัน ขำแบบกัดกัน",
+            "action": "เลือกบทบาทและตัดสินใจเล่นแบบกล้าหรือขี้ขลาด",
+            "goal": "ส่ง potion และทำคะแนนมากสุด",
+            "impediment": "คนอื่นอาจเลือกบทบาทเดียวกันและแย่ง timing",
+            "character": "แม่มดและผู้ส่งยาเวท"
+          },
+          "wizard_hat": {
+            "core": [
+              {
+                "id": 1,
+                "stable_id": "WH-01",
+                "name": "Competitive",
+                "category": "Conflict"
+              },
+              {
+                "id": 6,
+                "stable_id": "WH-06",
+                "name": "Simultaneous Action Selection",
+                "category": "Order"
+              },
+              {
+                "id": 16,
+                "stable_id": "WH-16",
+                "name": "Victory Points",
+                "category": "Reward"
+              },
+              {
+                "id": 9,
+                "stable_id": "WH-09",
+                "name": "Fixed Number of Rounds",
+                "category": "Ending"
+              }
+            ],
+            "taste": [
+              {
+                "id": 22,
+                "stable_id": "WH-22",
+                "name": "Hand Management, Command",
+                "category": "Strategy"
+              },
+              {
+                "id": 28,
+                "stable_id": "WH-28",
+                "name": "Betting and Bluffing",
+                "category": "Engage"
+              },
+              {
+                "id": 29,
+                "stable_id": "WH-29",
+                "name": "Take That",
+                "category": "Engage"
+              }
+            ],
+            "unmapped": [],
+            "success_condition_text": "Victory Points"
+          }
+        },
+        "transferable_skills": {
+          "skill_map": []
+        },
+        "bgg": null,
+        "sources": [
+          {
+            "url": "https://www.spiel-des-jahres.de/spiele/broom-service/",
+            "locator": "#sidebar: publisher; Personen; Dauer",
+            "read_scope": "award page metadata only; rulebook not read"
+          },
+          {
+            "url": "https://www.spiel-des-jahres.de/preiskat/kennerspiel-des-jahres/page/2/",
+            "locator": "| Kennerspiel des Jahres | 2015",
+            "read_scope": "winner name/category/year"
+          },
+          {
+            "url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+            "locator": "game broom-service-2015",
+            "read_scope": "existing WoL analyst design interpretation; not UNICEF skill assessment"
+          }
+        ]
+      },
+      {
+        "game_id": "spinderella-2015",
+        "name": "Spinderella",
+        "aliases": [],
+        "family_id": "spinderella",
+        "publisher": "Zoch",
+        "players": [
+          2,
+          3,
+          4
+        ],
+        "publisher_play_duration_minutes": null,
+        "observed_session_time_minutes": null,
+        "organizer_listed_play_duration_minutes": {
+          "min": 20,
+          "max": 20,
+          "source_scope": "award organizer listing; not independently verified publisher duration or observed total time"
+        },
+        "medium": "tabletop",
+        "medium_provenance": {
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "locator": "game spinderella-2015 MAGIC action",
+          "source_layer": "analyst_classification_from_existing_physical_game_descriptions",
+          "read_scope": "WoL game description; not publisher component audit"
+        },
+        "format": null,
+        "genres": [],
+        "mechanisms": [
+          "Competitive",
+          "Fixed Turn Order",
+          "Completing Targets",
+          "Dexterity",
+          "Point to point movement",
+          "Take That"
+        ],
+        "collections": [
+          "sdj-2015-2025"
+        ],
+        "collection_scope_note": "Award benchmark supplement; not screened into the original strategy-card-games session-duration corpus.",
+        "awards": [
+          {
+            "category": "Kinderspiel des Jahres",
+            "year": 2015,
+            "status": "winner",
+            "source_url": "https://www.spiel-des-jahres.de/spiele/spinderella/",
+            "source_locator": "| Kinderspiel des Jahres | 2015",
+            "accessed_on": "2026-10-03"
+          }
+        ],
+        "external_cover": {
+          "url": null,
+          "source_url": "https://www.spiel-des-jahres.de/spiele/spinderella/",
+          "display_allowed": false,
+          "rights_status": "not_verified"
+        },
+        "design_analysis": {
+          "source_layer": "existing_wol_analyst_interpretation",
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "source_locator": "games.js game spinderella-2015",
+          "required_action": "เดินมดและควบคุมแมงมุม",
+          "design_lesson": "กระดานสองชั้นทำให้ consequence ของการโดนจับมองเห็นและสัมผัสได้ เด็กเข้าใจแรงกดดันทันที.",
+          "table_moment": "Skill Shot",
+          "replay_engine": "Physical spider movement keeps each chase different.",
+          "magic": {
+            "mood": "ลุ้น ซน ระวังตัว",
+            "action": "เดินมดและควบคุมแมงมุม",
+            "goal": "พามดไปถึงเส้นชัย",
+            "impediment": "แมงมุมบนกระดานชั้นบนจับมดได้",
+            "character": "มดตัวเล็กในป่าแมงมุม"
+          },
+          "wizard_hat": {
+            "core": [
+              {
+                "id": 1,
+                "stable_id": "WH-01",
+                "name": "Competitive",
+                "category": "Conflict"
+              },
+              {
+                "id": 5,
+                "stable_id": "WH-05",
+                "name": "Fixed Turn Order",
+                "category": "Order"
+              },
+              {
+                "id": 12,
+                "stable_id": "WH-12",
+                "name": "Completing Targets",
+                "category": "Ending"
+              }
+            ],
+            "taste": [
+              {
+                "id": 17,
+                "stable_id": "WH-17",
+                "name": "Dexterity",
+                "category": "Touch"
+              },
+              {
+                "id": 19,
+                "stable_id": "WH-19",
+                "name": "Point to point movement",
+                "category": "Touch"
+              },
+              {
+                "id": 29,
+                "stable_id": "WH-29",
+                "name": "Take That",
+                "category": "Engage"
+              }
+            ],
+            "unmapped": [
+              {
+                "name": "Mission Success: Race",
+                "source_category": "Reward",
+                "source_field": "win",
+                "reason": "No exact card in current 50-card workbook; retain as design interpretation, not a fabricated card."
+              }
+            ],
+            "success_condition_text": "Mission Success: Race"
+          }
+        },
+        "transferable_skills": {
+          "skill_map": []
+        },
+        "bgg": null,
+        "sources": [
+          {
+            "url": "https://www.spiel-des-jahres.de/spiele/spinderella/",
+            "locator": "#sidebar: publisher; Personen; Dauer",
+            "read_scope": "award page metadata only; rulebook not read"
+          },
+          {
+            "url": "https://www.spiel-des-jahres.de/preiskat/kinderspiel-des-jahres/page/2/",
+            "locator": "| Kinderspiel des Jahres | 2015",
+            "read_scope": "winner name/category/year"
+          },
+          {
+            "url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+            "locator": "game spinderella-2015",
+            "read_scope": "existing WoL analyst design interpretation; not UNICEF skill assessment"
+          }
+        ]
+      },
+      {
+        "game_id": "codenames-2016",
+        "name": "Codenames",
+        "aliases": [],
+        "family_id": "codenames",
+        "publisher": "CGE (Czech Games Edition)",
+        "players": [
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "publisher_play_duration_minutes": null,
+        "observed_session_time_minutes": null,
+        "organizer_listed_play_duration_minutes": {
+          "min": 15,
+          "max": 15,
+          "source_scope": "award organizer listing; not independently verified publisher duration or observed total time"
+        },
+        "medium": "tabletop",
+        "medium_provenance": {
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "locator": "game codenames-2016 MAGIC action",
+          "source_layer": "analyst_classification_from_existing_physical_game_descriptions",
+          "read_scope": "WoL game description; not publisher component audit"
+        },
+        "format": null,
+        "genres": [],
+        "mechanisms": [
+          "Team",
+          "Fixed Turn Order",
+          "Completing Targets",
+          "Targeted Clues",
+          "Deduction, Hidden Information",
+          "Communication Limits"
+        ],
+        "collections": [
+          "sdj-2015-2025"
+        ],
+        "collection_scope_note": "Award benchmark supplement; not screened into the original strategy-card-games session-duration corpus.",
+        "awards": [
+          {
+            "category": "Spiel des Jahres",
+            "year": 2016,
+            "status": "winner",
+            "source_url": "https://www.spiel-des-jahres.de/spiele/codenames/",
+            "source_locator": "| Spiel des Jahres | 2016",
+            "accessed_on": "2026-10-03"
+          }
+        ],
+        "external_cover": {
+          "url": null,
+          "source_url": "https://www.spiel-des-jahres.de/spiele/codenames/",
+          "display_allowed": false,
+          "rights_status": "not_verified"
+        },
+        "design_analysis": {
+          "source_layer": "existing_wol_analyst_interpretation",
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "source_locator": "games.js game codenames-2016",
+          "required_action": "ให้คำใบ้หนึ่งคำและเดาคำบนโต๊ะ",
+          "design_lesson": "กติกาสั้นแต่ decision space กว้างมาก ความลึกมาจากภาษาและความหมายร่วม ไม่ใช่กฎจำนวนมาก.",
+          "table_moment": "Aha",
+          "replay_engine": "Language and team interpretation create endless variety.",
+          "magic": {
+            "mood": "ฉลาด เกร็ง สนุกกับการอ่านใจ",
+            "action": "ให้คำใบ้หนึ่งคำและเดาคำบนโต๊ะ",
+            "goal": "หา agent ของทีมให้ครบก่อน",
+            "impediment": "คำใบ้คลุมเครือและ assassin card",
+            "character": "spymaster และทีมสายลับ"
+          },
+          "wizard_hat": {
+            "core": [
+              {
+                "id": 3,
+                "stable_id": "WH-03",
+                "name": "Team",
+                "category": "Conflict"
+              },
+              {
+                "id": 5,
+                "stable_id": "WH-05",
+                "name": "Fixed Turn Order",
+                "category": "Order"
+              },
+              {
+                "id": 12,
+                "stable_id": "WH-12",
+                "name": "Completing Targets",
+                "category": "Ending"
+              }
+            ],
+            "taste": [
+              {
+                "id": 27,
+                "stable_id": "WH-27",
+                "name": "Targeted Clues",
+                "category": "Engage"
+              },
+              {
+                "id": 42,
+                "stable_id": "WH-42",
+                "name": "Deduction, Hidden Information",
+                "category": "Twist"
+              },
+              {
+                "id": 44,
+                "stable_id": "WH-44",
+                "name": "Communication Limits",
+                "category": "Twist"
+              }
+            ],
+            "unmapped": [
+              {
+                "name": "Mission Success: Objective Completion",
+                "source_category": "Reward",
+                "source_field": "win",
+                "reason": "No exact card in current 50-card workbook; retain as design interpretation, not a fabricated card."
+              }
+            ],
+            "success_condition_text": "Mission Success: Objective Completion"
+          }
+        },
+        "transferable_skills": {
+          "skill_map": []
+        },
+        "bgg": null,
+        "sources": [
+          {
+            "url": "https://www.spiel-des-jahres.de/spiele/codenames/",
+            "locator": "#sidebar: publisher; Personen; Dauer",
+            "read_scope": "award page metadata only; rulebook not read"
+          },
+          {
+            "url": "https://www.spiel-des-jahres.de/preiskat/spiel-des-jahres/page/2/",
+            "locator": "| Spiel des Jahres | 2016",
+            "read_scope": "winner name/category/year"
+          },
+          {
+            "url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+            "locator": "game codenames-2016",
+            "read_scope": "existing WoL analyst design interpretation; not UNICEF skill assessment"
+          }
+        ]
+      },
+      {
+        "game_id": "isle-of-skye-2016",
+        "name": "Isle of Skye",
+        "aliases": [],
+        "family_id": "isle-of-skye",
+        "publisher": "Lookout Spiele",
+        "players": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "publisher_play_duration_minutes": null,
+        "observed_session_time_minutes": null,
+        "organizer_listed_play_duration_minutes": {
+          "min": 60,
+          "max": 60,
+          "source_scope": "award organizer listing; not independently verified publisher duration or observed total time"
+        },
+        "medium": "tabletop",
+        "medium_provenance": {
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "locator": "game isle-of-skye-2016 MAGIC action",
+          "source_layer": "analyst_classification_from_existing_physical_game_descriptions",
+          "read_scope": "WoL game description; not publisher component audit"
+        },
+        "format": null,
+        "genres": [],
+        "mechanisms": [
+          "Competitive",
+          "Fixed Turn Order",
+          "Victory Points",
+          "Fixed Number of Rounds",
+          "Market, Exchanging, Trading",
+          "Dynamic resource value",
+          "Tile Laying, Pattern Building, Jigsaw"
+        ],
+        "collections": [
+          "sdj-2015-2025"
+        ],
+        "collection_scope_note": "Award benchmark supplement; not screened into the original strategy-card-games session-duration corpus.",
+        "awards": [
+          {
+            "category": "Kennerspiel des Jahres",
+            "year": 2016,
+            "status": "winner",
+            "source_url": "https://www.spiel-des-jahres.de/spiele/isle-of-skye/",
+            "source_locator": "| Kennerspiel des Jahres | 2016",
+            "accessed_on": "2026-10-03"
+          }
+        ],
+        "external_cover": {
+          "url": null,
+          "source_url": "https://www.spiel-des-jahres.de/spiele/isle-of-skye/",
+          "display_allowed": false,
+          "rights_status": "not_verified"
+        },
+        "design_analysis": {
+          "source_layer": "existing_wol_analyst_interpretation",
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "source_locator": "games.js game isle-of-skye-2016",
+          "required_action": "ตั้งราคา ซื้อขาย และต่อแผ่นภูมิประเทศ",
+          "design_lesson": "pricing ทำให้ tile ธรรมดากลายเป็นการอ่านตลาด ผู้เล่นต้องตั้งราคาที่ทั้งป้องกันคนอื่นและไม่ทำร้ายตัวเอง.",
+          "table_moment": "Hard Trade-off",
+          "replay_engine": "Scoring tiles and pricing pressure shift the economy.",
+          "magic": {
+            "mood": "คิดคำนวณ อบอุ่น แข่งขันแบบมีเศรษฐกิจ",
+            "action": "ตั้งราคา ซื้อขาย และต่อแผ่นภูมิประเทศ",
+            "goal": "สร้างอาณาจักรที่ทำคะแนนได้ดีที่สุด",
+            "impediment": "เงินจำกัดและคู่แข่งอาจซื้อ tile สำคัญ",
+            "character": "หัวหน้า clan ในสกอตแลนด์"
+          },
+          "wizard_hat": {
+            "core": [
+              {
+                "id": 1,
+                "stable_id": "WH-01",
+                "name": "Competitive",
+                "category": "Conflict"
+              },
+              {
+                "id": 5,
+                "stable_id": "WH-05",
+                "name": "Fixed Turn Order",
+                "category": "Order"
+              },
+              {
+                "id": 16,
+                "stable_id": "WH-16",
+                "name": "Victory Points",
+                "category": "Reward"
+              },
+              {
+                "id": 9,
+                "stable_id": "WH-09",
+                "name": "Fixed Number of Rounds",
+                "category": "Ending"
+              }
+            ],
+            "taste": [
+              {
+                "id": 36,
+                "stable_id": "WH-36",
+                "name": "Market, Exchanging, Trading",
+                "category": "Asset"
+              },
+              {
+                "id": 41,
+                "stable_id": "WH-41",
+                "name": "Dynamic resource value",
+                "category": "Asset"
+              },
+              {
+                "id": 21,
+                "stable_id": "WH-21",
+                "name": "Tile Laying, Pattern Building, Jigsaw",
+                "category": "Touch"
+              }
+            ],
+            "unmapped": [],
+            "success_condition_text": "Victory Points"
+          }
+        },
+        "transferable_skills": {
+          "skill_map": []
+        },
+        "bgg": null,
+        "sources": [
+          {
+            "url": "https://www.spiel-des-jahres.de/spiele/isle-of-skye/",
+            "locator": "#sidebar: publisher; Personen; Dauer",
+            "read_scope": "award page metadata only; rulebook not read"
+          },
+          {
+            "url": "https://www.spiel-des-jahres.de/preiskat/kennerspiel-des-jahres/page/2/",
+            "locator": "| Kennerspiel des Jahres | 2016",
+            "read_scope": "winner name/category/year"
+          },
+          {
+            "url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+            "locator": "game isle-of-skye-2016",
+            "read_scope": "existing WoL analyst design interpretation; not UNICEF skill assessment"
+          }
+        ]
+      },
+      {
+        "game_id": "stone-age-junior-2016",
+        "name": "Stone Age Junior",
+        "aliases": [],
+        "family_id": "stone-age-junior",
+        "publisher": "Hans im Glück",
+        "players": [
+          2,
+          3,
+          4
+        ],
+        "publisher_play_duration_minutes": null,
+        "observed_session_time_minutes": null,
+        "organizer_listed_play_duration_minutes": {
+          "min": 15,
+          "max": 15,
+          "source_scope": "award organizer listing; not independently verified publisher duration or observed total time"
+        },
+        "medium": "tabletop",
+        "medium_provenance": {
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "locator": "game stone-age-junior-2016 MAGIC action",
+          "source_layer": "analyst_classification_from_existing_physical_game_descriptions",
+          "read_scope": "WoL game description; not publisher component audit"
+        },
+        "format": null,
+        "genres": [],
+        "mechanisms": [
+          "Competitive",
+          "Fixed Turn Order",
+          "Completing Targets",
+          "Memory",
+          "Point to point movement",
+          "Set Collection"
+        ],
+        "collections": [
+          "sdj-2015-2025"
+        ],
+        "collection_scope_note": "Award benchmark supplement; not screened into the original strategy-card-games session-duration corpus.",
+        "awards": [
+          {
+            "category": "Kinderspiel des Jahres",
+            "year": 2016,
+            "status": "winner",
+            "source_url": "https://www.spiel-des-jahres.de/spiele/stone-age-junior/",
+            "source_locator": "| Kinderspiel des Jahres | 2016",
+            "accessed_on": "2026-10-03"
+          }
+        ],
+        "external_cover": {
+          "url": null,
+          "source_url": "https://www.spiel-des-jahres.de/spiele/stone-age-junior/",
+          "display_allowed": false,
+          "rights_status": "not_verified"
+        },
+        "design_analysis": {
+          "source_layer": "existing_wol_analyst_interpretation",
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "source_locator": "games.js game stone-age-junior-2016",
+          "required_action": "พลิกจำ เดินเก็บของ และสร้างกระท่อม",
+          "design_lesson": "ย่อ resource game ให้เด็กเข้าใจผ่าน memory และ movement เด็กได้ฝึก planning โดยไม่รู้สึกว่ากำลังเรียนระบบเศรษฐกิจ.",
+          "table_moment": "Aha",
+          "replay_engine": "Memory positions and resource goals vary each play.",
+          "magic": {
+            "mood": "สำรวจ อบอุ่น ภูมิใจ",
+            "action": "พลิกจำ เดินเก็บของ และสร้างกระท่อม",
+            "goal": "สร้างกระท่อมให้ครบ",
+            "impediment": "ความจำและทรัพยากรที่ต้องวางแผน",
+            "character": "เด็กยุคหินในหมู่บ้าน"
+          },
+          "wizard_hat": {
+            "core": [
+              {
+                "id": 1,
+                "stable_id": "WH-01",
+                "name": "Competitive",
+                "category": "Conflict"
+              },
+              {
+                "id": 5,
+                "stable_id": "WH-05",
+                "name": "Fixed Turn Order",
+                "category": "Order"
+              },
+              {
+                "id": 12,
+                "stable_id": "WH-12",
+                "name": "Completing Targets",
+                "category": "Ending"
+              }
+            ],
+            "taste": [
+              {
+                "id": 48,
+                "stable_id": "WH-48",
+                "name": "Memory",
+                "category": "Twist"
+              },
+              {
+                "id": 19,
+                "stable_id": "WH-19",
+                "name": "Point to point movement",
+                "category": "Touch"
+              },
+              {
+                "id": 40,
+                "stable_id": "WH-40",
+                "name": "Set Collection",
+                "category": "Asset"
+              }
+            ],
+            "unmapped": [
+              {
+                "name": "Mission Success: Race",
+                "source_category": "Reward",
+                "source_field": "win",
+                "reason": "No exact card in current 50-card workbook; retain as design interpretation, not a fabricated card."
+              }
+            ],
+            "success_condition_text": "Mission Success: Race"
+          }
+        },
+        "transferable_skills": {
+          "skill_map": []
+        },
+        "bgg": null,
+        "sources": [
+          {
+            "url": "https://www.spiel-des-jahres.de/spiele/stone-age-junior/",
+            "locator": "#sidebar: publisher; Personen; Dauer",
+            "read_scope": "award page metadata only; rulebook not read"
+          },
+          {
+            "url": "https://www.spiel-des-jahres.de/preiskat/kinderspiel-des-jahres/page/2/",
+            "locator": "| Kinderspiel des Jahres | 2016",
+            "read_scope": "winner name/category/year"
+          },
+          {
+            "url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+            "locator": "game stone-age-junior-2016",
+            "read_scope": "existing WoL analyst design interpretation; not UNICEF skill assessment"
+          }
+        ]
+      },
+      {
+        "game_id": "kingdomino-2017",
+        "name": "Kingdomino",
+        "aliases": [],
+        "family_id": "kingdomino",
+        "publisher": "Pegasus Spiele",
+        "players": [
+          2,
+          3,
+          4
+        ],
+        "publisher_play_duration_minutes": null,
+        "observed_session_time_minutes": null,
+        "organizer_listed_play_duration_minutes": {
+          "min": 30,
+          "max": 30,
+          "source_scope": "award organizer listing; not independently verified publisher duration or observed total time"
+        },
+        "medium": "tabletop",
+        "medium_provenance": {
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "locator": "game kingdomino-2017 MAGIC action",
+          "source_layer": "analyst_classification_from_existing_physical_game_descriptions",
+          "read_scope": "WoL game description; not publisher component audit"
+        },
+        "format": null,
+        "genres": [],
+        "mechanisms": [
+          "Competitive",
+          "Dynamics Turn Order",
+          "Victory Points",
+          "Exhausting Resources",
+          "Tile Laying, Pattern Building, Jigsaw",
+          "Drafting, Action Selection",
+          "Set Collection"
+        ],
+        "collections": [
+          "sdj-2015-2025"
+        ],
+        "collection_scope_note": "Award benchmark supplement; not screened into the original strategy-card-games session-duration corpus.",
+        "awards": [
+          {
+            "category": "Spiel des Jahres",
+            "year": 2017,
+            "status": "winner",
+            "source_url": "https://www.spiel-des-jahres.de/spiele/kingdomino/",
+            "source_locator": "| Spiel des Jahres | 2017",
+            "accessed_on": "2026-10-03"
+          }
+        ],
+        "external_cover": {
+          "url": null,
+          "source_url": "https://www.spiel-des-jahres.de/spiele/kingdomino/",
+          "display_allowed": false,
+          "rights_status": "not_verified"
+        },
+        "design_analysis": {
+          "source_layer": "existing_wol_analyst_interpretation",
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "source_locator": "games.js game kingdomino-2017",
+          "required_action": "เลือก domino และต่ออาณาจักร 5x5",
+          "design_lesson": "การเลือก tile ดีทำให้ได้เล่นทีหลัง เป็น trade-off ที่สอนง่ายแต่ลึกมาก และทำให้ Order กลายเป็น mechanic จริง.",
+          "table_moment": "Beautiful Build",
+          "replay_engine": "Tile order and spatial scoring change each map.",
+          "magic": {
+            "mood": "สบาย คม สร้างสรรค์",
+            "action": "เลือก domino และต่ออาณาจักร 5x5",
+            "goal": "ทำพื้นที่ชนิดเดียวกันให้ใหญ่และมี crown",
+            "impediment": "พื้นที่จำกัดและ turn order ผูกกับ tile value",
+            "character": "ผู้ปกครองอาณาจักรเล็ก"
+          },
+          "wizard_hat": {
+            "core": [
+              {
+                "id": 1,
+                "stable_id": "WH-01",
+                "name": "Competitive",
+                "category": "Conflict"
+              },
+              {
+                "id": 8,
+                "stable_id": "WH-08",
+                "name": "Dynamics Turn Order",
+                "category": "Order"
+              },
+              {
+                "id": 16,
+                "stable_id": "WH-16",
+                "name": "Victory Points",
+                "category": "Reward"
+              },
+              {
+                "id": 10,
+                "stable_id": "WH-10",
+                "name": "Exhausting Resources",
+                "category": "Ending"
+              }
+            ],
+            "taste": [
+              {
+                "id": 21,
+                "stable_id": "WH-21",
+                "name": "Tile Laying, Pattern Building, Jigsaw",
+                "category": "Touch"
+              },
+              {
+                "id": 31,
+                "stable_id": "WH-31",
+                "name": "Drafting, Action Selection",
+                "category": "Strategy"
+              },
+              {
+                "id": 40,
+                "stable_id": "WH-40",
+                "name": "Set Collection",
+                "category": "Asset"
+              }
+            ],
+            "unmapped": [],
+            "success_condition_text": "Victory Points"
+          }
+        },
+        "transferable_skills": {
+          "skill_map": []
+        },
+        "bgg": null,
+        "sources": [
+          {
+            "url": "https://www.spiel-des-jahres.de/spiele/kingdomino/",
+            "locator": "#sidebar: publisher; Personen; Dauer",
+            "read_scope": "award page metadata only; rulebook not read"
+          },
+          {
+            "url": "https://www.spiel-des-jahres.de/preiskat/spiel-des-jahres/page/2/",
+            "locator": "| Spiel des Jahres | 2017",
+            "read_scope": "winner name/category/year"
+          },
+          {
+            "url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+            "locator": "game kingdomino-2017",
+            "read_scope": "existing WoL analyst design interpretation; not UNICEF skill assessment"
+          }
+        ]
+      },
+      {
+        "game_id": "exit-2017",
+        "name": "EXIT: Das Spiel",
+        "aliases": [
+          "EXIT – Das Spiel"
+        ],
+        "family_id": "exit",
+        "publisher": "Kosmos",
+        "players": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "publisher_play_duration_minutes": null,
+        "observed_session_time_minutes": null,
+        "organizer_listed_play_duration_minutes": {
+          "min": 90,
+          "max": 90,
+          "source_scope": "award organizer listing; not independently verified publisher duration or observed total time"
+        },
+        "medium": "tabletop",
+        "medium_provenance": {
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "locator": "game exit-2017 MAGIC action",
+          "source_layer": "analyst_classification_from_existing_physical_game_descriptions",
+          "read_scope": "WoL game description; not publisher component audit"
+        },
+        "format": null,
+        "genres": [],
+        "mechanisms": [
+          "Co-Operation",
+          "Real-Time",
+          "Elapsed Real Time Ending",
+          "Deduction, Hidden Information",
+          "Communication Limits",
+          "Paper and Pencil"
+        ],
+        "collections": [
+          "sdj-2015-2025"
+        ],
+        "collection_scope_note": "Award benchmark supplement; not screened into the original strategy-card-games session-duration corpus.",
+        "awards": [
+          {
+            "category": "Kennerspiel des Jahres",
+            "year": 2017,
+            "status": "winner",
+            "source_url": "https://www.spiel-des-jahres.de/spiele/exit-das-spiel/",
+            "source_locator": "| Kennerspiel des Jahres | 2017",
+            "accessed_on": "2026-10-03"
+          }
+        ],
+        "external_cover": {
+          "url": null,
+          "source_url": "https://www.spiel-des-jahres.de/spiele/exit-das-spiel/",
+          "display_allowed": false,
+          "rights_status": "not_verified"
+        },
+        "design_analysis": {
+          "source_layer": "existing_wol_analyst_interpretation",
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "source_locator": "games.js game exit-2017",
+          "required_action": "อ่าน clue ตัด พับ เขียน และถอดรหัส",
+          "design_lesson": "การเขียน ตัด และพับ component ทำให้ puzzle เป็นการลงมือค้นพบ ไม่ใช่แค่นั่งคิดคำตอบ.",
+          "table_moment": "Aha",
+          "replay_engine": "Scenario-specific puzzle chain.",
+          "magic": {
+            "mood": "เร่งด่วน ลึกลับ พอแก้ได้แล้วสะใจ",
+            "action": "อ่าน clue ตัด พับ เขียน และถอดรหัส",
+            "goal": "หนีออกจากสถานการณ์ให้ทัน",
+            "impediment": "เวลาและ puzzle chain ที่ไม่รู้คำตอบล่วงหน้า",
+            "character": "ทีมติดอยู่ใน escape room"
+          },
+          "wizard_hat": {
+            "core": [
+              {
+                "id": 2,
+                "stable_id": "WH-02",
+                "name": "Co-Operation",
+                "category": "Conflict"
+              },
+              {
+                "id": 7,
+                "stable_id": "WH-07",
+                "name": "Real-Time",
+                "category": "Order"
+              },
+              {
+                "id": 11,
+                "stable_id": "WH-11",
+                "name": "Elapsed Real Time Ending",
+                "category": "Ending"
+              }
+            ],
+            "taste": [
+              {
+                "id": 42,
+                "stable_id": "WH-42",
+                "name": "Deduction, Hidden Information",
+                "category": "Twist"
+              },
+              {
+                "id": 44,
+                "stable_id": "WH-44",
+                "name": "Communication Limits",
+                "category": "Twist"
+              },
+              {
+                "id": 18,
+                "stable_id": "WH-18",
+                "name": "Paper and Pencil",
+                "category": "Touch"
+              }
+            ],
+            "unmapped": [
+              {
+                "name": "Mission Success: Objective Completion",
+                "source_category": "Reward",
+                "source_field": "win",
+                "reason": "No exact card in current 50-card workbook; retain as design interpretation, not a fabricated card."
+              }
+            ],
+            "success_condition_text": "Mission Success: Objective Completion"
+          }
+        },
+        "transferable_skills": {
+          "skill_map": []
+        },
+        "bgg": null,
+        "sources": [
+          {
+            "url": "https://www.spiel-des-jahres.de/spiele/exit-das-spiel/",
+            "locator": "#sidebar: publisher; Personen; Dauer",
+            "read_scope": "award page metadata only; rulebook not read"
+          },
+          {
+            "url": "https://www.spiel-des-jahres.de/preiskat/kennerspiel-des-jahres/page/2/",
+            "locator": "| Kennerspiel des Jahres | 2017",
+            "read_scope": "winner name/category/year"
+          },
+          {
+            "url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+            "locator": "game exit-2017",
+            "read_scope": "existing WoL analyst design interpretation; not UNICEF skill assessment"
+          }
+        ]
+      },
+      {
+        "game_id": "icecool-2017",
+        "name": "ICECOOL",
+        "aliases": [],
+        "family_id": "icecool",
+        "publisher": "Amigo",
+        "players": [
+          2,
+          3,
+          4
+        ],
+        "publisher_play_duration_minutes": null,
+        "observed_session_time_minutes": null,
+        "organizer_listed_play_duration_minutes": {
+          "min": 30,
+          "max": 30,
+          "source_scope": "award organizer listing; not independently verified publisher duration or observed total time"
+        },
+        "medium": "tabletop",
+        "medium_provenance": {
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "locator": "game icecool-2017 MAGIC action",
+          "source_layer": "analyst_classification_from_existing_physical_game_descriptions",
+          "read_scope": "WoL game description; not publisher component audit"
+        },
+        "format": null,
+        "genres": [],
+        "mechanisms": [
+          "Competitive",
+          "Fixed Turn Order",
+          "Victory Points",
+          "Fixed Number of Events",
+          "Dexterity",
+          "Point to point movement",
+          "Take That"
+        ],
+        "collections": [
+          "sdj-2015-2025"
+        ],
+        "collection_scope_note": "Award benchmark supplement; not screened into the original strategy-card-games session-duration corpus.",
+        "awards": [
+          {
+            "category": "Kinderspiel des Jahres",
+            "year": 2017,
+            "status": "winner",
+            "source_url": "https://www.spiel-des-jahres.de/spiele/icecool/",
+            "source_locator": "| Kinderspiel des Jahres | 2017",
+            "accessed_on": "2026-10-03"
+          }
+        ],
+        "external_cover": {
+          "url": null,
+          "source_url": "https://www.spiel-des-jahres.de/spiele/icecool/",
+          "display_allowed": false,
+          "rights_status": "not_verified"
+        },
+        "design_analysis": {
+          "source_layer": "existing_wol_analyst_interpretation",
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "source_locator": "games.js game icecool-2017",
+          "required_action": "flick penguin ผ่านประตูหรือไล่จับ",
+          "design_lesson": "skill toy กลายเป็น board game เพราะมี role, objective และจังหวะพลาดที่เล่าต่อได้.",
+          "table_moment": "Skill Shot",
+          "replay_engine": "Skill mastery and unpredictable positions.",
+          "magic": {
+            "mood": "ซน เร็ว ฮา",
+            "action": "flick penguin ผ่านประตูหรือไล่จับ",
+            "goal": "เก็บปลาและหลบผู้จับ",
+            "impediment": "ความแม่นและตำแหน่งที่คาดเดายาก",
+            "character": "นักเรียนเพนกวินในโรงเรียน"
+          },
+          "wizard_hat": {
+            "core": [
+              {
+                "id": 1,
+                "stable_id": "WH-01",
+                "name": "Competitive",
+                "category": "Conflict"
+              },
+              {
+                "id": 5,
+                "stable_id": "WH-05",
+                "name": "Fixed Turn Order",
+                "category": "Order"
+              },
+              {
+                "id": 16,
+                "stable_id": "WH-16",
+                "name": "Victory Points",
+                "category": "Reward"
+              },
+              {
+                "id": 13,
+                "stable_id": "WH-13",
+                "name": "Fixed Number of Events",
+                "category": "Ending"
+              }
+            ],
+            "taste": [
+              {
+                "id": 17,
+                "stable_id": "WH-17",
+                "name": "Dexterity",
+                "category": "Touch"
+              },
+              {
+                "id": 19,
+                "stable_id": "WH-19",
+                "name": "Point to point movement",
+                "category": "Touch"
+              },
+              {
+                "id": 29,
+                "stable_id": "WH-29",
+                "name": "Take That",
+                "category": "Engage"
+              }
+            ],
+            "unmapped": [],
+            "success_condition_text": "Victory Points"
+          }
+        },
+        "transferable_skills": {
+          "skill_map": []
+        },
+        "bgg": null,
+        "sources": [
+          {
+            "url": "https://www.spiel-des-jahres.de/spiele/icecool/",
+            "locator": "#sidebar: publisher; Personen; Dauer",
+            "read_scope": "award page metadata only; rulebook not read"
+          },
+          {
+            "url": "https://www.spiel-des-jahres.de/preiskat/kinderspiel-des-jahres/page/2/",
+            "locator": "| Kinderspiel des Jahres | 2017",
+            "read_scope": "winner name/category/year"
+          },
+          {
+            "url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+            "locator": "game icecool-2017",
+            "read_scope": "existing WoL analyst design interpretation; not UNICEF skill assessment"
+          }
+        ]
+      },
+      {
+        "game_id": "azul-2018",
+        "name": "Azul",
+        "aliases": [],
+        "family_id": "azul",
+        "publisher": "Next Move",
+        "players": [
+          2,
+          3,
+          4
+        ],
+        "publisher_play_duration_minutes": null,
+        "observed_session_time_minutes": null,
+        "organizer_listed_play_duration_minutes": {
+          "min": 45,
+          "max": 45,
+          "source_scope": "award organizer listing; not independently verified publisher duration or observed total time"
+        },
+        "medium": "tabletop",
+        "medium_provenance": {
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "locator": "game azul-2018 MAGIC action",
+          "source_layer": "analyst_classification_from_existing_physical_game_descriptions",
+          "read_scope": "WoL game description; not publisher component audit"
+        },
+        "format": null,
+        "genres": [],
+        "mechanisms": [
+          "Competitive",
+          "Dynamics Turn Order",
+          "Victory Points",
+          "Completing Targets",
+          "Drafting, Action Selection",
+          "Tile Laying, Pattern Building, Jigsaw",
+          "Set Collection",
+          "Dynamic resource value"
+        ],
+        "collections": [
+          "sdj-2015-2025"
+        ],
+        "collection_scope_note": "Award benchmark supplement; not screened into the original strategy-card-games session-duration corpus.",
+        "awards": [
+          {
+            "category": "Spiel des Jahres",
+            "year": 2018,
+            "status": "winner",
+            "source_url": "https://www.spiel-des-jahres.de/spiele/azul/",
+            "source_locator": "| Spiel des Jahres | 2018",
+            "accessed_on": "2026-10-03"
+          }
+        ],
+        "external_cover": {
+          "url": null,
+          "source_url": "https://www.spiel-des-jahres.de/spiele/azul/",
+          "display_allowed": false,
+          "rights_status": "not_verified"
+        },
+        "design_analysis": {
+          "source_layer": "existing_wol_analyst_interpretation",
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "source_locator": "games.js game azul-2018",
+          "required_action": "draft tile และจัด pattern บนบอร์ดส่วนตัว",
+          "design_lesson": "ทุกการเลือกเป็นทั้งโอกาสและความเสี่ยง tactile identity สูงจน abstract game จำง่ายและอยากหยิบเล่น.",
+          "table_moment": "Beautiful Build",
+          "replay_engine": "Drafting tension and board pattern choices.",
+          "magic": {
+            "mood": "สวย คม รู้สึกฉลาด",
+            "action": "draft tile และจัด pattern บนบอร์ดส่วนตัว",
+            "goal": "ทำคะแนนจากลายกระเบื้อง",
+            "impediment": "ของเหลือสร้างโทษและบังคับ timing",
+            "character": "ช่างปูกระเบื้องวัง"
+          },
+          "wizard_hat": {
+            "core": [
+              {
+                "id": 1,
+                "stable_id": "WH-01",
+                "name": "Competitive",
+                "category": "Conflict"
+              },
+              {
+                "id": 8,
+                "stable_id": "WH-08",
+                "name": "Dynamics Turn Order",
+                "category": "Order"
+              },
+              {
+                "id": 16,
+                "stable_id": "WH-16",
+                "name": "Victory Points",
+                "category": "Reward"
+              },
+              {
+                "id": 12,
+                "stable_id": "WH-12",
+                "name": "Completing Targets",
+                "category": "Ending"
+              }
+            ],
+            "taste": [
+              {
+                "id": 31,
+                "stable_id": "WH-31",
+                "name": "Drafting, Action Selection",
+                "category": "Strategy"
+              },
+              {
+                "id": 21,
+                "stable_id": "WH-21",
+                "name": "Tile Laying, Pattern Building, Jigsaw",
+                "category": "Touch"
+              },
+              {
+                "id": 40,
+                "stable_id": "WH-40",
+                "name": "Set Collection",
+                "category": "Asset"
+              },
+              {
+                "id": 41,
+                "stable_id": "WH-41",
+                "name": "Dynamic resource value",
+                "category": "Asset"
+              }
+            ],
+            "unmapped": [],
+            "success_condition_text": "Victory Points"
+          }
+        },
+        "transferable_skills": {
+          "skill_map": []
+        },
+        "bgg": null,
+        "sources": [
+          {
+            "url": "https://www.spiel-des-jahres.de/spiele/azul/",
+            "locator": "#sidebar: publisher; Personen; Dauer",
+            "read_scope": "award page metadata only; rulebook not read"
+          },
+          {
+            "url": "https://www.spiel-des-jahres.de/preiskat/spiel-des-jahres/",
+            "locator": "| Spiel des Jahres | 2018",
+            "read_scope": "winner name/category/year"
+          },
+          {
+            "url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+            "locator": "game azul-2018",
+            "read_scope": "existing WoL analyst design interpretation; not UNICEF skill assessment"
+          }
+        ]
+      },
+      {
+        "game_id": "quacks-2018",
+        "name": "Quacks of Quedlinburg",
+        "aliases": [
+          "Die Quacksalber von Quedlinburg",
+          "The Quacks of Quedlinburg"
+        ],
+        "family_id": "quacks",
+        "publisher": "Schmidt",
+        "players": [
+          2,
+          3,
+          4
+        ],
+        "publisher_play_duration_minutes": null,
+        "observed_session_time_minutes": null,
+        "organizer_listed_play_duration_minutes": {
+          "min": 45,
+          "max": 45,
+          "source_scope": "award organizer listing; not independently verified publisher duration or observed total time"
+        },
+        "medium": "tabletop",
+        "medium_provenance": {
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "locator": "game quacks-2018 MAGIC action",
+          "source_layer": "analyst_classification_from_existing_physical_game_descriptions",
+          "read_scope": "WoL game description; not publisher component audit"
+        },
+        "format": null,
+        "genres": [],
+        "mechanisms": [
+          "Competitive",
+          "Simultaneous Action Selection",
+          "Victory Points",
+          "Fixed Number of Rounds",
+          "Push your luck",
+          "Deck Building, Bag Building, Upgrade",
+          "Output Randomness"
+        ],
+        "collections": [
+          "sdj-2015-2025"
+        ],
+        "collection_scope_note": "Award benchmark supplement; not screened into the original strategy-card-games session-duration corpus.",
+        "awards": [
+          {
+            "category": "Kennerspiel des Jahres",
+            "year": 2018,
+            "status": "winner",
+            "source_url": "https://www.spiel-des-jahres.de/spiele/die-quacksalber-von-quedlinburg/",
+            "source_locator": "| Kennerspiel des Jahres | 2018",
+            "accessed_on": "2026-10-03"
+          }
+        ],
+        "external_cover": {
+          "url": null,
+          "source_url": "https://www.spiel-des-jahres.de/spiele/die-quacksalber-von-quedlinburg/",
+          "display_allowed": false,
+          "rights_status": "not_verified"
+        },
+        "design_analysis": {
+          "source_layer": "existing_wol_analyst_interpretation",
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "source_locator": "games.js game quacks-2018",
+          "required_action": "หยิบ ingredient จากถุงและหยุดก่อนหม้อระเบิด",
+          "design_lesson": "push-your-luck มี progression เพราะถุงสะท้อนการตัดสินใจที่ผ่านมา ความสุ่มจึงรู้สึกเป็นความรับผิดชอบร่วมกับโชค.",
+          "table_moment": "Almost Failed",
+          "replay_engine": "Bag upgrades and risk profile evolve.",
+          "magic": {
+            "mood": "ลุ้น หัวเราะ เสี่ยงแบบอยากลองอีก",
+            "action": "หยิบ ingredient จากถุงและหยุดก่อนหม้อระเบิด",
+            "goal": "ต้มยาให้ไกลและทำคะแนนมาก",
+            "impediment": "ความโลภกับ token เสี่ยงในถุง",
+            "character": "หมอยาพื้นบ้านในตลาด"
+          },
+          "wizard_hat": {
+            "core": [
+              {
+                "id": 1,
+                "stable_id": "WH-01",
+                "name": "Competitive",
+                "category": "Conflict"
+              },
+              {
+                "id": 6,
+                "stable_id": "WH-06",
+                "name": "Simultaneous Action Selection",
+                "category": "Order"
+              },
+              {
+                "id": 16,
+                "stable_id": "WH-16",
+                "name": "Victory Points",
+                "category": "Reward"
+              },
+              {
+                "id": 9,
+                "stable_id": "WH-09",
+                "name": "Fixed Number of Rounds",
+                "category": "Ending"
+              }
+            ],
+            "taste": [
+              {
+                "id": 47,
+                "stable_id": "WH-47",
+                "name": "Push your luck",
+                "category": "Twist"
+              },
+              {
+                "id": 33,
+                "stable_id": "WH-33",
+                "name": "Deck Building, Bag Building, Upgrade",
+                "category": "Strategy"
+              },
+              {
+                "id": 45,
+                "stable_id": "WH-45",
+                "name": "Output Randomness",
+                "category": "Twist"
+              }
+            ],
+            "unmapped": [],
+            "success_condition_text": "Victory Points"
+          }
+        },
+        "transferable_skills": {
+          "skill_map": []
+        },
+        "bgg": null,
+        "sources": [
+          {
+            "url": "https://www.spiel-des-jahres.de/spiele/die-quacksalber-von-quedlinburg/",
+            "locator": "#sidebar: publisher; Personen; Dauer",
+            "read_scope": "award page metadata only; rulebook not read"
+          },
+          {
+            "url": "https://www.spiel-des-jahres.de/preiskat/kennerspiel-des-jahres/",
+            "locator": "| Kennerspiel des Jahres | 2018",
+            "read_scope": "winner name/category/year"
+          },
+          {
+            "url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+            "locator": "game quacks-2018",
+            "read_scope": "existing WoL analyst design interpretation; not UNICEF skill assessment"
+          }
+        ]
+      },
+      {
+        "game_id": "funkelschatz-2018",
+        "name": "Funkelschatz",
+        "aliases": [],
+        "family_id": "funkelschatz",
+        "publisher": "Haba",
+        "players": [
+          2,
+          3,
+          4
+        ],
+        "publisher_play_duration_minutes": null,
+        "observed_session_time_minutes": null,
+        "organizer_listed_play_duration_minutes": {
+          "min": 15,
+          "max": 15,
+          "source_scope": "award organizer listing; not independently verified publisher duration or observed total time"
+        },
+        "medium": "tabletop",
+        "medium_provenance": {
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "locator": "game funkelschatz-2018 MAGIC action",
+          "source_layer": "analyst_classification_from_existing_physical_game_descriptions",
+          "read_scope": "WoL game description; not publisher component audit"
+        },
+        "format": null,
+        "genres": [],
+        "mechanisms": [
+          "Competitive",
+          "Fixed Turn Order",
+          "Victory Points",
+          "Exhausting Resources",
+          "Dexterity",
+          "Output Randomness",
+          "Set Collection"
+        ],
+        "collections": [
+          "sdj-2015-2025"
+        ],
+        "collection_scope_note": "Award benchmark supplement; not screened into the original strategy-card-games session-duration corpus.",
+        "awards": [
+          {
+            "category": "Kinderspiel des Jahres",
+            "year": 2018,
+            "status": "winner",
+            "source_url": "https://www.spiel-des-jahres.de/spiele/funkelschatz/",
+            "source_locator": "| Kinderspiel des Jahres | 2018",
+            "accessed_on": "2026-10-03"
+          }
+        ],
+        "external_cover": {
+          "url": null,
+          "source_url": "https://www.spiel-des-jahres.de/spiele/funkelschatz/",
+          "display_allowed": false,
+          "rights_status": "not_verified"
+        },
+        "design_analysis": {
+          "source_layer": "existing_wol_analyst_interpretation",
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "source_locator": "games.js game funkelschatz-2018",
+          "required_action": "เลือกสีแล้วค่อยๆ ยกวงน้ำแข็งให้ gem หล่น",
+          "design_lesson": "component ทำหน้าที่เป็นระบบคาดการณ์ เด็กได้อ่าน physical probability แบบจับต้องได้.",
+          "table_moment": "Material Surprise",
+          "replay_engine": "Physical gem drops are never identical.",
+          "magic": {
+            "mood": "ตื่นตา ลุ้น หวาน",
+            "action": "เลือกสีแล้วค่อยๆ ยกวงน้ำแข็งให้ gem หล่น",
+            "goal": "เก็บ gem สีที่เลือกให้มาก",
+            "impediment": "การคาดเดาว่าอะไรจะหล่นและใครได้ประโยชน์",
+            "character": "มังกรเด็กเก็บอัญมณี"
+          },
+          "wizard_hat": {
+            "core": [
+              {
+                "id": 1,
+                "stable_id": "WH-01",
+                "name": "Competitive",
+                "category": "Conflict"
+              },
+              {
+                "id": 5,
+                "stable_id": "WH-05",
+                "name": "Fixed Turn Order",
+                "category": "Order"
+              },
+              {
+                "id": 16,
+                "stable_id": "WH-16",
+                "name": "Victory Points",
+                "category": "Reward"
+              },
+              {
+                "id": 10,
+                "stable_id": "WH-10",
+                "name": "Exhausting Resources",
+                "category": "Ending"
+              }
+            ],
+            "taste": [
+              {
+                "id": 17,
+                "stable_id": "WH-17",
+                "name": "Dexterity",
+                "category": "Touch"
+              },
+              {
+                "id": 45,
+                "stable_id": "WH-45",
+                "name": "Output Randomness",
+                "category": "Twist"
+              },
+              {
+                "id": 40,
+                "stable_id": "WH-40",
+                "name": "Set Collection",
+                "category": "Asset"
+              }
+            ],
+            "unmapped": [],
+            "success_condition_text": "Victory Points"
+          }
+        },
+        "transferable_skills": {
+          "skill_map": []
+        },
+        "bgg": null,
+        "sources": [
+          {
+            "url": "https://www.spiel-des-jahres.de/spiele/funkelschatz/",
+            "locator": "#sidebar: publisher; Personen; Dauer",
+            "read_scope": "award page metadata only; rulebook not read"
+          },
+          {
+            "url": "https://www.spiel-des-jahres.de/preiskat/kinderspiel-des-jahres/",
+            "locator": "| Kinderspiel des Jahres | 2018",
+            "read_scope": "winner name/category/year"
+          },
+          {
+            "url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+            "locator": "game funkelschatz-2018",
+            "read_scope": "existing WoL analyst design interpretation; not UNICEF skill assessment"
+          }
+        ]
+      },
+      {
+        "game_id": "just-one-2019",
+        "name": "Just One",
+        "aliases": [],
+        "family_id": "just-one",
+        "publisher": "Repos Production",
+        "players": [
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "publisher_play_duration_minutes": null,
+        "observed_session_time_minutes": null,
+        "organizer_listed_play_duration_minutes": {
+          "min": 20,
+          "max": 20,
+          "source_scope": "award organizer listing; not independently verified publisher duration or observed total time"
+        },
+        "medium": "tabletop",
+        "medium_provenance": {
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "locator": "game just-one-2019 MAGIC action",
+          "source_layer": "analyst_classification_from_existing_physical_game_descriptions",
+          "read_scope": "WoL game description; not publisher component audit"
+        },
+        "format": null,
+        "genres": [],
+        "mechanisms": [
+          "Co-Operation",
+          "Simultaneous Action Selection",
+          "Fixed Number of Events",
+          "Targeted Clues",
+          "Communication Limits",
+          "Paper and Pencil"
+        ],
+        "collections": [
+          "sdj-2015-2025"
+        ],
+        "collection_scope_note": "Award benchmark supplement; not screened into the original strategy-card-games session-duration corpus.",
+        "awards": [
+          {
+            "category": "Spiel des Jahres",
+            "year": 2019,
+            "status": "winner",
+            "source_url": "https://www.spiel-des-jahres.de/spiele/just-one/",
+            "source_locator": "| Spiel des Jahres | 2019",
+            "accessed_on": "2026-10-03"
+          }
+        ],
+        "external_cover": {
+          "url": null,
+          "source_url": "https://www.spiel-des-jahres.de/spiele/just-one/",
+          "display_allowed": false,
+          "rights_status": "not_verified"
+        },
+        "design_analysis": {
+          "source_layer": "existing_wol_analyst_interpretation",
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "source_locator": "games.js game just-one-2019",
+          "required_action": "เขียน clue เงียบๆ และเดาคำ",
+          "design_lesson": "คำซ้ำหายไปทำให้ผู้เล่นต้องคิดถึงความคิดของคนอื่น แม้ยังไม่ได้คุยกัน.",
+          "table_moment": "Social Laugh",
+          "replay_engine": "Social interpretation and clue overlap.",
+          "magic": {
+            "mood": "เป็นกันเอง ขำ อบอุ่น",
+            "action": "เขียน clue เงียบๆ และเดาคำ",
+            "goal": "ให้คนทายตอบถูกให้มากที่สุด",
+            "impediment": "clue ซ้ำถูกลบและ clue แปลกอาจไม่เข้าใจ",
+            "character": "กลุ่มเพื่อนช่วยกันใบ้คำ"
+          },
+          "wizard_hat": {
+            "core": [
+              {
+                "id": 2,
+                "stable_id": "WH-02",
+                "name": "Co-Operation",
+                "category": "Conflict"
+              },
+              {
+                "id": 6,
+                "stable_id": "WH-06",
+                "name": "Simultaneous Action Selection",
+                "category": "Order"
+              },
+              {
+                "id": 13,
+                "stable_id": "WH-13",
+                "name": "Fixed Number of Events",
+                "category": "Ending"
+              }
+            ],
+            "taste": [
+              {
+                "id": 27,
+                "stable_id": "WH-27",
+                "name": "Targeted Clues",
+                "category": "Engage"
+              },
+              {
+                "id": 44,
+                "stable_id": "WH-44",
+                "name": "Communication Limits",
+                "category": "Twist"
+              },
+              {
+                "id": 18,
+                "stable_id": "WH-18",
+                "name": "Paper and Pencil",
+                "category": "Touch"
+              }
+            ],
+            "unmapped": [
+              {
+                "name": "Mission Success: Shared Score",
+                "source_category": "Reward",
+                "source_field": "win",
+                "reason": "No exact card in current 50-card workbook; retain as design interpretation, not a fabricated card."
+              }
+            ],
+            "success_condition_text": "Mission Success: Shared Score"
+          }
+        },
+        "transferable_skills": {
+          "skill_map": []
+        },
+        "bgg": null,
+        "sources": [
+          {
+            "url": "https://www.spiel-des-jahres.de/spiele/just-one/",
+            "locator": "#sidebar: publisher; Personen; Dauer",
+            "read_scope": "award page metadata only; rulebook not read"
+          },
+          {
+            "url": "https://www.spiel-des-jahres.de/preiskat/spiel-des-jahres/",
+            "locator": "| Spiel des Jahres | 2019",
+            "read_scope": "winner name/category/year"
+          },
+          {
+            "url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+            "locator": "game just-one-2019",
+            "read_scope": "existing WoL analyst design interpretation; not UNICEF skill assessment"
+          }
+        ]
+      },
+      {
+        "game_id": "wingspan-2019",
+        "name": "Wingspan",
+        "aliases": [
+          "Flügelschlag"
+        ],
+        "family_id": "wingspan",
+        "publisher": "Feuerland",
+        "players": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "publisher_play_duration_minutes": null,
+        "observed_session_time_minutes": null,
+        "organizer_listed_play_duration_minutes": {
+          "min": 75,
+          "max": 75,
+          "source_scope": "award organizer listing; not independently verified publisher duration or observed total time"
+        },
+        "medium": "tabletop",
+        "medium_provenance": {
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "locator": "game wingspan-2019 MAGIC action",
+          "source_layer": "analyst_classification_from_existing_physical_game_descriptions",
+          "read_scope": "WoL game description; not publisher component audit"
+        },
+        "format": null,
+        "genres": [],
+        "mechanisms": [
+          "Competitive",
+          "Fixed Turn Order",
+          "Victory Points",
+          "Fixed Number of Rounds",
+          "Engine Building, Supply Chains",
+          "Set Collection",
+          "Hand Management, Command"
+        ],
+        "collections": [
+          "sdj-2015-2025"
+        ],
+        "collection_scope_note": "Award benchmark supplement; not screened into the original strategy-card-games session-duration corpus.",
+        "awards": [
+          {
+            "category": "Kennerspiel des Jahres",
+            "year": 2019,
+            "status": "winner",
+            "source_url": "https://www.spiel-des-jahres.de/spiele/fluegelschlag/",
+            "source_locator": "| Kennerspiel des Jahres | 2019",
+            "accessed_on": "2026-10-03"
+          }
+        ],
+        "external_cover": {
+          "url": null,
+          "source_url": "https://www.spiel-des-jahres.de/spiele/fluegelschlag/",
+          "display_allowed": false,
+          "rights_status": "not_verified"
+        },
+        "design_analysis": {
+          "source_layer": "existing_wol_analyst_interpretation",
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "source_locator": "games.js game wingspan-2019",
+          "required_action": "เล่นนก เก็บอาหาร วางไข่ และ activate habitat",
+          "design_lesson": "complex engine approachable ขึ้นเพราะธีมและ production ทำให้ระบบคะแนนหลายทางรู้สึกเป็นธรรมชาติ.",
+          "table_moment": "Beautiful Build",
+          "replay_engine": "Card variety, goals, and engine paths.",
+          "magic": {
+            "mood": "สงบ งดงาม ค่อยๆ เติบโต",
+            "action": "เล่นนก เก็บอาหาร วางไข่ และ activate habitat",
+            "goal": "สร้าง engine นกที่ทำคะแนนสูง",
+            "impediment": "card/resource timing และ objectives",
+            "character": "นักดูนกและผู้จัดระบบนิเวศ"
+          },
+          "wizard_hat": {
+            "core": [
+              {
+                "id": 1,
+                "stable_id": "WH-01",
+                "name": "Competitive",
+                "category": "Conflict"
+              },
+              {
+                "id": 5,
+                "stable_id": "WH-05",
+                "name": "Fixed Turn Order",
+                "category": "Order"
+              },
+              {
+                "id": 16,
+                "stable_id": "WH-16",
+                "name": "Victory Points",
+                "category": "Reward"
+              },
+              {
+                "id": 9,
+                "stable_id": "WH-09",
+                "name": "Fixed Number of Rounds",
+                "category": "Ending"
+              }
+            ],
+            "taste": [
+              {
+                "id": 34,
+                "stable_id": "WH-34",
+                "name": "Engine Building, Supply Chains",
+                "category": "Strategy"
+              },
+              {
+                "id": 40,
+                "stable_id": "WH-40",
+                "name": "Set Collection",
+                "category": "Asset"
+              },
+              {
+                "id": 22,
+                "stable_id": "WH-22",
+                "name": "Hand Management, Command",
+                "category": "Strategy"
+              }
+            ],
+            "unmapped": [],
+            "success_condition_text": "Victory Points"
+          }
+        },
+        "transferable_skills": {
+          "skill_map": []
+        },
+        "bgg": null,
+        "sources": [
+          {
+            "url": "https://www.spiel-des-jahres.de/spiele/fluegelschlag/",
+            "locator": "#sidebar: publisher; Personen; Dauer",
+            "read_scope": "award page metadata only; rulebook not read"
+          },
+          {
+            "url": "https://www.spiel-des-jahres.de/preiskat/kennerspiel-des-jahres/",
+            "locator": "| Kennerspiel des Jahres | 2019",
+            "read_scope": "winner name/category/year"
+          },
+          {
+            "url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+            "locator": "game wingspan-2019",
+            "read_scope": "existing WoL analyst design interpretation; not UNICEF skill assessment"
+          }
+        ]
+      },
+      {
+        "game_id": "tal-der-wikinger-2019",
+        "name": "Tal der Wikinger",
+        "aliases": [],
+        "family_id": "tal-der-wikinger",
+        "publisher": "Haba",
+        "players": [
+          2,
+          3,
+          4
+        ],
+        "publisher_play_duration_minutes": null,
+        "observed_session_time_minutes": null,
+        "organizer_listed_play_duration_minutes": {
+          "min": 20,
+          "max": 20,
+          "source_scope": "award organizer listing; not independently verified publisher duration or observed total time"
+        },
+        "medium": "tabletop",
+        "medium_provenance": {
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "locator": "game tal-der-wikinger-2019 MAGIC action",
+          "source_layer": "analyst_classification_from_existing_physical_game_descriptions",
+          "read_scope": "WoL game description; not publisher component audit"
+        },
+        "format": null,
+        "genres": [],
+        "mechanisms": [
+          "Competitive",
+          "Fixed Turn Order",
+          "Victory Points",
+          "Fixed Number of Events",
+          "Dexterity",
+          "Point to point movement",
+          "Drafting, Action Selection"
+        ],
+        "collections": [
+          "sdj-2015-2025"
+        ],
+        "collection_scope_note": "Award benchmark supplement; not screened into the original strategy-card-games session-duration corpus.",
+        "awards": [
+          {
+            "category": "Kinderspiel des Jahres",
+            "year": 2019,
+            "status": "winner",
+            "source_url": "https://www.spiel-des-jahres.de/spiele/tal-der-wikinger/",
+            "source_locator": "| Kinderspiel des Jahres | 2019",
+            "accessed_on": "2026-10-03"
+          }
+        ],
+        "external_cover": {
+          "url": null,
+          "source_url": "https://www.spiel-des-jahres.de/spiele/tal-der-wikinger/",
+          "display_allowed": false,
+          "rights_status": "not_verified"
+        },
+        "design_analysis": {
+          "source_layer": "existing_wol_analyst_interpretation",
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "source_locator": "games.js game tal-der-wikinger-2019",
+          "required_action": "กลิ้งลูกบอลชนถังและขยับชิ้นบนท่าเรือ",
+          "design_lesson": "dexterity ส่งผลต่อ tactical board state ไม่ใช่แค่ทำคะแนนตรงๆ.",
+          "table_moment": "Skill Shot",
+          "replay_engine": "Dexterity impacts board position each round.",
+          "magic": {
+            "mood": "คึกคัก แข่งขัน ขำ",
+            "action": "กลิ้งลูกบอลชนถังและขยับชิ้นบนท่าเรือ",
+            "goal": "เก็บเหรียญให้มาก",
+            "impediment": "การชนถังเปลี่ยนตำแหน่งและอาจตกน้ำ",
+            "character": "เด็กไวกิงในงานแข่ง"
+          },
+          "wizard_hat": {
+            "core": [
+              {
+                "id": 1,
+                "stable_id": "WH-01",
+                "name": "Competitive",
+                "category": "Conflict"
+              },
+              {
+                "id": 5,
+                "stable_id": "WH-05",
+                "name": "Fixed Turn Order",
+                "category": "Order"
+              },
+              {
+                "id": 16,
+                "stable_id": "WH-16",
+                "name": "Victory Points",
+                "category": "Reward"
+              },
+              {
+                "id": 13,
+                "stable_id": "WH-13",
+                "name": "Fixed Number of Events",
+                "category": "Ending"
+              }
+            ],
+            "taste": [
+              {
+                "id": 17,
+                "stable_id": "WH-17",
+                "name": "Dexterity",
+                "category": "Touch"
+              },
+              {
+                "id": 19,
+                "stable_id": "WH-19",
+                "name": "Point to point movement",
+                "category": "Touch"
+              },
+              {
+                "id": 31,
+                "stable_id": "WH-31",
+                "name": "Drafting, Action Selection",
+                "category": "Strategy"
+              }
+            ],
+            "unmapped": [],
+            "success_condition_text": "Victory Points"
+          }
+        },
+        "transferable_skills": {
+          "skill_map": []
+        },
+        "bgg": null,
+        "sources": [
+          {
+            "url": "https://www.spiel-des-jahres.de/spiele/tal-der-wikinger/",
+            "locator": "#sidebar: publisher; Personen; Dauer",
+            "read_scope": "award page metadata only; rulebook not read"
+          },
+          {
+            "url": "https://www.spiel-des-jahres.de/preiskat/kinderspiel-des-jahres/",
+            "locator": "| Kinderspiel des Jahres | 2019",
+            "read_scope": "winner name/category/year"
+          },
+          {
+            "url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+            "locator": "game tal-der-wikinger-2019",
+            "read_scope": "existing WoL analyst design interpretation; not UNICEF skill assessment"
+          }
+        ]
+      },
+      {
+        "game_id": "pictures-2020",
+        "name": "Pictures",
+        "aliases": [],
+        "family_id": "pictures",
+        "publisher": "PD-Verlag",
+        "players": [
+          3,
+          4,
+          5
+        ],
+        "publisher_play_duration_minutes": null,
+        "observed_session_time_minutes": null,
+        "organizer_listed_play_duration_minutes": {
+          "min": 30,
+          "max": 30,
+          "source_scope": "award organizer listing; not independently verified publisher duration or observed total time"
+        },
+        "medium": "tabletop",
+        "medium_provenance": {
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "locator": "game pictures-2020 MAGIC action",
+          "source_layer": "analyst_classification_from_existing_physical_game_descriptions",
+          "read_scope": "WoL game description; not publisher component audit"
+        },
+        "format": null,
+        "genres": [],
+        "mechanisms": [
+          "Competitive",
+          "Simultaneous Action Selection",
+          "Victory Points",
+          "Fixed Number of Rounds",
+          "Targeted Clues",
+          "Communication Limits",
+          "Dexterity",
+          "Matching, Follow the Pattern"
+        ],
+        "collections": [
+          "sdj-2015-2025"
+        ],
+        "collection_scope_note": "Award benchmark supplement; not screened into the original strategy-card-games session-duration corpus.",
+        "awards": [
+          {
+            "category": "Spiel des Jahres",
+            "year": 2020,
+            "status": "winner",
+            "source_url": "https://www.spiel-des-jahres.de/spiele/pictures/",
+            "source_locator": "| Spiel des Jahres | 2020",
+            "accessed_on": "2026-10-03"
+          }
+        ],
+        "external_cover": {
+          "url": null,
+          "source_url": "https://www.spiel-des-jahres.de/spiele/pictures/",
+          "display_allowed": false,
+          "rights_status": "not_verified"
+        },
+        "design_analysis": {
+          "source_layer": "existing_wol_analyst_interpretation",
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "source_locator": "games.js game pictures-2020",
+          "required_action": "ใช้วัสดุจำกัดสร้างภาพให้คนอื่นเดา",
+          "design_lesson": "constraint ที่ดีทำให้ผู้เล่นสร้างสรรค์มากขึ้น และทำให้ communication game มี texture ใหม่.",
+          "table_moment": "Social Laugh",
+          "replay_engine": "Material constraints and image interpretation change.",
+          "magic": {
+            "mood": "สร้างสรรค์ ขำ ประหลาดใจ",
+            "action": "ใช้วัสดุจำกัดสร้างภาพให้คนอื่นเดา",
+            "goal": "สื่อสารรูปที่ได้รับให้แม่น",
+            "impediment": "วัสดุแต่ละชุดสื่อได้ไม่เท่ากัน",
+            "character": "ศิลปินที่มีเครื่องมือจำกัด"
+          },
+          "wizard_hat": {
+            "core": [
+              {
+                "id": 1,
+                "stable_id": "WH-01",
+                "name": "Competitive",
+                "category": "Conflict"
+              },
+              {
+                "id": 6,
+                "stable_id": "WH-06",
+                "name": "Simultaneous Action Selection",
+                "category": "Order"
+              },
+              {
+                "id": 16,
+                "stable_id": "WH-16",
+                "name": "Victory Points",
+                "category": "Reward"
+              },
+              {
+                "id": 9,
+                "stable_id": "WH-09",
+                "name": "Fixed Number of Rounds",
+                "category": "Ending"
+              }
+            ],
+            "taste": [
+              {
+                "id": 27,
+                "stable_id": "WH-27",
+                "name": "Targeted Clues",
+                "category": "Engage"
+              },
+              {
+                "id": 44,
+                "stable_id": "WH-44",
+                "name": "Communication Limits",
+                "category": "Twist"
+              },
+              {
+                "id": 17,
+                "stable_id": "WH-17",
+                "name": "Dexterity",
+                "category": "Touch"
+              },
+              {
+                "id": 43,
+                "stable_id": "WH-43",
+                "name": "Matching, Follow the Pattern",
+                "category": "Twist"
+              }
+            ],
+            "unmapped": [],
+            "success_condition_text": "Victory Points"
+          }
+        },
+        "transferable_skills": {
+          "skill_map": []
+        },
+        "bgg": null,
+        "sources": [
+          {
+            "url": "https://www.spiel-des-jahres.de/spiele/pictures/",
+            "locator": "#sidebar: publisher; Personen; Dauer",
+            "read_scope": "award page metadata only; rulebook not read"
+          },
+          {
+            "url": "https://www.spiel-des-jahres.de/preiskat/spiel-des-jahres/",
+            "locator": "| Spiel des Jahres | 2020",
+            "read_scope": "winner name/category/year"
+          },
+          {
+            "url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+            "locator": "game pictures-2020",
+            "read_scope": "existing WoL analyst design interpretation; not UNICEF skill assessment"
+          }
+        ]
+      },
+      {
+        "game_id": "the-crew-2020",
+        "name": "Die Crew",
+        "aliases": [
+          "The Crew: The Quest for Planet Nine"
+        ],
+        "family_id": "the-crew",
+        "publisher": "Kosmos",
+        "players": [
+          3,
+          4,
+          5
+        ],
+        "publisher_play_duration_minutes": null,
+        "observed_session_time_minutes": null,
+        "organizer_listed_play_duration_minutes": {
+          "min": 20,
+          "max": 20,
+          "source_scope": "award organizer listing; not independently verified publisher duration or observed total time"
+        },
+        "medium": "tabletop",
+        "medium_provenance": {
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "locator": "game the-crew-2020 MAGIC action",
+          "source_layer": "analyst_classification_from_existing_physical_game_descriptions",
+          "read_scope": "WoL game description; not publisher component audit"
+        },
+        "format": null,
+        "genres": [],
+        "mechanisms": [
+          "Co-Operation",
+          "Fixed Turn Order",
+          "Completing Targets",
+          "Communication Limits",
+          "Hand Management, Command",
+          "Claim Objectives, Contracts",
+          "Deduction, Hidden Information"
+        ],
+        "collections": [
+          "sdj-2015-2025"
+        ],
+        "collection_scope_note": "Award benchmark supplement; not screened into the original strategy-card-games session-duration corpus.",
+        "awards": [
+          {
+            "category": "Kennerspiel des Jahres",
+            "year": 2020,
+            "status": "winner",
+            "source_url": "https://www.spiel-des-jahres.de/spiele/die-crew/",
+            "source_locator": "| Kennerspiel des Jahres | 2020",
+            "accessed_on": "2026-10-03"
+          }
+        ],
+        "external_cover": {
+          "url": null,
+          "source_url": "https://www.spiel-des-jahres.de/spiele/die-crew/",
+          "display_allowed": false,
+          "rights_status": "not_verified"
+        },
+        "design_analysis": {
+          "source_layer": "existing_wol_analyst_interpretation",
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "source_locator": "games.js game the-crew-2020",
+          "required_action": "เล่น trick-taking และทำภารกิจเฉพาะ",
+          "design_lesson": "การจำกัดการสื่อสารทำให้ทุกไพ่กลายเป็นข้อมูล และเปลี่ยน trick-taking ให้เป็น co-op mission.",
+          "table_moment": "Almost Failed",
+          "replay_engine": "Mission structure changes goals and constraints.",
+          "magic": {
+            "mood": "เงียบ ตึง ทีมเวิร์กสูง",
+            "action": "เล่น trick-taking และทำภารกิจเฉพาะ",
+            "goal": "ให้คนที่ถูกต้องชนะ trick ที่ถูกต้อง",
+            "impediment": "ห้ามสื่อสารเต็มที่และไพ่ในมือคนอื่นเป็นความลับ",
+            "character": "ลูกเรืออวกาศ"
+          },
+          "wizard_hat": {
+            "core": [
+              {
+                "id": 2,
+                "stable_id": "WH-02",
+                "name": "Co-Operation",
+                "category": "Conflict"
+              },
+              {
+                "id": 5,
+                "stable_id": "WH-05",
+                "name": "Fixed Turn Order",
+                "category": "Order"
+              },
+              {
+                "id": 12,
+                "stable_id": "WH-12",
+                "name": "Completing Targets",
+                "category": "Ending"
+              }
+            ],
+            "taste": [
+              {
+                "id": 44,
+                "stable_id": "WH-44",
+                "name": "Communication Limits",
+                "category": "Twist"
+              },
+              {
+                "id": 22,
+                "stable_id": "WH-22",
+                "name": "Hand Management, Command",
+                "category": "Strategy"
+              },
+              {
+                "id": 39,
+                "stable_id": "WH-39",
+                "name": "Claim Objectives, Contracts",
+                "category": "Strategy"
+              },
+              {
+                "id": 42,
+                "stable_id": "WH-42",
+                "name": "Deduction, Hidden Information",
+                "category": "Twist"
+              }
+            ],
+            "unmapped": [
+              {
+                "name": "Mission Success: Objective Completion",
+                "source_category": "Reward",
+                "source_field": "win",
+                "reason": "No exact card in current 50-card workbook; retain as design interpretation, not a fabricated card."
+              }
+            ],
+            "success_condition_text": "Mission Success: Objective Completion"
+          }
+        },
+        "transferable_skills": {
+          "skill_map": []
+        },
+        "bgg": null,
+        "sources": [
+          {
+            "url": "https://www.spiel-des-jahres.de/spiele/die-crew/",
+            "locator": "#sidebar: publisher; Personen; Dauer",
+            "read_scope": "award page metadata only; rulebook not read"
+          },
+          {
+            "url": "https://www.spiel-des-jahres.de/preiskat/kennerspiel-des-jahres/",
+            "locator": "| Kennerspiel des Jahres | 2020",
+            "read_scope": "winner name/category/year"
+          },
+          {
+            "url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+            "locator": "game the-crew-2020",
+            "read_scope": "existing WoL analyst design interpretation; not UNICEF skill assessment"
+          }
+        ]
+      },
+      {
+        "game_id": "speedy-roll-2020",
+        "name": "Speedy Roll",
+        "aliases": [],
+        "family_id": "speedy-roll",
+        "publisher": "Lifestyle Boardgames / Piatnik",
+        "players": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "publisher_play_duration_minutes": null,
+        "observed_session_time_minutes": null,
+        "organizer_listed_play_duration_minutes": {
+          "min": 20,
+          "max": 20,
+          "source_scope": "award organizer listing; not independently verified publisher duration or observed total time"
+        },
+        "medium": "tabletop",
+        "medium_provenance": {
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "locator": "game speedy-roll-2020 MAGIC action",
+          "source_layer": "analyst_classification_from_existing_physical_game_descriptions",
+          "read_scope": "WoL game description; not publisher component audit"
+        },
+        "format": null,
+        "genres": [],
+        "mechanisms": [
+          "Fixed Turn Order",
+          "Completing Targets",
+          "Dexterity",
+          "Point to point movement",
+          "Output Randomness"
+        ],
+        "collections": [
+          "sdj-2015-2025"
+        ],
+        "collection_scope_note": "Award benchmark supplement; not screened into the original strategy-card-games session-duration corpus.",
+        "awards": [
+          {
+            "category": "Kinderspiel des Jahres",
+            "year": 2020,
+            "status": "winner",
+            "source_url": "https://www.spiel-des-jahres.de/spiele/speedy-roll/",
+            "source_locator": "| Kinderspiel des Jahres | 2020",
+            "accessed_on": "2026-10-03"
+          }
+        ],
+        "external_cover": {
+          "url": null,
+          "source_url": "https://www.spiel-des-jahres.de/spiele/speedy-roll/",
+          "display_allowed": false,
+          "rights_status": "not_verified"
+        },
+        "design_analysis": {
+          "source_layer": "existing_wol_analyst_interpretation",
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "source_locator": "games.js game speedy-roll-2020",
+          "required_action": "กลิ้งลูกบอลเก็บ token และเดินบนเส้นทาง",
+          "design_lesson": "physical interface เป็น input system ที่เด็กเข้าใจทันที และเป็นการสุ่มที่ควบคุมได้บางส่วน.",
+          "table_moment": "Skill Shot",
+          "replay_engine": "Physical rolling and route decisions vary.",
+          "magic": {
+            "mood": "เร็ว ลุ้น สัมผัสสนุก",
+            "action": "กลิ้งลูกบอลเก็บ token และเดินบนเส้นทาง",
+            "goal": "ไปถึงบ้านหรือทำภารกิจให้สำเร็จ",
+            "impediment": "สิ่งที่ติดลูกบอลและเส้นทางที่เลือก",
+            "character": "เม่นรีบกลับบ้าน"
+          },
+          "wizard_hat": {
+            "core": [
+              {
+                "id": 5,
+                "stable_id": "WH-05",
+                "name": "Fixed Turn Order",
+                "category": "Order"
+              },
+              {
+                "id": 12,
+                "stable_id": "WH-12",
+                "name": "Completing Targets",
+                "category": "Ending"
+              }
+            ],
+            "taste": [
+              {
+                "id": 17,
+                "stable_id": "WH-17",
+                "name": "Dexterity",
+                "category": "Touch"
+              },
+              {
+                "id": 19,
+                "stable_id": "WH-19",
+                "name": "Point to point movement",
+                "category": "Touch"
+              },
+              {
+                "id": 45,
+                "stable_id": "WH-45",
+                "name": "Output Randomness",
+                "category": "Twist"
+              }
+            ],
+            "unmapped": [
+              {
+                "name": "Competitive / Co-Operation",
+                "source_category": "Conflict",
+                "source_field": "conflict",
+                "reason": "No exact card in current 50-card workbook; retain as design interpretation, not a fabricated card."
+              },
+              {
+                "name": "Mission Success: Race",
+                "source_category": "Reward",
+                "source_field": "win",
+                "reason": "No exact card in current 50-card workbook; retain as design interpretation, not a fabricated card."
+              }
+            ],
+            "success_condition_text": "Mission Success: Race"
+          }
+        },
+        "transferable_skills": {
+          "skill_map": []
+        },
+        "bgg": null,
+        "sources": [
+          {
+            "url": "https://www.spiel-des-jahres.de/spiele/speedy-roll/",
+            "locator": "#sidebar: publisher; Personen; Dauer",
+            "read_scope": "award page metadata only; rulebook not read"
+          },
+          {
+            "url": "https://www.spiel-des-jahres.de/preiskat/kinderspiel-des-jahres/",
+            "locator": "| Kinderspiel des Jahres | 2020",
+            "read_scope": "winner name/category/year"
+          },
+          {
+            "url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+            "locator": "game speedy-roll-2020",
+            "read_scope": "existing WoL analyst design interpretation; not UNICEF skill assessment"
+          }
+        ]
+      },
+      {
+        "game_id": "micromacro-2021",
+        "name": "MicroMacro: Crime City",
+        "aliases": [],
+        "family_id": "micromacro",
+        "publisher": "Edition Spielwiese / Pegasus Spiele",
+        "players": [
+          1,
+          2,
+          3
+        ],
+        "publisher_play_duration_minutes": null,
+        "observed_session_time_minutes": null,
+        "organizer_listed_play_duration_minutes": {
+          "min": 15,
+          "max": 45,
+          "source_scope": "award organizer listing; not independently verified publisher duration or observed total time"
+        },
+        "medium": "tabletop",
+        "medium_provenance": {
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "locator": "game micromacro-2021 MAGIC action",
+          "source_layer": "analyst_classification_from_existing_physical_game_descriptions",
+          "read_scope": "WoL game description; not publisher component audit"
+        },
+        "format": null,
+        "genres": [],
+        "mechanisms": [
+          "Co-Operation",
+          "Real-Time",
+          "Completing Targets",
+          "Deduction, Hidden Information",
+          "Targeted Clues",
+          "Paper and Pencil",
+          "Role Playing/Storytelling"
+        ],
+        "collections": [
+          "sdj-2015-2025"
+        ],
+        "collection_scope_note": "Award benchmark supplement; not screened into the original strategy-card-games session-duration corpus.",
+        "awards": [
+          {
+            "category": "Spiel des Jahres",
+            "year": 2021,
+            "status": "winner",
+            "source_url": "https://www.spiel-des-jahres.de/spiele/micromacro-crime-city/",
+            "source_locator": "| Spiel des Jahres | 2021",
+            "accessed_on": "2026-10-03"
+          }
+        ],
+        "external_cover": {
+          "url": null,
+          "source_url": "https://www.spiel-des-jahres.de/spiele/micromacro-crime-city/",
+          "display_allowed": false,
+          "rights_status": "not_verified"
+        },
+        "design_analysis": {
+          "source_layer": "existing_wol_analyst_interpretation",
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "source_locator": "games.js game micromacro-2021",
+          "required_action": "สแกนแผนที่ หา timeline และตอบคำถามคดี",
+          "design_lesson": "component เดียวเป็นทั้ง board, story, timeline และ puzzle space ผู้เล่นไขคดีจากการสังเกตจริง.",
+          "table_moment": "Aha",
+          "replay_engine": "Case-based observation puzzles.",
+          "magic": {
+            "mood": "อยากรู้อยากเห็น สืบสวน เพลิน",
+            "action": "สแกนแผนที่ หา timeline และตอบคำถามคดี",
+            "goal": "ไขคดีให้ถูก",
+            "impediment": "รายละเอียดเยอะและเหตุการณ์ซ่อนในภาพ",
+            "character": "นักสืบบนแผนที่เมือง"
+          },
+          "wizard_hat": {
+            "core": [
+              {
+                "id": 2,
+                "stable_id": "WH-02",
+                "name": "Co-Operation",
+                "category": "Conflict"
+              },
+              {
+                "id": 7,
+                "stable_id": "WH-07",
+                "name": "Real-Time",
+                "category": "Order"
+              },
+              {
+                "id": 12,
+                "stable_id": "WH-12",
+                "name": "Completing Targets",
+                "category": "Ending"
+              }
+            ],
+            "taste": [
+              {
+                "id": 42,
+                "stable_id": "WH-42",
+                "name": "Deduction, Hidden Information",
+                "category": "Twist"
+              },
+              {
+                "id": 27,
+                "stable_id": "WH-27",
+                "name": "Targeted Clues",
+                "category": "Engage"
+              },
+              {
+                "id": 18,
+                "stable_id": "WH-18",
+                "name": "Paper and Pencil",
+                "category": "Touch"
+              },
+              {
+                "id": 25,
+                "stable_id": "WH-25",
+                "name": "Role Playing/Storytelling",
+                "category": "Engage"
+              }
+            ],
+            "unmapped": [
+              {
+                "name": "Mission Success: Objective Completion",
+                "source_category": "Reward",
+                "source_field": "win",
+                "reason": "No exact card in current 50-card workbook; retain as design interpretation, not a fabricated card."
+              }
+            ],
+            "success_condition_text": "Mission Success: Objective Completion"
+          }
+        },
+        "transferable_skills": {
+          "skill_map": []
+        },
+        "bgg": null,
+        "sources": [
+          {
+            "url": "https://www.spiel-des-jahres.de/spiele/micromacro-crime-city/",
+            "locator": "#sidebar: publisher; Personen; Dauer",
+            "read_scope": "award page metadata only; rulebook not read"
+          },
+          {
+            "url": "https://www.spiel-des-jahres.de/preiskat/spiel-des-jahres/",
+            "locator": "| Spiel des Jahres | 2021",
+            "read_scope": "winner name/category/year"
+          },
+          {
+            "url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+            "locator": "game micromacro-2021",
+            "read_scope": "existing WoL analyst design interpretation; not UNICEF skill assessment"
+          }
+        ]
+      },
+      {
+        "game_id": "paleo-2021",
+        "name": "Paleo",
+        "aliases": [],
+        "family_id": "paleo",
+        "publisher": "Hans im Glück",
+        "players": [
+          2,
+          3,
+          4
+        ],
+        "publisher_play_duration_minutes": null,
+        "observed_session_time_minutes": null,
+        "organizer_listed_play_duration_minutes": {
+          "min": 45,
+          "max": 60,
+          "source_scope": "award organizer listing; not independently verified publisher duration or observed total time"
+        },
+        "medium": "tabletop",
+        "medium_provenance": {
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "locator": "game paleo-2021 MAGIC action",
+          "source_layer": "analyst_classification_from_existing_physical_game_descriptions",
+          "read_scope": "WoL game description; not publisher component audit"
+        },
+        "format": null,
+        "genres": [],
+        "mechanisms": [
+          "Co-Operation",
+          "Simultaneous Action Selection",
+          "Fixed Number of Events",
+          "Hand Management, Command",
+          "Deduction, Hidden Information",
+          "Event"
+        ],
+        "collections": [
+          "sdj-2015-2025"
+        ],
+        "collection_scope_note": "Award benchmark supplement; not screened into the original strategy-card-games session-duration corpus.",
+        "awards": [
+          {
+            "category": "Kennerspiel des Jahres",
+            "year": 2021,
+            "status": "winner",
+            "source_url": "https://www.spiel-des-jahres.de/spiele/paleo/",
+            "source_locator": "| Kennerspiel des Jahres | 2021",
+            "accessed_on": "2026-10-03"
+          }
+        ],
+        "external_cover": {
+          "url": null,
+          "source_url": "https://www.spiel-des-jahres.de/spiele/paleo/",
+          "display_allowed": false,
+          "rights_status": "not_verified"
+        },
+        "design_analysis": {
+          "source_layer": "existing_wol_analyst_interpretation",
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "source_locator": "games.js game paleo-2021",
+          "required_action": "เลือกการ์ดสำรวจ จัดคน และรับมือเหตุการณ์",
+          "design_lesson": "ข้อมูลไม่สมบูรณ์ทำให้ action selection รู้สึกเหมือนสำรวจโลกไม่รู้จักจริงๆ.",
+          "table_moment": "Hard Trade-off",
+          "replay_engine": "Modules and hidden card outcomes change survival pressure.",
+          "magic": {
+            "mood": "เอาตัวรอด ตึง ร่วมชะตา",
+            "action": "เลือกการ์ดสำรวจ จัดคน และรับมือเหตุการณ์",
+            "goal": "ทำภารกิจชนเผ่าให้สำเร็จก่อนสะสมความล้มเหลว",
+            "impediment": "ข้อมูลหน้าการ์ดจำกัดและทรัพยากรขาดแคลน",
+            "character": "ชนเผ่ามนุษย์ยุคหิน"
+          },
+          "wizard_hat": {
+            "core": [
+              {
+                "id": 2,
+                "stable_id": "WH-02",
+                "name": "Co-Operation",
+                "category": "Conflict"
+              },
+              {
+                "id": 6,
+                "stable_id": "WH-06",
+                "name": "Simultaneous Action Selection",
+                "category": "Order"
+              },
+              {
+                "id": 13,
+                "stable_id": "WH-13",
+                "name": "Fixed Number of Events",
+                "category": "Ending"
+              }
+            ],
+            "taste": [
+              {
+                "id": 22,
+                "stable_id": "WH-22",
+                "name": "Hand Management, Command",
+                "category": "Strategy"
+              },
+              {
+                "id": 42,
+                "stable_id": "WH-42",
+                "name": "Deduction, Hidden Information",
+                "category": "Twist"
+              },
+              {
+                "id": 46,
+                "stable_id": "WH-46",
+                "name": "Event",
+                "category": "Twist"
+              }
+            ],
+            "unmapped": [
+              {
+                "name": "Survival / Mission Success",
+                "source_category": "Reward",
+                "source_field": "win",
+                "reason": "No exact card in current 50-card workbook; retain as design interpretation, not a fabricated card."
+              }
+            ],
+            "success_condition_text": "Survival / Mission Success"
+          }
+        },
+        "transferable_skills": {
+          "skill_map": []
+        },
+        "bgg": null,
+        "sources": [
+          {
+            "url": "https://www.spiel-des-jahres.de/spiele/paleo/",
+            "locator": "#sidebar: publisher; Personen; Dauer",
+            "read_scope": "award page metadata only; rulebook not read"
+          },
+          {
+            "url": "https://www.spiel-des-jahres.de/preiskat/kennerspiel-des-jahres/",
+            "locator": "| Kennerspiel des Jahres | 2021",
+            "read_scope": "winner name/category/year"
+          },
+          {
+            "url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+            "locator": "game paleo-2021",
+            "read_scope": "existing WoL analyst design interpretation; not UNICEF skill assessment"
+          }
+        ]
+      },
+      {
+        "game_id": "dragomino-2021",
+        "name": "Dragomino",
+        "aliases": [],
+        "family_id": "dragomino",
+        "publisher": "Pegasus Spiele",
+        "players": [
+          2,
+          3,
+          4
+        ],
+        "publisher_play_duration_minutes": null,
+        "observed_session_time_minutes": null,
+        "organizer_listed_play_duration_minutes": {
+          "min": 15,
+          "max": 15,
+          "source_scope": "award organizer listing; not independently verified publisher duration or observed total time"
+        },
+        "medium": "tabletop",
+        "medium_provenance": {
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "locator": "game dragomino-2021 MAGIC action",
+          "source_layer": "analyst_classification_from_existing_physical_game_descriptions",
+          "read_scope": "WoL game description; not publisher component audit"
+        },
+        "format": null,
+        "genres": [],
+        "mechanisms": [
+          "Competitive",
+          "Fixed Turn Order",
+          "Victory Points",
+          "Exhausting Resources",
+          "Tile Laying, Pattern Building, Jigsaw",
+          "Drafting, Action Selection",
+          "Output Randomness"
+        ],
+        "collections": [
+          "sdj-2015-2025"
+        ],
+        "collection_scope_note": "Award benchmark supplement; not screened into the original strategy-card-games session-duration corpus.",
+        "awards": [
+          {
+            "category": "Kinderspiel des Jahres",
+            "year": 2021,
+            "status": "winner",
+            "source_url": "https://www.spiel-des-jahres.de/spiele/dragomino/",
+            "source_locator": "| Kinderspiel des Jahres | 2021",
+            "accessed_on": "2026-10-03"
+          }
+        ],
+        "external_cover": {
+          "url": null,
+          "source_url": "https://www.spiel-des-jahres.de/spiele/dragomino/",
+          "display_allowed": false,
+          "rights_status": "not_verified"
+        },
+        "design_analysis": {
+          "source_layer": "existing_wol_analyst_interpretation",
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "source_locator": "games.js game dragomino-2021",
+          "required_action": "ต่อ domino landscape แล้วเปิดไข่มังกร",
+          "design_lesson": "เด็กเลือก tile, ต่อ pattern และรับ feedback ทันทีผ่านไข่มังกร เป็น family strategy ที่ย่อได้ดี.",
+          "table_moment": "Beautiful Build",
+          "replay_engine": "Tile draw and egg reveals vary.",
+          "magic": {
+            "mood": "น่ารัก ค้นพบ ภูมิใจ",
+            "action": "ต่อ domino landscape แล้วเปิดไข่มังกร",
+            "goal": "เก็บลูกมังกรให้มาก",
+            "impediment": "tile choice และโชคจากไข่",
+            "character": "นักสำรวจเกาะมังกร"
+          },
+          "wizard_hat": {
+            "core": [
+              {
+                "id": 1,
+                "stable_id": "WH-01",
+                "name": "Competitive",
+                "category": "Conflict"
+              },
+              {
+                "id": 5,
+                "stable_id": "WH-05",
+                "name": "Fixed Turn Order",
+                "category": "Order"
+              },
+              {
+                "id": 16,
+                "stable_id": "WH-16",
+                "name": "Victory Points",
+                "category": "Reward"
+              },
+              {
+                "id": 10,
+                "stable_id": "WH-10",
+                "name": "Exhausting Resources",
+                "category": "Ending"
+              }
+            ],
+            "taste": [
+              {
+                "id": 21,
+                "stable_id": "WH-21",
+                "name": "Tile Laying, Pattern Building, Jigsaw",
+                "category": "Touch"
+              },
+              {
+                "id": 31,
+                "stable_id": "WH-31",
+                "name": "Drafting, Action Selection",
+                "category": "Strategy"
+              },
+              {
+                "id": 45,
+                "stable_id": "WH-45",
+                "name": "Output Randomness",
+                "category": "Twist"
+              }
+            ],
+            "unmapped": [],
+            "success_condition_text": "Victory Points"
+          }
+        },
+        "transferable_skills": {
+          "skill_map": []
+        },
+        "bgg": null,
+        "sources": [
+          {
+            "url": "https://www.spiel-des-jahres.de/spiele/dragomino/",
+            "locator": "#sidebar: publisher; Personen; Dauer",
+            "read_scope": "award page metadata only; rulebook not read"
+          },
+          {
+            "url": "https://www.spiel-des-jahres.de/preiskat/kinderspiel-des-jahres/",
+            "locator": "| Kinderspiel des Jahres | 2021",
+            "read_scope": "winner name/category/year"
+          },
+          {
+            "url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+            "locator": "game dragomino-2021",
+            "read_scope": "existing WoL analyst design interpretation; not UNICEF skill assessment"
+          }
+        ]
+      },
+      {
+        "game_id": "cascadia-2022",
+        "name": "Cascadia",
+        "aliases": [],
+        "family_id": "cascadia",
+        "publisher": "Flatout Games / AEG / Kosmos",
+        "players": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "publisher_play_duration_minutes": null,
+        "observed_session_time_minutes": null,
+        "organizer_listed_play_duration_minutes": {
+          "min": 30,
+          "max": 60,
+          "source_scope": "award organizer listing; not independently verified publisher duration or observed total time"
+        },
+        "medium": "tabletop",
+        "medium_provenance": {
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "locator": "game cascadia-2022 MAGIC action",
+          "source_layer": "analyst_classification_from_existing_physical_game_descriptions",
+          "read_scope": "WoL game description; not publisher component audit"
+        },
+        "format": null,
+        "genres": [],
+        "mechanisms": [
+          "Competitive",
+          "Fixed Turn Order",
+          "Victory Points",
+          "Exhausting Resources",
+          "Tile Laying, Pattern Building, Jigsaw",
+          "Drafting, Action Selection",
+          "Set Collection",
+          "Variable Setup, Variable Player Powers"
+        ],
+        "collections": [
+          "sdj-2015-2025"
+        ],
+        "collection_scope_note": "Award benchmark supplement; not screened into the original strategy-card-games session-duration corpus.",
+        "awards": [
+          {
+            "category": "Spiel des Jahres",
+            "year": 2022,
+            "status": "winner",
+            "source_url": "https://www.spiel-des-jahres.de/spiele/cascadia/",
+            "source_locator": "| Spiel des Jahres | 2022",
+            "accessed_on": "2026-10-03"
+          }
+        ],
+        "external_cover": {
+          "url": null,
+          "source_url": "https://www.spiel-des-jahres.de/spiele/cascadia/",
+          "display_allowed": false,
+          "rights_status": "not_verified"
+        },
+        "design_analysis": {
+          "source_layer": "existing_wol_analyst_interpretation",
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "source_locator": "games.js game cascadia-2022",
+          "required_action": "draft tile+wildlife token และสร้าง habitat",
+          "design_lesson": "puzzle สองชั้นอ่านง่ายแต่มี depth และ replay จาก scoring cards เหมาะกับ strategy ที่ไม่กดดัน.",
+          "table_moment": "Beautiful Build",
+          "replay_engine": "Variable wildlife scoring and tile-token pairings.",
+          "magic": {
+            "mood": "สงบ คิดเพลิน จัดสมดุล",
+            "action": "draft tile+wildlife token และสร้าง habitat",
+            "goal": "ทำคะแนนจากภูมิประเทศและสัตว์",
+            "impediment": "pairing ระหว่าง tile กับ token จำกัดการเลือก",
+            "character": "ผู้ออกแบบระบบนิเวศ"
+          },
+          "wizard_hat": {
+            "core": [
+              {
+                "id": 1,
+                "stable_id": "WH-01",
+                "name": "Competitive",
+                "category": "Conflict"
+              },
+              {
+                "id": 5,
+                "stable_id": "WH-05",
+                "name": "Fixed Turn Order",
+                "category": "Order"
+              },
+              {
+                "id": 16,
+                "stable_id": "WH-16",
+                "name": "Victory Points",
+                "category": "Reward"
+              },
+              {
+                "id": 10,
+                "stable_id": "WH-10",
+                "name": "Exhausting Resources",
+                "category": "Ending"
+              }
+            ],
+            "taste": [
+              {
+                "id": 21,
+                "stable_id": "WH-21",
+                "name": "Tile Laying, Pattern Building, Jigsaw",
+                "category": "Touch"
+              },
+              {
+                "id": 31,
+                "stable_id": "WH-31",
+                "name": "Drafting, Action Selection",
+                "category": "Strategy"
+              },
+              {
+                "id": 40,
+                "stable_id": "WH-40",
+                "name": "Set Collection",
+                "category": "Asset"
+              },
+              {
+                "id": 49,
+                "stable_id": "WH-49",
+                "name": "Variable Setup, Variable Player Powers",
+                "category": "Asset"
+              }
+            ],
+            "unmapped": [],
+            "success_condition_text": "Victory Points"
+          }
+        },
+        "transferable_skills": {
+          "skill_map": []
+        },
+        "bgg": null,
+        "sources": [
+          {
+            "url": "https://www.spiel-des-jahres.de/spiele/cascadia/",
+            "locator": "#sidebar: publisher; Personen; Dauer",
+            "read_scope": "award page metadata only; rulebook not read"
+          },
+          {
+            "url": "https://www.spiel-des-jahres.de/preiskat/spiel-des-jahres/",
+            "locator": "| Spiel des Jahres | 2022",
+            "read_scope": "winner name/category/year"
+          },
+          {
+            "url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+            "locator": "game cascadia-2022",
+            "read_scope": "existing WoL analyst design interpretation; not UNICEF skill assessment"
+          }
+        ]
+      },
+      {
+        "game_id": "living-forest-2022",
+        "name": "Living Forest",
+        "aliases": [],
+        "family_id": "living-forest",
+        "publisher": "Pegasus Spiele",
+        "players": [
+          2,
+          3,
+          4
+        ],
+        "publisher_play_duration_minutes": null,
+        "observed_session_time_minutes": null,
+        "organizer_listed_play_duration_minutes": {
+          "min": 30,
+          "max": 60,
+          "source_scope": "award organizer listing; not independently verified publisher duration or observed total time"
+        },
+        "medium": "tabletop",
+        "medium_provenance": {
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "locator": "game living-forest-2022 MAGIC action",
+          "source_layer": "analyst_classification_from_existing_physical_game_descriptions",
+          "read_scope": "WoL game description; not publisher component audit"
+        },
+        "format": null,
+        "genres": [],
+        "mechanisms": [
+          "Competitive",
+          "Fixed Turn Order",
+          "Completing Targets",
+          "Push your luck",
+          "Deck Building, Bag Building, Upgrade",
+          "Point to point movement"
+        ],
+        "collections": [
+          "sdj-2015-2025"
+        ],
+        "collection_scope_note": "Award benchmark supplement; not screened into the original strategy-card-games session-duration corpus.",
+        "awards": [
+          {
+            "category": "Kennerspiel des Jahres",
+            "year": 2022,
+            "status": "winner",
+            "source_url": "https://www.spiel-des-jahres.de/spiele/living-forest/",
+            "source_locator": "| Kennerspiel des Jahres | 2022",
+            "accessed_on": "2026-10-03"
+          }
+        ],
+        "external_cover": {
+          "url": null,
+          "source_url": "https://www.spiel-des-jahres.de/spiele/living-forest/",
+          "display_allowed": false,
+          "rights_status": "not_verified"
+        },
+        "design_analysis": {
+          "source_layer": "existing_wol_analyst_interpretation",
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "source_locator": "games.js game living-forest-2022",
+          "required_action": "เปิดการ์ด spirit, เลือก action, ดับไฟ/ปลูกต้นไม้/เดิน",
+          "design_lesson": "หลายเส้นทางชนะให้ผู้เล่นเลือก identity เชิงกลยุทธ์เอง แต่ยังรู้สึกอยู่ในภัยเดียวกัน.",
+          "table_moment": "Almost Failed",
+          "replay_engine": "Multiple victory paths and deck growth.",
+          "magic": {
+            "mood": "เร่ง ร่วมภัย แข่งกันกอบกู้",
+            "action": "เปิดการ์ด spirit, เลือก action, ดับไฟ/ปลูกต้นไม้/เดิน",
+            "goal": "บรรลุหนึ่งในสามเงื่อนไขชนะก่อน",
+            "impediment": "ไฟกลางและความเสี่ยงจากการเปิดการ์ด",
+            "character": "ผู้พิทักษ์ป่า"
+          },
+          "wizard_hat": {
+            "core": [
+              {
+                "id": 1,
+                "stable_id": "WH-01",
+                "name": "Competitive",
+                "category": "Conflict"
+              },
+              {
+                "id": 5,
+                "stable_id": "WH-05",
+                "name": "Fixed Turn Order",
+                "category": "Order"
+              },
+              {
+                "id": 12,
+                "stable_id": "WH-12",
+                "name": "Completing Targets",
+                "category": "Ending"
+              }
+            ],
+            "taste": [
+              {
+                "id": 47,
+                "stable_id": "WH-47",
+                "name": "Push your luck",
+                "category": "Twist"
+              },
+              {
+                "id": 33,
+                "stable_id": "WH-33",
+                "name": "Deck Building, Bag Building, Upgrade",
+                "category": "Strategy"
+              },
+              {
+                "id": 19,
+                "stable_id": "WH-19",
+                "name": "Point to point movement",
+                "category": "Touch"
+              }
+            ],
+            "unmapped": [
+              {
+                "name": "Mission Success: Race",
+                "source_category": "Reward",
+                "source_field": "win",
+                "reason": "No exact card in current 50-card workbook; retain as design interpretation, not a fabricated card."
+              }
+            ],
+            "success_condition_text": "Mission Success: Race"
+          }
+        },
+        "transferable_skills": {
+          "skill_map": []
+        },
+        "bgg": null,
+        "sources": [
+          {
+            "url": "https://www.spiel-des-jahres.de/spiele/living-forest/",
+            "locator": "#sidebar: publisher; Personen; Dauer",
+            "read_scope": "award page metadata only; rulebook not read"
+          },
+          {
+            "url": "https://www.spiel-des-jahres.de/preiskat/kennerspiel-des-jahres/",
+            "locator": "| Kennerspiel des Jahres | 2022",
+            "read_scope": "winner name/category/year"
+          },
+          {
+            "url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+            "locator": "game living-forest-2022",
+            "read_scope": "existing WoL analyst design interpretation; not UNICEF skill assessment"
+          }
+        ]
+      },
+      {
+        "game_id": "zauberberg-2022",
+        "name": "Zauberberg",
+        "aliases": [],
+        "family_id": "zauberberg",
+        "publisher": "Amigo",
+        "players": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "publisher_play_duration_minutes": null,
+        "observed_session_time_minutes": null,
+        "organizer_listed_play_duration_minutes": {
+          "min": 15,
+          "max": 15,
+          "source_scope": "award organizer listing; not independently verified publisher duration or observed total time"
+        },
+        "medium": "tabletop",
+        "medium_provenance": {
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "locator": "game zauberberg-2022 MAGIC action",
+          "source_layer": "analyst_classification_from_existing_physical_game_descriptions",
+          "read_scope": "WoL game description; not publisher component audit"
+        },
+        "format": null,
+        "genres": [],
+        "mechanisms": [
+          "Co-Operation",
+          "Fixed Turn Order",
+          "Completing Targets",
+          "Dexterity",
+          "Point to point movement",
+          "Output Randomness"
+        ],
+        "collections": [
+          "sdj-2015-2025"
+        ],
+        "collection_scope_note": "Award benchmark supplement; not screened into the original strategy-card-games session-duration corpus.",
+        "awards": [
+          {
+            "category": "Kinderspiel des Jahres",
+            "year": 2022,
+            "status": "winner",
+            "source_url": "https://www.spiel-des-jahres.de/spiele/zauberberg/",
+            "source_locator": "| Kinderspiel des Jahres | 2022",
+            "accessed_on": "2026-10-03"
+          }
+        ],
+        "external_cover": {
+          "url": null,
+          "source_url": "https://www.spiel-des-jahres.de/spiele/zauberberg/",
+          "display_allowed": false,
+          "rights_status": "not_verified"
+        },
+        "design_analysis": {
+          "source_layer": "existing_wol_analyst_interpretation",
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "source_locator": "games.js game zauberberg-2022",
+          "required_action": "ปล่อยลูกแก้วให้พาตัวละครลงเขา",
+          "design_lesson": "marble run เป็น decision system ที่เด็กเห็นผลของแรงและเส้นทางทันที.",
+          "table_moment": "Material Surprise",
+          "replay_engine": "Marble paths create changing outcomes.",
+          "magic": {
+            "mood": "ลุ้น ช่วยกัน เวทมนตร์",
+            "action": "ปล่อยลูกแก้วให้พาตัวละครลงเขา",
+            "goal": "พานักเรียนถึงปลายทางก่อนแม่มด",
+            "impediment": "เส้นทางลูกแก้วคาดเดาได้ไม่หมด",
+            "character": "นักเรียนเวทมนตร์หนีลงภูเขา"
+          },
+          "wizard_hat": {
+            "core": [
+              {
+                "id": 2,
+                "stable_id": "WH-02",
+                "name": "Co-Operation",
+                "category": "Conflict"
+              },
+              {
+                "id": 5,
+                "stable_id": "WH-05",
+                "name": "Fixed Turn Order",
+                "category": "Order"
+              },
+              {
+                "id": 12,
+                "stable_id": "WH-12",
+                "name": "Completing Targets",
+                "category": "Ending"
+              }
+            ],
+            "taste": [
+              {
+                "id": 17,
+                "stable_id": "WH-17",
+                "name": "Dexterity",
+                "category": "Touch"
+              },
+              {
+                "id": 19,
+                "stable_id": "WH-19",
+                "name": "Point to point movement",
+                "category": "Touch"
+              },
+              {
+                "id": 45,
+                "stable_id": "WH-45",
+                "name": "Output Randomness",
+                "category": "Twist"
+              }
+            ],
+            "unmapped": [
+              {
+                "name": "Mission Success: Race",
+                "source_category": "Reward",
+                "source_field": "win",
+                "reason": "No exact card in current 50-card workbook; retain as design interpretation, not a fabricated card."
+              }
+            ],
+            "success_condition_text": "Mission Success: Race"
+          }
+        },
+        "transferable_skills": {
+          "skill_map": []
+        },
+        "bgg": null,
+        "sources": [
+          {
+            "url": "https://www.spiel-des-jahres.de/spiele/zauberberg/",
+            "locator": "#sidebar: publisher; Personen; Dauer",
+            "read_scope": "award page metadata only; rulebook not read"
+          },
+          {
+            "url": "https://www.spiel-des-jahres.de/preiskat/kinderspiel-des-jahres/",
+            "locator": "| Kinderspiel des Jahres | 2022",
+            "read_scope": "winner name/category/year"
+          },
+          {
+            "url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+            "locator": "game zauberberg-2022",
+            "read_scope": "existing WoL analyst design interpretation; not UNICEF skill assessment"
+          }
+        ]
+      },
+      {
+        "game_id": "dorfromantik-2023",
+        "name": "Dorfromantik",
+        "aliases": [
+          "Dorfromantik: Das Brettspiel",
+          "Dorfromantik: The Board Game"
+        ],
+        "family_id": "dorfromantik",
+        "publisher": "Pegasus Spiele",
+        "players": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "publisher_play_duration_minutes": null,
+        "observed_session_time_minutes": null,
+        "organizer_listed_play_duration_minutes": {
+          "min": 30,
+          "max": 60,
+          "source_scope": "award organizer listing; not independently verified publisher duration or observed total time"
+        },
+        "medium": "tabletop",
+        "medium_provenance": {
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "locator": "game dorfromantik-2023 MAGIC action",
+          "source_layer": "analyst_classification_from_existing_physical_game_descriptions",
+          "read_scope": "WoL game description; not publisher component audit"
+        },
+        "format": null,
+        "genres": [],
+        "mechanisms": [
+          "Co-Operation",
+          "Fixed Turn Order",
+          "Exhausting Resources",
+          "Tile Laying, Pattern Building, Jigsaw",
+          "Claim Objectives, Contracts",
+          "Rule Changing"
+        ],
+        "collections": [
+          "sdj-2015-2025"
+        ],
+        "collection_scope_note": "Award benchmark supplement; not screened into the original strategy-card-games session-duration corpus.",
+        "awards": [
+          {
+            "category": "Spiel des Jahres",
+            "year": 2023,
+            "status": "winner",
+            "source_url": "https://www.spiel-des-jahres.de/spiele/dorfromantik-das-brettspiel/",
+            "source_locator": "| Spiel des Jahres | 2023",
+            "accessed_on": "2026-10-03"
+          }
+        ],
+        "external_cover": {
+          "url": null,
+          "source_url": "https://www.spiel-des-jahres.de/spiele/dorfromantik-das-brettspiel/",
+          "display_allowed": false,
+          "rights_status": "not_verified"
+        },
+        "design_analysis": {
+          "source_layer": "existing_wol_analyst_interpretation",
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "source_locator": "games.js game dorfromantik-2023",
+          "required_action": "วาง tile และทำ task ให้สำเร็จ",
+          "design_lesson": "ไม่มีความรู้สึกแพ้รุนแรง แต่ campaign unlock ทำให้ family game มี long-tail replay.",
+          "table_moment": "Beautiful Build",
+          "replay_engine": "Campaign unlocks and task variety.",
+          "magic": {
+            "mood": "สงบ อบอุ่น อยากทำให้ดีขึ้น",
+            "action": "วาง tile และทำ task ให้สำเร็จ",
+            "goal": "สร้างภูมิทัศน์สวยและคะแนนสูงขึ้นเรื่อยๆ",
+            "impediment": "tile draw, task constraints, unlock ใหม่",
+            "character": "ทีมสร้างหมู่บ้านและภูมิทัศน์"
+          },
+          "wizard_hat": {
+            "core": [
+              {
+                "id": 2,
+                "stable_id": "WH-02",
+                "name": "Co-Operation",
+                "category": "Conflict"
+              },
+              {
+                "id": 5,
+                "stable_id": "WH-05",
+                "name": "Fixed Turn Order",
+                "category": "Order"
+              },
+              {
+                "id": 10,
+                "stable_id": "WH-10",
+                "name": "Exhausting Resources",
+                "category": "Ending"
+              }
+            ],
+            "taste": [
+              {
+                "id": 21,
+                "stable_id": "WH-21",
+                "name": "Tile Laying, Pattern Building, Jigsaw",
+                "category": "Touch"
+              },
+              {
+                "id": 39,
+                "stable_id": "WH-39",
+                "name": "Claim Objectives, Contracts",
+                "category": "Strategy"
+              },
+              {
+                "id": 50,
+                "stable_id": "WH-50",
+                "name": "Rule Changing",
+                "category": "Twist"
+              }
+            ],
+            "unmapped": [
+              {
+                "name": "Mission Success: Shared Score",
+                "source_category": "Reward",
+                "source_field": "win",
+                "reason": "No exact card in current 50-card workbook; retain as design interpretation, not a fabricated card."
+              }
+            ],
+            "success_condition_text": "Mission Success: Shared Score"
+          }
+        },
+        "transferable_skills": {
+          "skill_map": []
+        },
+        "bgg": null,
+        "sources": [
+          {
+            "url": "https://www.spiel-des-jahres.de/spiele/dorfromantik-das-brettspiel/",
+            "locator": "#sidebar: publisher; Personen; Dauer",
+            "read_scope": "award page metadata only; rulebook not read"
+          },
+          {
+            "url": "https://www.spiel-des-jahres.de/preiskat/spiel-des-jahres/",
+            "locator": "| Spiel des Jahres | 2023",
+            "read_scope": "winner name/category/year"
+          },
+          {
+            "url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+            "locator": "game dorfromantik-2023",
+            "read_scope": "existing WoL analyst design interpretation; not UNICEF skill assessment"
+          }
+        ]
+      },
+      {
+        "game_id": "challengers-2023",
+        "name": "Challengers!",
+        "aliases": [],
+        "family_id": "challengers",
+        "publisher": "1 More Time Games / Z-Man Games",
+        "players": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "publisher_play_duration_minutes": null,
+        "observed_session_time_minutes": null,
+        "organizer_listed_play_duration_minutes": {
+          "min": 45,
+          "max": 45,
+          "source_scope": "award organizer listing; not independently verified publisher duration or observed total time"
+        },
+        "medium": "tabletop",
+        "medium_provenance": {
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "locator": "game challengers-2023 MAGIC action",
+          "source_layer": "analyst_classification_from_existing_physical_game_descriptions",
+          "read_scope": "WoL game description; not publisher component audit"
+        },
+        "format": null,
+        "genres": [],
+        "mechanisms": [
+          "Competitive",
+          "Simultaneous Action Selection",
+          "Victory Points",
+          "Fixed Number of Events",
+          "Deck Building, Bag Building, Upgrade",
+          "Hand Management, Command",
+          "Variable Setup, Variable Player Powers"
+        ],
+        "collections": [
+          "sdj-2015-2025"
+        ],
+        "collection_scope_note": "Award benchmark supplement; not screened into the original strategy-card-games session-duration corpus.",
+        "awards": [
+          {
+            "category": "Kennerspiel des Jahres",
+            "year": 2023,
+            "status": "winner",
+            "source_url": "https://www.spiel-des-jahres.de/spiele/challengers/",
+            "source_locator": "| Kennerspiel des Jahres | 2023",
+            "accessed_on": "2026-10-03"
+          }
+        ],
+        "external_cover": {
+          "url": null,
+          "source_url": "https://www.spiel-des-jahres.de/spiele/challengers/",
+          "display_allowed": false,
+          "rights_status": "not_verified"
+        },
+        "design_analysis": {
+          "source_layer": "existing_wol_analyst_interpretation",
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "source_locator": "games.js game challengers-2023",
+          "required_action": "draft deck แล้ว duel อัตโนมัติหลายโต๊ะ",
+          "design_lesson": "ทำ deck construction ให้เป็น party-scale tournament และลด downtime ด้วย simultaneous matches.",
+          "table_moment": "Social Laugh",
+          "replay_engine": "Deck construction and tournament pairings.",
+          "magic": {
+            "mood": "คึกคัก tournament สนุกแบบงานแข่ง",
+            "action": "draft deck แล้ว duel อัตโนมัติหลายโต๊ะ",
+            "goal": "เก็บ trophies/fans เพื่อเข้ารอบชิง",
+            "impediment": "deck ที่เราสร้างอาจทำงานผิดจังหวะ",
+            "character": "ผู้จัดทีมลงทัวร์นาเมนต์"
+          },
+          "wizard_hat": {
+            "core": [
+              {
+                "id": 1,
+                "stable_id": "WH-01",
+                "name": "Competitive",
+                "category": "Conflict"
+              },
+              {
+                "id": 6,
+                "stable_id": "WH-06",
+                "name": "Simultaneous Action Selection",
+                "category": "Order"
+              },
+              {
+                "id": 16,
+                "stable_id": "WH-16",
+                "name": "Victory Points",
+                "category": "Reward"
+              },
+              {
+                "id": 13,
+                "stable_id": "WH-13",
+                "name": "Fixed Number of Events",
+                "category": "Ending"
+              }
+            ],
+            "taste": [
+              {
+                "id": 33,
+                "stable_id": "WH-33",
+                "name": "Deck Building, Bag Building, Upgrade",
+                "category": "Strategy"
+              },
+              {
+                "id": 22,
+                "stable_id": "WH-22",
+                "name": "Hand Management, Command",
+                "category": "Strategy"
+              },
+              {
+                "id": 49,
+                "stable_id": "WH-49",
+                "name": "Variable Setup, Variable Player Powers",
+                "category": "Asset"
+              }
+            ],
+            "unmapped": [],
+            "success_condition_text": "Victory Points"
+          }
+        },
+        "transferable_skills": {
+          "skill_map": []
+        },
+        "bgg": null,
+        "sources": [
+          {
+            "url": "https://www.spiel-des-jahres.de/spiele/challengers/",
+            "locator": "#sidebar: publisher; Personen; Dauer",
+            "read_scope": "award page metadata only; rulebook not read"
+          },
+          {
+            "url": "https://www.spiel-des-jahres.de/preiskat/kennerspiel-des-jahres/",
+            "locator": "| Kennerspiel des Jahres | 2023",
+            "read_scope": "winner name/category/year"
+          },
+          {
+            "url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+            "locator": "game challengers-2023",
+            "read_scope": "existing WoL analyst design interpretation; not UNICEF skill assessment"
+          }
+        ]
+      },
+      {
+        "game_id": "mysterium-kids-2023",
+        "name": "Mysterium Kids",
+        "aliases": [],
+        "family_id": "mysterium-kids",
+        "publisher": "Libellud / Space Cow",
+        "players": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "publisher_play_duration_minutes": null,
+        "observed_session_time_minutes": null,
+        "organizer_listed_play_duration_minutes": {
+          "min": 20,
+          "max": 20,
+          "source_scope": "award organizer listing; not independently verified publisher duration or observed total time"
+        },
+        "medium": "tabletop",
+        "medium_provenance": {
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "locator": "game mysterium-kids-2023 MAGIC action",
+          "source_layer": "analyst_classification_from_existing_physical_game_descriptions",
+          "read_scope": "WoL game description; not publisher component audit"
+        },
+        "format": null,
+        "genres": [],
+        "mechanisms": [
+          "Co-Operation",
+          "Fixed Turn Order",
+          "Fixed Number of Events",
+          "Targeted Clues",
+          "Communication Limits",
+          "Dexterity"
+        ],
+        "collections": [
+          "sdj-2015-2025"
+        ],
+        "collection_scope_note": "Award benchmark supplement; not screened into the original strategy-card-games session-duration corpus.",
+        "awards": [
+          {
+            "category": "Kinderspiel des Jahres",
+            "year": 2023,
+            "status": "winner",
+            "source_url": "https://www.spiel-des-jahres.de/spiele/mysterium-kids/",
+            "source_locator": "| Kinderspiel des Jahres | 2023",
+            "accessed_on": "2026-10-03"
+          }
+        ],
+        "external_cover": {
+          "url": null,
+          "source_url": "https://www.spiel-des-jahres.de/spiele/mysterium-kids/",
+          "display_allowed": false,
+          "rights_status": "not_verified"
+        },
+        "design_analysis": {
+          "source_layer": "existing_wol_analyst_interpretation",
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "source_locator": "games.js game mysterium-kids-2023",
+          "required_action": "ทำเสียงเพื่อใบ้วัตถุให้คนอื่นเดา",
+          "design_lesson": "เสียงกลายเป็น material ของเกม เด็กฝึก communication และ listening โดยไม่ต้องอ่านเยอะ.",
+          "table_moment": "Social Laugh",
+          "replay_engine": "Sound interpretation changes with players.",
+          "magic": {
+            "mood": "ลึกลับ ขำ ฟังอย่างตั้งใจ",
+            "action": "ทำเสียงเพื่อใบ้วัตถุให้คนอื่นเดา",
+            "goal": "เดาคำใบ้เสียงให้สำเร็จร่วมกัน",
+            "impediment": "เสียงตีความได้หลายทาง",
+            "character": "เด็กๆ สื่อสารกับวิญญาณผ่านเสียง"
+          },
+          "wizard_hat": {
+            "core": [
+              {
+                "id": 2,
+                "stable_id": "WH-02",
+                "name": "Co-Operation",
+                "category": "Conflict"
+              },
+              {
+                "id": 5,
+                "stable_id": "WH-05",
+                "name": "Fixed Turn Order",
+                "category": "Order"
+              },
+              {
+                "id": 13,
+                "stable_id": "WH-13",
+                "name": "Fixed Number of Events",
+                "category": "Ending"
+              }
+            ],
+            "taste": [
+              {
+                "id": 27,
+                "stable_id": "WH-27",
+                "name": "Targeted Clues",
+                "category": "Engage"
+              },
+              {
+                "id": 44,
+                "stable_id": "WH-44",
+                "name": "Communication Limits",
+                "category": "Twist"
+              },
+              {
+                "id": 17,
+                "stable_id": "WH-17",
+                "name": "Dexterity",
+                "category": "Touch"
+              }
+            ],
+            "unmapped": [
+              {
+                "name": "Mission Success: Shared Score",
+                "source_category": "Reward",
+                "source_field": "win",
+                "reason": "No exact card in current 50-card workbook; retain as design interpretation, not a fabricated card."
+              }
+            ],
+            "success_condition_text": "Mission Success: Shared Score"
+          }
+        },
+        "transferable_skills": {
+          "skill_map": []
+        },
+        "bgg": null,
+        "sources": [
+          {
+            "url": "https://www.spiel-des-jahres.de/spiele/mysterium-kids/",
+            "locator": "#sidebar: publisher; Personen; Dauer",
+            "read_scope": "award page metadata only; rulebook not read"
+          },
+          {
+            "url": "https://www.spiel-des-jahres.de/preiskat/kinderspiel-des-jahres/",
+            "locator": "| Kinderspiel des Jahres | 2023",
+            "read_scope": "winner name/category/year"
+          },
+          {
+            "url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+            "locator": "game mysterium-kids-2023",
+            "read_scope": "existing WoL analyst design interpretation; not UNICEF skill assessment"
+          }
+        ]
+      },
+      {
+        "game_id": "sky-team-2024",
+        "name": "Sky Team",
+        "aliases": [],
+        "family_id": "sky-team",
+        "publisher": "Kosmos / Scorpion Masqué",
+        "players": [
+          2
+        ],
+        "publisher_play_duration_minutes": null,
+        "observed_session_time_minutes": null,
+        "organizer_listed_play_duration_minutes": {
+          "min": 20,
+          "max": 20,
+          "source_scope": "award organizer listing; not independently verified publisher duration or observed total time"
+        },
+        "medium": "tabletop",
+        "medium_provenance": {
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "locator": "game sky-team-2024 MAGIC action",
+          "source_layer": "analyst_classification_from_existing_physical_game_descriptions",
+          "read_scope": "WoL game description; not publisher component audit"
+        },
+        "format": null,
+        "genres": [],
+        "mechanisms": [
+          "Co-Operation",
+          "Simultaneous Action Selection",
+          "Fixed Number of Events",
+          "Communication Limits",
+          "Worker Placement, Action Point",
+          "Output Randomness"
+        ],
+        "collections": [
+          "sdj-2015-2025"
+        ],
+        "collection_scope_note": "Award benchmark supplement; not screened into the original strategy-card-games session-duration corpus.",
+        "awards": [
+          {
+            "category": "Spiel des Jahres",
+            "year": 2024,
+            "status": "winner",
+            "source_url": "https://www.spiel-des-jahres.de/spiele/sky-team/",
+            "source_locator": "| Spiel des Jahres | 2024",
+            "accessed_on": "2026-10-03"
+          }
+        ],
+        "external_cover": {
+          "url": null,
+          "source_url": "https://www.spiel-des-jahres.de/spiele/sky-team/",
+          "display_allowed": false,
+          "rights_status": "not_verified"
+        },
+        "design_analysis": {
+          "source_layer": "existing_wol_analyst_interpretation",
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "source_locator": "games.js game sky-team-2024",
+          "required_action": "roll dice เงียบๆ แล้ววางควบคุมเครื่องบิน",
+          "design_lesson": "ความเงียบทำให้รู้สึกเหมือน cockpit ที่ต้องเชื่อใจคู่หู เป็น benchmark ของ Communication Limits ที่มีเหตุผลทางอารมณ์.",
+          "table_moment": "Almost Failed",
+          "replay_engine": "Scenario airports and dice constraints.",
+          "magic": {
+            "mood": "ตึง เงียบ เชื่อใจกัน",
+            "action": "roll dice เงียบๆ แล้ววางควบคุมเครื่องบิน",
+            "goal": "ลงจอดให้ปลอดภัย",
+            "impediment": "ห้ามคุยระหว่างวาง dice, ค่า dice จำกัด, runway pressure",
+            "character": "pilot และ co-pilot"
+          },
+          "wizard_hat": {
+            "core": [
+              {
+                "id": 2,
+                "stable_id": "WH-02",
+                "name": "Co-Operation",
+                "category": "Conflict"
+              },
+              {
+                "id": 6,
+                "stable_id": "WH-06",
+                "name": "Simultaneous Action Selection",
+                "category": "Order"
+              },
+              {
+                "id": 13,
+                "stable_id": "WH-13",
+                "name": "Fixed Number of Events",
+                "category": "Ending"
+              }
+            ],
+            "taste": [
+              {
+                "id": 44,
+                "stable_id": "WH-44",
+                "name": "Communication Limits",
+                "category": "Twist"
+              },
+              {
+                "id": 32,
+                "stable_id": "WH-32",
+                "name": "Worker Placement, Action Point",
+                "category": "Strategy"
+              },
+              {
+                "id": 45,
+                "stable_id": "WH-45",
+                "name": "Output Randomness",
+                "category": "Twist"
+              }
+            ],
+            "unmapped": [
+              {
+                "name": "Mission Success: Objective Completion",
+                "source_category": "Reward",
+                "source_field": "win",
+                "reason": "No exact card in current 50-card workbook; retain as design interpretation, not a fabricated card."
+              }
+            ],
+            "success_condition_text": "Mission Success: Objective Completion"
+          }
+        },
+        "transferable_skills": {
+          "skill_map": []
+        },
+        "bgg": null,
+        "sources": [
+          {
+            "url": "https://www.spiel-des-jahres.de/spiele/sky-team/",
+            "locator": "#sidebar: publisher; Personen; Dauer",
+            "read_scope": "award page metadata only; rulebook not read"
+          },
+          {
+            "url": "https://www.spiel-des-jahres.de/preiskat/spiel-des-jahres/",
+            "locator": "| Spiel des Jahres | 2024",
+            "read_scope": "winner name/category/year"
+          },
+          {
+            "url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+            "locator": "game sky-team-2024",
+            "read_scope": "existing WoL analyst design interpretation; not UNICEF skill assessment"
+          }
+        ]
+      },
+      {
+        "game_id": "daybreak-2024",
+        "name": "e-Mission / Daybreak",
+        "aliases": [
+          "e-Mission",
+          "Daybreak"
+        ],
+        "family_id": "daybreak",
+        "publisher": "Schmidt",
+        "players": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "publisher_play_duration_minutes": null,
+        "observed_session_time_minutes": null,
+        "organizer_listed_play_duration_minutes": {
+          "min": 60,
+          "max": 120,
+          "source_scope": "award organizer listing; not independently verified publisher duration or observed total time"
+        },
+        "medium": "tabletop",
+        "medium_provenance": {
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "locator": "game daybreak-2024 MAGIC action",
+          "source_layer": "analyst_classification_from_existing_physical_game_descriptions",
+          "read_scope": "WoL game description; not publisher component audit"
+        },
+        "format": null,
+        "genres": [],
+        "mechanisms": [
+          "Co-Operation",
+          "Fixed Turn Order",
+          "Completing Targets",
+          "Engine Building, Supply Chains",
+          "Hand Management, Command",
+          "Event"
+        ],
+        "collections": [
+          "sdj-2015-2025"
+        ],
+        "collection_scope_note": "Award benchmark supplement; not screened into the original strategy-card-games session-duration corpus.",
+        "awards": [
+          {
+            "category": "Kennerspiel des Jahres",
+            "year": 2024,
+            "status": "winner",
+            "source_url": "https://www.spiel-des-jahres.de/spiele/e-mission/",
+            "source_locator": "| Kennerspiel des Jahres | 2024",
+            "accessed_on": "2026-10-03"
+          }
+        ],
+        "external_cover": {
+          "url": null,
+          "source_url": "https://www.spiel-des-jahres.de/spiele/e-mission/",
+          "display_allowed": false,
+          "rights_status": "not_verified"
+        },
+        "design_analysis": {
+          "source_layer": "existing_wol_analyst_interpretation",
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "source_locator": "games.js game daybreak-2024",
+          "required_action": "เล่นการ์ดสร้างระบบลด emissions และรับมือ crisis",
+          "design_lesson": "serious topic ถูกแปลงเป็น co-op system ที่มี agency ไม่ใช่ lecture.",
+          "table_moment": "Hard Trade-off",
+          "replay_engine": "Crisis cards, powers, and engine paths.",
+          "magic": {
+            "mood": "จริงจัง มีหวัง กดดันร่วม",
+            "action": "เล่นการ์ดสร้างระบบลด emissions และรับมือ crisis",
+            "goal": "พาโลกผ่านจุดเปลี่ยน climate",
+            "impediment": "emissions, crisis, trade-off ระหว่างระบบ",
+            "character": "ทีมภูมิภาคและผู้ตัดสินใจโลก"
+          },
+          "wizard_hat": {
+            "core": [
+              {
+                "id": 2,
+                "stable_id": "WH-02",
+                "name": "Co-Operation",
+                "category": "Conflict"
+              },
+              {
+                "id": 5,
+                "stable_id": "WH-05",
+                "name": "Fixed Turn Order",
+                "category": "Order"
+              },
+              {
+                "id": 12,
+                "stable_id": "WH-12",
+                "name": "Completing Targets",
+                "category": "Ending"
+              }
+            ],
+            "taste": [
+              {
+                "id": 34,
+                "stable_id": "WH-34",
+                "name": "Engine Building, Supply Chains",
+                "category": "Strategy"
+              },
+              {
+                "id": 22,
+                "stable_id": "WH-22",
+                "name": "Hand Management, Command",
+                "category": "Strategy"
+              },
+              {
+                "id": 46,
+                "stable_id": "WH-46",
+                "name": "Event",
+                "category": "Twist"
+              }
+            ],
+            "unmapped": [
+              {
+                "name": "Mission Success: Objective Completion",
+                "source_category": "Reward",
+                "source_field": "win",
+                "reason": "No exact card in current 50-card workbook; retain as design interpretation, not a fabricated card."
+              }
+            ],
+            "success_condition_text": "Mission Success: Objective Completion"
+          }
+        },
+        "transferable_skills": {
+          "skill_map": []
+        },
+        "bgg": null,
+        "sources": [
+          {
+            "url": "https://www.spiel-des-jahres.de/spiele/e-mission/",
+            "locator": "#sidebar: publisher; Personen; Dauer",
+            "read_scope": "award page metadata only; rulebook not read"
+          },
+          {
+            "url": "https://www.spiel-des-jahres.de/preiskat/kennerspiel-des-jahres/",
+            "locator": "| Kennerspiel des Jahres | 2024",
+            "read_scope": "winner name/category/year"
+          },
+          {
+            "url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+            "locator": "game daybreak-2024",
+            "read_scope": "existing WoL analyst design interpretation; not UNICEF skill assessment"
+          }
+        ]
+      },
+      {
+        "game_id": "magic-keys-2024",
+        "name": "Die magischen Schlüssel",
+        "aliases": [],
+        "family_id": "magic-keys",
+        "publisher": "Game Factory / Happy Baobab",
+        "players": [
+          2,
+          3,
+          4
+        ],
+        "publisher_play_duration_minutes": null,
+        "observed_session_time_minutes": null,
+        "organizer_listed_play_duration_minutes": {
+          "min": 15,
+          "max": 15,
+          "source_scope": "award organizer listing; not independently verified publisher duration or observed total time"
+        },
+        "medium": "tabletop",
+        "medium_provenance": {
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "locator": "game magic-keys-2024 MAGIC action",
+          "source_layer": "analyst_classification_from_existing_physical_game_descriptions",
+          "read_scope": "WoL game description; not publisher component audit"
+        },
+        "format": null,
+        "genres": [],
+        "mechanisms": [
+          "Competitive",
+          "Fixed Turn Order",
+          "Completing Targets",
+          "Push your luck",
+          "Output Randomness",
+          "Point to point movement"
+        ],
+        "collections": [
+          "sdj-2015-2025"
+        ],
+        "collection_scope_note": "Award benchmark supplement; not screened into the original strategy-card-games session-duration corpus.",
+        "awards": [
+          {
+            "category": "Kinderspiel des Jahres",
+            "year": 2024,
+            "status": "winner",
+            "source_url": "https://www.spiel-des-jahres.de/spiele/die-magischen-schluessel/",
+            "source_locator": "| Kinderspiel des Jahres | 2024",
+            "accessed_on": "2026-10-03"
+          }
+        ],
+        "external_cover": {
+          "url": null,
+          "source_url": "https://www.spiel-des-jahres.de/spiele/die-magischen-schluessel/",
+          "display_allowed": false,
+          "rights_status": "not_verified"
+        },
+        "design_analysis": {
+          "source_layer": "existing_wol_analyst_interpretation",
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "source_locator": "games.js game magic-keys-2024",
+          "required_action": "เดินในป่า หยิบกุญแจ และลองเปิดหีบ",
+          "design_lesson": "push-your-luck ถูกทำให้เป็น ritual ที่เด็กเข้าใจ: จะหยุดหรือเสี่ยงไปลึกกว่าเดิม.",
+          "table_moment": "Material Surprise",
+          "replay_engine": "Key reveals and path choices.",
+          "magic": {
+            "mood": "ลุ้น อยากเปิด กล้าเสี่ยง",
+            "action": "เดินในป่า หยิบกุญแจ และลองเปิดหีบ",
+            "goal": "เก็บ treasure ให้ถึงเป้าหมาย",
+            "impediment": "กุญแจอาจเปิดไม่ได้และการไปต่อเสี่ยง",
+            "character": "นักผจญภัยเด็กในป่ากุญแจวิเศษ"
+          },
+          "wizard_hat": {
+            "core": [
+              {
+                "id": 1,
+                "stable_id": "WH-01",
+                "name": "Competitive",
+                "category": "Conflict"
+              },
+              {
+                "id": 5,
+                "stable_id": "WH-05",
+                "name": "Fixed Turn Order",
+                "category": "Order"
+              },
+              {
+                "id": 12,
+                "stable_id": "WH-12",
+                "name": "Completing Targets",
+                "category": "Ending"
+              }
+            ],
+            "taste": [
+              {
+                "id": 47,
+                "stable_id": "WH-47",
+                "name": "Push your luck",
+                "category": "Twist"
+              },
+              {
+                "id": 45,
+                "stable_id": "WH-45",
+                "name": "Output Randomness",
+                "category": "Twist"
+              },
+              {
+                "id": 19,
+                "stable_id": "WH-19",
+                "name": "Point to point movement",
+                "category": "Touch"
+              }
+            ],
+            "unmapped": [
+              {
+                "name": "Mission Success: Race",
+                "source_category": "Reward",
+                "source_field": "win",
+                "reason": "No exact card in current 50-card workbook; retain as design interpretation, not a fabricated card."
+              }
+            ],
+            "success_condition_text": "Mission Success: Race"
+          }
+        },
+        "transferable_skills": {
+          "skill_map": []
+        },
+        "bgg": null,
+        "sources": [
+          {
+            "url": "https://www.spiel-des-jahres.de/spiele/die-magischen-schluessel/",
+            "locator": "#sidebar: publisher; Personen; Dauer",
+            "read_scope": "award page metadata only; rulebook not read"
+          },
+          {
+            "url": "https://www.spiel-des-jahres.de/preiskat/kinderspiel-des-jahres/",
+            "locator": "| Kinderspiel des Jahres | 2024",
+            "read_scope": "winner name/category/year"
+          },
+          {
+            "url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+            "locator": "game magic-keys-2024",
+            "read_scope": "existing WoL analyst design interpretation; not UNICEF skill assessment"
+          }
+        ]
+      },
+      {
+        "game_id": "bomb-busters-2025",
+        "name": "Bomb Busters",
+        "aliases": [],
+        "family_id": "bomb-busters",
+        "publisher": "Pegasus Spiele",
+        "players": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "publisher_play_duration_minutes": null,
+        "observed_session_time_minutes": null,
+        "organizer_listed_play_duration_minutes": {
+          "min": 20,
+          "max": 40,
+          "source_scope": "award organizer listing; not independently verified publisher duration or observed total time"
+        },
+        "medium": "tabletop",
+        "medium_provenance": {
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "locator": "game bomb-busters-2025 MAGIC action",
+          "source_layer": "analyst_classification_from_existing_physical_game_descriptions",
+          "read_scope": "WoL game description; not publisher component audit"
+        },
+        "format": null,
+        "genres": [],
+        "mechanisms": [
+          "Co-Operation",
+          "Fixed Turn Order",
+          "Completing Targets",
+          "Deduction, Hidden Information",
+          "Communication Limits",
+          "Memory"
+        ],
+        "collections": [
+          "sdj-2015-2025"
+        ],
+        "collection_scope_note": "Award benchmark supplement; not screened into the original strategy-card-games session-duration corpus.",
+        "awards": [
+          {
+            "category": "Spiel des Jahres",
+            "year": 2025,
+            "status": "winner",
+            "source_url": "https://www.spiel-des-jahres.de/spiele/bomb-busters/",
+            "source_locator": "| Spiel des Jahres | 2025",
+            "accessed_on": "2026-10-03"
+          }
+        ],
+        "external_cover": {
+          "url": null,
+          "source_url": "https://www.spiel-des-jahres.de/spiele/bomb-busters/",
+          "display_allowed": false,
+          "rights_status": "not_verified"
+        },
+        "design_analysis": {
+          "source_layer": "existing_wol_analyst_interpretation",
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "source_locator": "games.js game bomb-busters-2025",
+          "required_action": "เดาหาคู่สายไฟและค่อยๆ เปิดข้อมูล",
+          "design_lesson": "logical deduction มี emotional stakes สูง ทุก guess มีน้ำหนัก แต่ mission campaign เพิ่มความลึกแบบค่อยเป็นค่อยไป.",
+          "table_moment": "Almost Failed",
+          "replay_engine": "Mission campaign gradually changes deduction pressure.",
+          "magic": {
+            "mood": "ตึง ฉลาด โล่งใจเมื่อรอด",
+            "action": "เดาหาคู่สายไฟและค่อยๆ เปิดข้อมูล",
+            "goal": "กู้ระเบิดโดยไม่ตัดสายผิด",
+            "impediment": "ข้อมูลส่วนตัวไม่ครบ, red wire, timer, mission rules",
+            "character": "ทีมกู้ระเบิด"
+          },
+          "wizard_hat": {
+            "core": [
+              {
+                "id": 2,
+                "stable_id": "WH-02",
+                "name": "Co-Operation",
+                "category": "Conflict"
+              },
+              {
+                "id": 5,
+                "stable_id": "WH-05",
+                "name": "Fixed Turn Order",
+                "category": "Order"
+              },
+              {
+                "id": 12,
+                "stable_id": "WH-12",
+                "name": "Completing Targets",
+                "category": "Ending"
+              }
+            ],
+            "taste": [
+              {
+                "id": 42,
+                "stable_id": "WH-42",
+                "name": "Deduction, Hidden Information",
+                "category": "Twist"
+              },
+              {
+                "id": 44,
+                "stable_id": "WH-44",
+                "name": "Communication Limits",
+                "category": "Twist"
+              },
+              {
+                "id": 48,
+                "stable_id": "WH-48",
+                "name": "Memory",
+                "category": "Twist"
+              }
+            ],
+            "unmapped": [
+              {
+                "name": "Mission Success: Objective Completion",
+                "source_category": "Reward",
+                "source_field": "win",
+                "reason": "No exact card in current 50-card workbook; retain as design interpretation, not a fabricated card."
+              }
+            ],
+            "success_condition_text": "Mission Success: Objective Completion"
+          }
+        },
+        "transferable_skills": {
+          "skill_map": []
+        },
+        "bgg": null,
+        "sources": [
+          {
+            "url": "https://www.spiel-des-jahres.de/spiele/bomb-busters/",
+            "locator": "#sidebar: publisher; Personen; Dauer",
+            "read_scope": "award page metadata only; rulebook not read"
+          },
+          {
+            "url": "https://www.spiel-des-jahres.de/preiskat/spiel-des-jahres/",
+            "locator": "| Spiel des Jahres | 2025",
+            "read_scope": "winner name/category/year"
+          },
+          {
+            "url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+            "locator": "game bomb-busters-2025",
+            "read_scope": "existing WoL analyst design interpretation; not UNICEF skill assessment"
+          }
+        ]
+      },
+      {
+        "game_id": "deep-sea-2025",
+        "name": "Endeavor: Deep Sea",
+        "aliases": [
+          "Endeavor: Die Tiefsee"
+        ],
+        "family_id": "deep-sea",
+        "publisher": "Frosted Games / Board Game Circus",
+        "players": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "publisher_play_duration_minutes": null,
+        "observed_session_time_minutes": null,
+        "organizer_listed_play_duration_minutes": {
+          "min": 60,
+          "max": 120,
+          "source_scope": "award organizer listing; not independently verified publisher duration or observed total time"
+        },
+        "medium": "tabletop",
+        "medium_provenance": {
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "locator": "game deep-sea-2025 MAGIC action",
+          "source_layer": "analyst_classification_from_existing_physical_game_descriptions",
+          "read_scope": "WoL game description; not publisher component audit"
+        },
+        "format": null,
+        "genres": [],
+        "mechanisms": [
+          "Competitive",
+          "Fixed Turn Order",
+          "Victory Points",
+          "Fixed Number of Rounds",
+          "Worker Placement, Action Point",
+          "Engine Building, Supply Chains",
+          "Set Collection"
+        ],
+        "collections": [
+          "sdj-2015-2025"
+        ],
+        "collection_scope_note": "Award benchmark supplement; not screened into the original strategy-card-games session-duration corpus.",
+        "awards": [
+          {
+            "category": "Kennerspiel des Jahres",
+            "year": 2025,
+            "status": "winner",
+            "source_url": "https://www.spiel-des-jahres.de/spiele/endeavor-die-tiefsee/",
+            "source_locator": "| Kennerspiel des Jahres | 2025",
+            "accessed_on": "2026-10-03"
+          }
+        ],
+        "external_cover": {
+          "url": null,
+          "source_url": "https://www.spiel-des-jahres.de/spiele/endeavor-die-tiefsee/",
+          "display_allowed": false,
+          "rights_status": "not_verified"
+        },
+        "design_analysis": {
+          "source_layer": "existing_wol_analyst_interpretation",
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "source_locator": "games.js game deep-sea-2025",
+          "required_action": "ส่งทีมสำรวจ ลงทะเล เก็บข้อมูล และพัฒนา capability",
+          "design_lesson": "ความลึกมาจากการจัดลำดับ action และ engine ไม่ใช่กฎรก ผู้เล่นรู้สึกพัฒนาความสามารถระหว่างเล่น.",
+          "table_moment": "Beautiful Build",
+          "replay_engine": "Modular exploration and engine choices.",
+          "magic": {
+            "mood": "สำรวจ ลุ่มลึก ค่อยๆ วางแผน",
+            "action": "ส่งทีมสำรวจ ลงทะเล เก็บข้อมูล และพัฒนา capability",
+            "goal": "สำรวจทะเลลึกและทำคะแนนจากเป้าหมายหลายทาง",
+            "impediment": "action จำกัด เส้นทางการเติบโต และการแข่งขันพื้นที่ข้อมูล",
+            "character": "ทีมสำรวจทะเลลึก"
+          },
+          "wizard_hat": {
+            "core": [
+              {
+                "id": 1,
+                "stable_id": "WH-01",
+                "name": "Competitive",
+                "category": "Conflict"
+              },
+              {
+                "id": 5,
+                "stable_id": "WH-05",
+                "name": "Fixed Turn Order",
+                "category": "Order"
+              },
+              {
+                "id": 16,
+                "stable_id": "WH-16",
+                "name": "Victory Points",
+                "category": "Reward"
+              },
+              {
+                "id": 9,
+                "stable_id": "WH-09",
+                "name": "Fixed Number of Rounds",
+                "category": "Ending"
+              }
+            ],
+            "taste": [
+              {
+                "id": 32,
+                "stable_id": "WH-32",
+                "name": "Worker Placement, Action Point",
+                "category": "Strategy"
+              },
+              {
+                "id": 34,
+                "stable_id": "WH-34",
+                "name": "Engine Building, Supply Chains",
+                "category": "Strategy"
+              },
+              {
+                "id": 40,
+                "stable_id": "WH-40",
+                "name": "Set Collection",
+                "category": "Asset"
+              }
+            ],
+            "unmapped": [],
+            "success_condition_text": "Victory Points"
+          }
+        },
+        "transferable_skills": {
+          "skill_map": []
+        },
+        "bgg": null,
+        "sources": [
+          {
+            "url": "https://www.spiel-des-jahres.de/spiele/endeavor-die-tiefsee/",
+            "locator": "#sidebar: publisher; Personen; Dauer",
+            "read_scope": "award page metadata only; rulebook not read"
+          },
+          {
+            "url": "https://www.spiel-des-jahres.de/preiskat/kennerspiel-des-jahres/",
+            "locator": "| Kennerspiel des Jahres | 2025",
+            "read_scope": "winner name/category/year"
+          },
+          {
+            "url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+            "locator": "game deep-sea-2025",
+            "read_scope": "existing WoL analyst design interpretation; not UNICEF skill assessment"
+          }
+        ]
+      },
+      {
+        "game_id": "topp-die-torte-2025",
+        "name": "Topp die Torte",
+        "aliases": [],
+        "family_id": "topp-die-torte",
+        "publisher": "Schmidt",
+        "players": [
+          2,
+          3,
+          4
+        ],
+        "publisher_play_duration_minutes": null,
+        "observed_session_time_minutes": null,
+        "organizer_listed_play_duration_minutes": {
+          "min": 20,
+          "max": 20,
+          "source_scope": "award organizer listing; not independently verified publisher duration or observed total time"
+        },
+        "medium": "tabletop",
+        "medium_provenance": {
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "locator": "game topp-die-torte-2025 MAGIC action",
+          "source_layer": "analyst_classification_from_existing_physical_game_descriptions",
+          "read_scope": "WoL game description; not publisher component audit"
+        },
+        "format": null,
+        "genres": [],
+        "mechanisms": [
+          "Competitive",
+          "Fixed Turn Order",
+          "Victory Points",
+          "Fixed Number of Rounds",
+          "Stacking, Balancing",
+          "Tile Laying, Pattern Building, Jigsaw",
+          "Set Collection"
+        ],
+        "collections": [
+          "sdj-2015-2025"
+        ],
+        "collection_scope_note": "Award benchmark supplement; not screened into the original strategy-card-games session-duration corpus.",
+        "awards": [
+          {
+            "category": "Kinderspiel des Jahres",
+            "year": 2025,
+            "status": "winner",
+            "source_url": "https://www.spiel-des-jahres.de/spiele/topp-die-torte/",
+            "source_locator": "| Kinderspiel des Jahres | 2025",
+            "accessed_on": "2026-10-03"
+          }
+        ],
+        "external_cover": {
+          "url": null,
+          "source_url": "https://www.spiel-des-jahres.de/spiele/topp-die-torte/",
+          "display_allowed": false,
+          "rights_status": "not_verified"
+        },
+        "design_analysis": {
+          "source_layer": "existing_wol_analyst_interpretation",
+          "source_url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+          "source_locator": "games.js game topp-die-torte-2025",
+          "required_action": "เลือกและซ้อนชั้นเค้กให้ได้ pattern",
+          "design_lesson": "tactile joy ไม่ได้ตัด strategy ออก แต่ทำให้ strategy เข้าใกล้มือเด็กมากขึ้น.",
+          "table_moment": "Beautiful Build",
+          "replay_engine": "Physical cake patterns and scoring tasks.",
+          "magic": {
+            "mood": "สีสัน สนุก ภูมิใจกับของที่สร้าง",
+            "action": "เลือกและซ้อนชั้นเค้กให้ได้ pattern",
+            "goal": "ทำเค้กให้ได้คะแนนสูงกว่า",
+            "impediment": "ชิ้นส่วนและ scoring condition บังคับให้เลือกอย่างมีแผน",
+            "character": "นักทำเค้กตัวน้อย"
+          },
+          "wizard_hat": {
+            "core": [
+              {
+                "id": 1,
+                "stable_id": "WH-01",
+                "name": "Competitive",
+                "category": "Conflict"
+              },
+              {
+                "id": 5,
+                "stable_id": "WH-05",
+                "name": "Fixed Turn Order",
+                "category": "Order"
+              },
+              {
+                "id": 16,
+                "stable_id": "WH-16",
+                "name": "Victory Points",
+                "category": "Reward"
+              },
+              {
+                "id": 9,
+                "stable_id": "WH-09",
+                "name": "Fixed Number of Rounds",
+                "category": "Ending"
+              }
+            ],
+            "taste": [
+              {
+                "id": 23,
+                "stable_id": "WH-23",
+                "name": "Stacking, Balancing",
+                "category": "Touch"
+              },
+              {
+                "id": 21,
+                "stable_id": "WH-21",
+                "name": "Tile Laying, Pattern Building, Jigsaw",
+                "category": "Touch"
+              },
+              {
+                "id": 40,
+                "stable_id": "WH-40",
+                "name": "Set Collection",
+                "category": "Asset"
+              }
+            ],
+            "unmapped": [],
+            "success_condition_text": "Victory Points"
+          }
+        },
+        "transferable_skills": {
+          "skill_map": []
+        },
+        "bgg": null,
+        "sources": [
+          {
+            "url": "https://www.spiel-des-jahres.de/spiele/topp-die-torte/",
+            "locator": "#sidebar: publisher; Personen; Dauer",
+            "read_scope": "award page metadata only; rulebook not read"
+          },
+          {
+            "url": "https://www.spiel-des-jahres.de/preiskat/kinderspiel-des-jahres/",
+            "locator": "| Kinderspiel des Jahres | 2025",
+            "read_scope": "winner name/category/year"
+          },
+          {
+            "url": "https://wollab.github.io/sdj-wizard-hat-playground/",
+            "locator": "game topp-die-torte-2025",
+            "read_scope": "existing WoL analyst design interpretation; not UNICEF skill assessment"
+          }
+        ]
+      }
+    ]
+  },
   "skills": [
     {
       "id": "creativity",
@@ -71787,5 +76637,5 @@
     }
   },
   "imported_at": "2026-10-03",
-  "digest": "ec746d56441c819801890893d88c0c83bfeb9e90585e2be8b7eaf6105db0566c"
+  "digest": "68b3bf908a5ea2e4c2b0ff6690d565ee89cabcec009a17c16f18d15e83cf4d99"
 }

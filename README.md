@@ -31,3 +31,8 @@ This is an explicit source-merge step; neither localStorage nor a proposal commi
 ## Sources and limits
 
 Skills describe opportunities and conditions from game rules, not measured learner scores. Publisher minutes are displayed separately from observed session fields. Unknown classifications remain null. BGG has one edition-verified snapshot with unknown exact votes/statistics date and 249 unknown records at the initial release. Original Wizard Hat artwork and metadata are retained; box art remains Phase 2.
+
+## UX refresh / SDJ supplement — 2026-10-03
+Warm off-white/charcoal theme follows Meta Learning with larger local Bai Jamjuree typography (body18px/control16px/secondary14px). Skill and mechanism labels are English; Thai explanation/search aliases remain. Comparison uses checkboxes and compact selection; WH uses original images grouped by family/category with list view.
+Data now renders250 canonical +33 SDJ2015–2025 award records, with collection filter. Organizer timing and existing WoL interpretation are explicitly separate from publisher duration and reviewed skill bridges. Award badges link official source/category/year. Approved external cover URL support is implemented; no approved covers exist in current source, so fallback is expected. No BGG/Amazon scrape/token or external image downloads.
+
