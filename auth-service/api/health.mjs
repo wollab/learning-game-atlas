@@ -1,0 +1,2 @@
+import {cors} from '../lib/security.mjs';
+export default function handler(req,res){if(!cors(req,res))return;const configured=!!(process.env.GITHUB_CLIENT_ID&&process.env.GITHUB_CLIENT_SECRET&&process.env.SESSION_SECRET?.length>=32&&process.env.AUTH_ORIGIN);res.status(200).json({service:'Learning Game Atlas GitHub editor',configured,missing:['GITHUB_CLIENT_ID','GITHUB_CLIENT_SECRET','SESSION_SECRET','AUTH_ORIGIN'].filter(k=>!process.env[k]),callback:process.env.AUTH_ORIGIN?`${process.env.AUTH_ORIGIN}/api/callback`:null});}

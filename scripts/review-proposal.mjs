@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+import {validProposal} from '../auth-service/lib/validation.mjs';
+const input=process.argv[2];if(!input)throw Error('Usage: node scripts/review-proposal.mjs path/to/proposal.json [output.json]');
+const p=validProposal(JSON.parse(fs.readFileSync(input,'utf8'))),a=JSON.parse(fs.readFileSync('src/data/atlas.json','utf8'));
+const map={games:a.catalogue.records??a.catalogue.games,skills:a.activities.skills,'wizard-hat':a.wh.cards,packages:a.packages,sources:a.activities.sources};
+const old=(map[p.collection]??[]).find(r=>String(r.game_id??r.skill_id??r.id??r.source_id)===p.record_id),revision=old?(old.record_revision_sha256??crypto.createHash('sha256').update(JSON.stringify(old)).digest('hex')):null;
+if(p.base_dataset_revision!==a.digest||p.base_record_revision!==revision)throw Error('Revision conflict: no merge plan produced');
+const report={proposal_id:p.proposal_id,collection:p.collection,record_id:p.record_id,status:'ready-for-canonical-owner-review',baseline:old??null,proposed_changes:p.changes,sources:p.sources,base_dataset_revision:a.digest,base_record_revision:revision,next_action:'Canonical KB owner reviews source/edition/field ownership, applies accepted changes deliberately, regenerates production exports, reimports atlas snapshot and commits it. This script never writes canonical knowledge.'};
+if(process.argv[3])fs.writeFileSync(process.argv[3],JSON.stringify(report,null,2));else console.log(JSON.stringify(report,null,2));

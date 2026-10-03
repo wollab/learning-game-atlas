@@ -1,0 +1,6 @@
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';
+const a=JSON.parse(fs.readFileSync('src/data/atlas.json')),rows=a.catalogue.records??a.catalogue.games;
+test('full corpus and stable card identities are present',()=>{assert.equal(rows.length,250);assert.equal(new Set(rows.map(g=>g.game_id??g.id)).size,250);assert.equal(a.wh.cards.length,50);assert.equal(a.activities.skills.length,12);});
+test('reviewed game evidence has all 12 cells without numeric fabricated scores',()=>{assert.ok(a.bridges.games.length>=41);for(const g of a.bridges.games){assert.equal(g.skills.length,12);assert.equal(new Set(g.skills.map(s=>s.skill_id)).size,12);}for(const b of a.bridges.bridges){assert.ok(b.rule_evidence?.url);assert.ok(b.conditions_th);assert.ok(b.applicable_player_counts?.length)}});
+test('Lunar cooperation remains four-player only',()=>{const b=a.bridges.bridges.find(b=>b.game_id==='lunar'&&b.skill_id==='cooperation');assert.deepEqual(b.applicable_player_counts,[4]);});
+test('unknown popularity remains null and snapshot date is not fabricated',()=>{const g=rows.find(g=>(g.game_id??g.id)==='high-society');assert.equal(g.bgg.vote_count,null);assert.equal(g.bgg.as_of,null);for(const g of rows.filter(g=>(g.game_id??g.id)!=='high-society'))assert.equal(g.bgg.overall_rank,null)});

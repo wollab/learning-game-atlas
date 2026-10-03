@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+let p='src/components/Builder.tsx',s=fs.readFileSync(p,'utf8');
+s=s.replace("const KEY='atlas-builder-v1';", "import BuilderActivity from './BuilderActivity';\nimport TastePicker from './TastePicker';\nconst KEY='atlas-builder-v1';");
+s=s.replace(/\{draft.skills.map\(\(id:string\)=>\{const s=skills.find[\s\S]*?\}\)\}\{draft.packageId/, '{draft.skills.map((id:string)=><BuilderActivity key={id} skillId={id}/>)}{draft.packageId');
+s=s.replace(/<div className="taste-picker">\{cards.filter\(c=>c.section==='TASTE'\)[\s\S]*?<\/div>\)\}<\/div><div className="form-grid">/, '<TastePicker draft={draft} onTaste={ids=>set(\'taste\',ids,true)} onLock={id=>set(\'locked\',{...draft.locked,[id]:!draft.locked[id]})}/><div className="form-grid">');
+fs.writeFileSync(p,s);
+p='src/components/App.tsx';s=fs.readFileSync(p,'utf8');s=s.replace("import Builder from './Builder';", "import Builder from './Builder';\nimport BGGInfo from './BGGInfo';");
+s=s.replace("<div className=\"game-action\"><h3>","<div className=\"game-action\"><h3>");
+s=s.replace("</span></div><div className=\"game-action\">", "</span><BGGInfo game={game}/></div><div className=\"game-action\">");
+s=s.replace("{types.map((t:any)=><option key={t}>{t}</option>)}", "{types.map((t:any)=><option key={t} value={t}>{({tabletop:'เกมบนโต๊ะ (Tabletop)',card:'การ์ดเกม (Card)',digital:'เกมดิจิทัล (Digital)'} as Row)[t]??t}</option>)}");
+fs.writeFileSync(p,s);

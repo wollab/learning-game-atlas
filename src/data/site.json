@@ -1,0 +1,72 @@
+{
+  "theme": {
+    "primary": "#0967DE",
+    "accent": "#FF7A1A",
+    "background": "#F4F9FF",
+    "ink": "#192C4C",
+    "headingFont": "Kanit",
+    "bodyFont": "Bai Jamjuree",
+    "radius": 18,
+    "defaultView": "cards"
+  },
+  "pages": {
+    "catalogue": {
+      "title": "ค้นเกมที่เปิดให้คิด\nหยิบกลไกไปออกแบบต่อ",
+      "intro": "ดูพฤติกรรมที่กติกาเรียกใช้ แล้วค่อยเลือกกลไกสำหรับต้นแบบของคุณ"
+    },
+    "skills": {
+      "title": "12 ทักษะเพื่อการเรียนรู้",
+      "intro": "เริ่มจากพฤติกรรมที่อยากเห็น แล้วสำรวจกติกาที่เปิดโอกาสให้เกิดขึ้น"
+    },
+    "wizard-hat": {
+      "title": "คลัง Wizard Hat",
+      "intro": "เลือกโครงสร้างหลักและกลไกเสริมรสชาติ เพื่อสร้างกติกาของคุณ"
+    },
+    "builder": {
+      "title": "สร้างต้นแบบเกม",
+      "intro": "ทักษะ → กิจกรรมสร้างการเรียนรู้ → กติกา → ต้นแบบที่นำไปทดลองได้"
+    },
+    "methodology": {
+      "title": "วิธีอ่านข้อมูล",
+      "intro": "แยกโอกาสตามกติกา เงื่อนไขการใช้ และหลักฐานการเรียนรู้"
+    },
+    "sources": {
+      "title": "แหล่งอ้างอิง",
+      "intro": "ตรวจที่มาของข้อมูลและขอบเขตที่อ่านก่อนนำไปใช้"
+    },
+    "admin": {
+      "title": "จัดการเว็บไซต์",
+      "intro": "บันทึก ตรวจข้อมูล และเผยแพร่ผ่าน GitHub"
+    }
+  },
+  "builder": {
+    "stepOrder": [
+      "skills",
+      "activity",
+      "rules",
+      "review"
+    ],
+    "defaults": {
+      "players": 4,
+      "minutes": 30,
+      "cardCount": 30,
+      "turns": "ผลัดกันเล่น"
+    },
+    "optionalSections": {
+      "roles": true,
+      "customRules": true,
+      "debrief": true
+    },
+    "playerOptions": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      10,
+      20
+    ]
+  },
+  "authEndpoint": ""
+}

@@ -1,0 +1,18 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+const app=path.resolve('..'), kb=path.resolve('../../../../03_Documents/04_Knowledge_Base/05_Research_Library');
+const read=p=>JSON.parse(fs.readFileSync(p,'utf8').replace(/^\uFEFF/,''));
+const shelf=path.join(kb,'learning-game-atlas/data');
+const preview=read(path.join(app,'preview-data.json'));
+const catalogue=fs.existsSync(path.join(shelf,'production-catalogue.json'))?read(path.join(shelf,'production-catalogue.json')):read(path.join(kb,'strategy-card-games/data/games.json'));
+const wh=fs.existsSync(path.join(shelf,'wizard-hat-production.json'))?read(path.join(shelf,'wizard-hat-production.json')):read(path.join(shelf,'wizard-hat.json'));
+const optional=n=>fs.existsSync(path.join(shelf,n))?read(path.join(shelf,n)):null;
+fs.mkdirSync('src/data',{recursive:true});fs.mkdirSync('public/assets',{recursive:true});
+for(const n of ['fonts','wh'])fs.cpSync(path.join(app,'assets',n),path.join('public/assets',n),{recursive:true});
+const data={catalogue,wh,skills:preview.skills,packages:preview.packages,annotations:preview.games,activities:optional('learning-activities.json'),bridges:optional('reviewed-skill-bridges.json'),imported_at:'2026-10-03',digest:crypto.createHash('sha256').update(JSON.stringify({catalogue,wh})).digest('hex')};
+fs.writeFileSync('src/data/atlas.json',JSON.stringify(data,null,2));
+const pick=(r,keys)=>Object.fromEntries(keys.filter(k=>r[k]!==undefined).map(k=>[k,r[k]]));
+const lean={...data,catalogue:{records:(catalogue.records??catalogue.games).map(g=>({...pick(g,['game_id','id','name','name_th','aliases','publisher','players','player_counts','publisher_play_duration_minutes','official_play_min','official_play_max','medium','format','genres','mechanisms','design_analysis','source_provenance','sources','bgg','atlas_annotation','record_revision_sha256']),transferable_skills:{skill_map:(g.transferable_skills?.skill_map??[]).filter(s=>!['U','X'].includes(s.status)).map(s=>pick(s,['skill_id','status','player_action','constraint','conditions','observable','counter_signal','applicable_player_counts','source_locators']))}}))},bridges:data.bridges?{games:data.bridges.games.map(g=>({...pick(g,['game_id','name','rule_evidence','wizard_hat','timing','edition_scope','applicable_player_counts']),skills:g.skills.map(s=>pick(s,['skill_id','status','status_label_th','reason_th','bridge_id']))})),bridges:data.bridges.bridges.map(b=>({...pick(b,['bridge_id','game_id','skill_id','activity_id','status','status_label_th','activity_th','required_action_th','observable_behaviour_th','counter_signal_th','wizard_hat','wizard_hat_gap_th','applicable_player_counts','role_th','conditions_th','observation_method_th']),rule_evidence:null})),related_games_by_skill:data.bridges.related_games_by_skill}:null,annotations:[]};
+fs.writeFileSync('src/data/public-atlas.json',JSON.stringify(lean));
+console.log('Imported',catalogue.games?.length??catalogue.records?.length,'games;',wh.cards?.length,'cards; activities',!!data.activities,'bridges',!!data.bridges);

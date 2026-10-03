@@ -1,0 +1,7 @@
+---
+import App from '../components/App';
+import '../styles.css';
+export function getStaticPaths(){return ['catalogue','game','compare','skills','skill','wizard-hat','builder','methodology','sources','admin'].map(route=>({params:{route}}));}
+const {route}=Astro.params;
+---
+<!doctype html><html lang="th"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="description" content="ค้นหาเกม กติกา และกิจกรรมสร้างการเรียนรู้ผ่าน 12 ทักษะและ Wizard Hat"/><title>Learning Game Atlas</title></head><body><App route={route!} client:load /></body></html>
