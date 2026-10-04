@@ -11,7 +11,7 @@ test('real export enables only the canonical publisher approvals',async()=>{
  const fs=await import('node:fs');const read=p=>JSON.parse(fs.readFileSync(new URL(p,import.meta.url),'utf8'));
  const full=read('../src/data/atlas.json'),lean=read('../src/data/public-atlas.json');
  const rows=d=>[...d.catalogue.records,...d.supplement.records];
- const covers=rows(lean).filter(g=>g.external_cover?.display_allowed);assert.equal(covers.length,38);
+ const covers=rows(lean).filter(g=>g.external_cover?.display_allowed);assert.equal(covers.length,37);
  for(const g of covers){assert.equal(new URL(g.external_cover.url).hostname,'blog.amigo-spiele.de');assert.equal(g.external_cover.usage_basis_url,'https://blog.amigo-spiele.de/presse/pressematerial/');assert.equal(g.external_cover.attribution,'© AMIGO');assert.deepEqual(g.external_cover,rows(full).find(r=>r.game_id===g.game_id).external_cover);}
  assert.equal(rows(lean).find(g=>g.game_id==='high-society').external_cover,null);
 });

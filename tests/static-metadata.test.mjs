@@ -31,9 +31,21 @@ test('duplicate/missing corpus IDs and unsafe sources fail before export',()=>{
 test('actual public export keeps learning scope and only matched snapshot metadata',()=>{
  const a=JSON.parse(fs.readFileSync('src/data/public-atlas.json','utf8'));
  const games=[...a.catalogue.records,...a.supplement.records];
- assert.equal(new Set(games.map(g=>g.game_id??g.id)).size,283);
+ assert.equal(new Set(games.map(g=>g.game_id??g.id)).size,282);
  assert.equal(a.flows.game_count,a.bridges.games.length);assert.equal(a.bridges.bridges.length,a.flows.flows.length);assert.equal(a.flows.flow_count,a.bridges.bridges.length);
  assert.equal(games.filter(g=>g.bgg_ranking_snapshot).length,10);assert.equal(games.filter(g=>g.bgg_metadata_snapshot).length,8);
  assert.equal(games.find(g=>g.game_id==='star-realms').bgg_ranking_snapshot,null);
  assert.ok(games.filter(g=>g.external_cover?.display_allowed).every(g=>g.external_cover.source_url==='https://blog.amigo-spiele.de/presse/pressematerial/'));
+});
+
+
+test('owner exclusion and known different-game identity do not leak into the public join',()=>{
+ const a=JSON.parse(fs.readFileSync('src/data/public-atlas.json','utf8'));
+ const games=[...a.catalogue.records,...a.supplement.records];
+ assert.ok(!games.some(g=>g.game_id==='matter-matters'));
+ const bus=games.find(g=>g.game_id==='pack-bus');
+ assert.equal(bus.bgg_reference.identity_conflict,true);
+ assert.equal(bus.bgg_reference.game_url,null);assert.equal(bus.bgg_reference.bgg_id,null);
+ assert.equal(bus.bgg_metadata_snapshot,null);assert.equal(bus.bgg_ranking_snapshot,null);
+ assert.deepEqual(bus.players,[2,3]);
 });

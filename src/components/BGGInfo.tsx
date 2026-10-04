@@ -2,7 +2,7 @@
 import type {Row} from '../lib/model';
 export default function BGGInfo({game}:{game:Row}){
  const snapshot=game.bgg_ranking_snapshot, b:Row=snapshot??game.bgg??{}, m=game.bgg_metadata_snapshot;
- if(b.overall_rank==null&&!m)return <p className="bgg-compact muted">BGG: ยังไม่มีข้อมูลอันดับที่ตรวจจับคู่แล้ว</p>;
+ if(b.overall_rank==null&&!m)return <div className="bgg-compact">{game.bgg_reference?.game_url&&<a href={game.bgg_reference.game_url} target="_blank" rel="noreferrer">ดูเกมบน BoardGameGeek ↗</a>}<p className="muted">ยังไม่มีข้อมูลอันดับที่ตรวจจับคู่แล้ว</p></div>;
  const range=(v:Row|null|undefined)=>v?.min==null||v?.max==null?'ยังไม่ทราบ':v.min===v.max?String(v.min):v.min+'–'+v.max;
  return <details className="bgg-compact">
   <summary>{b.overall_rank!=null?<>BGG #{b.overall_rank} · คะแนน {b.average_rating??'ยังไม่ทราบ'}</>:'ข้อมูลชุมชน BGG'}</summary>
@@ -12,7 +12,7 @@ export default function BGGInfo({game}:{game:Row}){
    <p>ข้อมูลชุมชนจาก snapshot ไม่ใช่อันดับสดหรือหลักฐานผลการเรียนรู้</p>
    {b.source_url&&<a href={b.source_url} target="_blank" rel="noreferrer">{snapshot?'แหล่ง ranking snapshot':'แหล่งข้อมูล BGG'}</a>}
   </>}
-  {m&&<><h3>Metadata snapshot · {m.snapshot_label??'ยังไม่ทราบวันที่ไฟล์'}</h3><p>จำนวนผู้เล่นที่บันทึก: {range(m.player_range)} · เวลาเล่นที่บันทึก: {range(m.listed_play_duration_minutes)} นาที</p><p>ข้อมูลชุมชนแยกจากข้อมูลผู้ผลิตที่แสดงในหน้าเกม</p><a href={m.source_url} target="_blank" rel="noreferrer">แหล่ง metadata snapshot</a></>}
+  {m&&<><h3>Metadata snapshot · {m.snapshot_label??'ยังไม่ทราบวันที่ไฟล์'}</h3><p>ปีเผยแพร่: {m.year??'ยังไม่ทราบ'}</p><p>นักออกแบบ: {m.designers?.join(', ')||'ยังไม่ทราบ'}</p><p>จำนวนผู้เล่นที่บันทึก: {range(m.player_range)} · เวลาเล่นที่บันทึก: {range(m.listed_play_duration_minutes)} นาที</p><p>ข้อมูลชุมชนแยกจากข้อมูลผู้ผลิตที่แสดงในหน้าเกม</p><a href={m.source_url} target="_blank" rel="noreferrer">แหล่ง metadata snapshot</a></>}
   {(snapshot?.game_url??m?.game_url)&&<p><a href={snapshot?.game_url??m?.game_url} target="_blank" rel="noreferrer">หน้าเกมบน BoardGameGeek</a></p>}
  </details>;
 }

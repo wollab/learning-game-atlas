@@ -34,5 +34,12 @@ Skills describe opportunities and conditions from game rules, not measured learn
 
 ## UX refresh / SDJ supplement — 2026-10-03
 Warm off-white/charcoal theme follows Meta Learning with larger local Bai Jamjuree typography (body18px/control16px/secondary14px). Skill and mechanism labels are English; Thai explanation/search aliases remain. Comparison uses checkboxes and compact selection; WH uses original images grouped by family/category with list view.
-Data now renders250 canonical +33 SDJ2015–2025 award records, with collection filter. Organizer timing and existing WoL interpretation are explicitly separate from publisher duration and reviewed skill bridges. Award badges link official source/category/year. Approved external cover URL support is implemented; no approved covers exist in current source, so fallback is expected. No BGG/Amazon scrape/token or external image downloads.
+Data now renders250 canonical +33 SDJ2015–2025 award records, with collection filter. Organizer timing and existing WoL interpretation are explicitly separate from publisher duration and reviewed skill bridges. Award badges link official source/category/year. Approved external cover URL support is implemented; 37 approved publisher covers are available; other records use a title fallback. No BGG/Amazon scrape/token or external image downloads.
 
+
+
+## Public static release — 2026-10-04
+
+Active corpus:249 base records +33 SDJ records =282. Matter Matters excluded by owner decision.61 source-reviewed learning games/173 bridges;221 remain in research and can be shown with the catalogue toggle.37 source-approved publisher covers are displayed via external URL. Selected BGG references are imported from local static files; independently reviewed metadata remains separately gated. The wrong-game Bus552 join is withheld from the Perplext BUS record. Admin server login/save remains unavailable until its configured endpoint is deployed; public browsing/search/comparison works without it. Blue/orange theme is stored in site.json.
+
+Chief authorized publication in chat on2026-10-04. Deployment uses the existing isolated GitHub repository and Pages workflow; root Codex-AI remains local. No runtime BGG fetch, sync service or new database.
