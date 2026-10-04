@@ -6,3 +6,7 @@ dist/
 screenshots/
 qa-results.json
 .npm-cache/
+
+.bgg-cache/
+__pycache__/
+*.pyc

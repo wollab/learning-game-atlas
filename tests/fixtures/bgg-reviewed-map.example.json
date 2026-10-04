@@ -1,0 +1,11 @@
+{
+  "records": [
+    {
+      "game_id": "high-society",
+      "bgg_id": "220",
+      "game_identity_verified": true,
+      "edition_match_verified": true,
+      "evidence_scope": "Existing reviewed base-game ID/Allplay edition mapping; live response not verified by this pilot"
+    }
+  ]
+}

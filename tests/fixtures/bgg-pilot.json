@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0",
+  "status": "planned-live-pilot; offline fixtures synthetic",
+  "records": [
+    {
+      "game_id": "high-society",
+      "name": "High Society",
+      "aliases": [],
+      "search_queries": [
+        "High Society"
+      ],
+      "reason": "Known reviewed game ID; distinguish base game rank from Allplay edition",
+      "offline_case": "unique"
+    },
+    {
+      "game_id": "3-witches",
+      "name": "3 Witches",
+      "aliases": [],
+      "search_queries": [
+        "3 Witches"
+      ],
+      "reason": "Distinguish 3 Witches from Witches",
+      "offline_case": "ambiguous"
+    },
+    {
+      "game_id": "witches",
+      "name": "Witches",
+      "aliases": [],
+      "search_queries": [
+        "Witches"
+      ],
+      "reason": "Similarly named games",
+      "offline_case": "ambiguous"
+    },
+    {
+      "game_id": "lunar",
+      "name": "Lunar",
+      "aliases": [],
+      "search_queries": [
+        "Lunar"
+      ],
+      "reason": "Keep four-player cooperation separate from catalogue player range",
+      "offline_case": "unique"
+    },
+    {
+      "game_id": "bohnanza",
+      "name": "Bohnanza",
+      "aliases": [],
+      "search_queries": [
+        "Bohnanza"
+      ],
+      "reason": "Preserve publisher duration even if BGG time differs",
+      "offline_case": "unique"
+    },
+    {
+      "game_id": "bohnanza-das-duell",
+      "name": "Bohnanza - Das Duell",
+      "aliases": [],
+      "search_queries": [
+        "Bohnanza - Das Duell"
+      ],
+      "reason": "Distinguish standalone family title from base game and expansions",
+      "offline_case": "expansion"
+    },
+    {
+      "game_id": "itchy-feet",
+      "name": "Itchy Feet",
+      "aliases": [],
+      "search_queries": [
+        "Itchy Feet"
+      ],
+      "reason": "Check aliases and edition identity without filling unreviewed negotiation claims",
+      "offline_case": "none"
+    },
+    {
+      "game_id": "odin",
+      "name": "Odin",
+      "aliases": [],
+      "search_queries": [
+        "Odin"
+      ],
+      "reason": "Short name and potential collisions",
+      "offline_case": "unique"
+    },
+    {
+      "game_id": "love-letter",
+      "name": "Love Letter",
+      "aliases": [],
+      "search_queries": [
+        "Love Letter"
+      ],
+      "reason": "Multiple editions and franchise variants",
+      "offline_case": "ambiguous"
+    },
+    {
+      "game_id": "colt-express-2015",
+      "name": "Colt Express",
+      "aliases": [],
+      "search_queries": [
+        "Colt Express"
+      ],
+      "reason": "SDJ supplemental record; preserve official award provenance",
+      "offline_case": "unique"
+    }
+  ]
+}

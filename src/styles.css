@@ -27,3 +27,25 @@ body,.app{font-size:1.125rem;line-height:1.75}h1{font-size:2.625rem;line-height:
 .source-layer-label{font-size:.875rem;color:#665080;line-height:1.75;margin:0}.rows .source-layer-label{grid-column:1/-1}
 .selection-anchor{position:relative;top:0}.selection-summary{border-color:var(--primary)}
 .selection-popover li>.game-cover{flex:0 0 36px}
+
+/* Readable subheadings within the learning activity flow. */
+.skill-flow h5{font-size:1rem;margin:1rem 0 .35rem;line-height:1.5}
+.skill-flow p{max-width:75ch}
+.prototype-tools,.admin-local-tools{display:flex;flex-wrap:wrap;gap:12px;margin:20px 0}.prototype-file{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:10px 14px;border:1px solid var(--line);border-radius:8px;font-size:1rem;font-weight:400;background:white}.prototype-file input{max-width:240px;font-size:.875rem;min-height:0;padding:6px}.prototype-review{border:1px solid var(--line);border-left:4px solid var(--primary);padding:22px;margin-bottom:28px;background:var(--wash)}.prototype-review article{padding:15px 0;border-bottom:1px solid var(--line)}.prototype-review li{margin-bottom:9px}.local-proposal-preview{padding:18px;background:var(--wash);margin:20px 0}.local-proposal-preview textarea{font-family:monospace;font-size:.875rem}@media(max-width:760px){.prototype-file,.prototype-tools button{width:100%}.prototype-review{padding:16px}.prototype-file input{max-width:100%}}
+
+/* WoL identity: canonical brand colors; semantic card colors remain intact. */
+:root{--primary:#50C2C0;--accent:#FEC566;--background:#FFFFFF;--ink:#414141;--wash:#EFFAFA;--link:#075985}
+.app a:not(.hat-chip):not(.skill-chip):not(.primary):not(.brand){color:var(--link)}
+.brand-logo{width:44px;height:44px;object-fit:contain;flex-shrink:0}.brand{font-weight:700}
+.primary{color:#192C4C}.selected,button[aria-pressed=true]{background:var(--primary);color:#192C4C;font-weight:700}
+.rail a[aria-current=page],.drawer a[aria-current=page]{background:var(--primary);color:#192C4C!important}
+.hat-chip{border-left-width:1px;font-weight:700;font-size:1rem;line-height:1.5;padding:9px 12px}.hat-chip:hover{text-decoration:underline;text-underline-offset:3px}
+.skill-chip{background:var(--primary);color:#192C4C;font-weight:700}
+.detail-game-identity{display:flex;align-items:center;gap:16px;margin:0 0 20px}.detail-game-identity .game-title{margin:0}
+@media(max-width:600px){.brand-logo{width:38px;height:38px}.brand{gap:8px;font-size:1.05rem}}
+
+.game-cover-wrap{display:inline-flex;flex-direction:column;align-items:center;flex-shrink:0;width:88px}.cover-credit{font-size:.75rem;line-height:1.4;overflow-wrap:anywhere;text-align:center}
+.bgg-compact summary,.game-letter,.builder-steps button[aria-current=step] b{color:var(--link)}
+
+/* A card-stack mark identifies mechanisms without repeating a text label. */
+.hat-chip{display:flex;align-items:flex-start;gap:8px}.mechanism-icon{flex-shrink:0;margin-top:2px}.hat-chip>span{min-width:0;overflow-wrap:anywhere}

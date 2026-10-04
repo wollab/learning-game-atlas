@@ -1,9 +1,9 @@
 {
   "theme": {
-    "primary": "#176F6B",
-    "accent": "#B88619",
-    "background": "#FFFEF8",
-    "ink": "#2F3338",
+    "primary": "#50C2C0",
+    "accent": "#FEC566",
+    "background": "#FFFFFF",
+    "ink": "#414141",
     "headingFont": "Bai Jamjuree",
     "bodyFont": "Bai Jamjuree",
     "radius": 10,
