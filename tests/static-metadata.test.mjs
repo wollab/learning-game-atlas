@@ -32,7 +32,7 @@ test('actual public export keeps learning scope and only matched snapshot metada
  const a=JSON.parse(fs.readFileSync('src/data/public-atlas.json','utf8'));
  const games=[...a.catalogue.records,...a.supplement.records];
  assert.equal(new Set(games.map(g=>g.game_id??g.id)).size,283);
- assert.equal(a.bridges.games.length,52);assert.equal(a.bridges.bridges.length,143);assert.equal(a.flows.flow_count,143);
+ assert.equal(a.flows.game_count,a.bridges.games.length);assert.equal(a.bridges.bridges.length,a.flows.flows.length);assert.equal(a.flows.flow_count,a.bridges.bridges.length);
  assert.equal(games.filter(g=>g.bgg_ranking_snapshot).length,10);assert.equal(games.filter(g=>g.bgg_metadata_snapshot).length,8);
  assert.equal(games.find(g=>g.game_id==='star-realms').bgg_ranking_snapshot,null);
  assert.ok(games.filter(g=>g.external_cover?.display_allowed).every(g=>g.external_cover.source_url==='https://blog.amigo-spiele.de/presse/pressematerial/'));

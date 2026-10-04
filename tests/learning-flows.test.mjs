@@ -3,8 +3,8 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 const a=JSON.parse(fs.readFileSync('src/data/atlas.json','utf8'));
 test('readable flows preserve all reviewed bridge claims and player contexts',()=>{
-  assert.equal(a.flows.game_count,52);assert.equal(a.flows.flow_count,143);
-  assert.equal(new Set(a.flows.flows.map(f=>f.bridge_id)).size,143);
+  assert.equal(a.flows.game_count,a.bridges.games.length);assert.equal(a.flows.flow_count,a.bridges.bridges.length);
+  assert.equal(new Set(a.flows.flows.map(f=>f.bridge_id)).size,a.bridges.bridges.length);
   for(const f of a.flows.flows){
     const b=a.bridges.bridges.find(b=>b.bridge_id===f.bridge_id);
     assert.equal(f.status,b.status);

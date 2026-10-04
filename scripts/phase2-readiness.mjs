@@ -4,6 +4,7 @@
  * Offline only. Does not enrich or rewrite catalogue, bridges, activities, flows, or images.
  */
 import { createHash } from 'node:crypto';
+import {staticImageAdapter} from './lib/static-images.mjs';
 import { readFile, writeFile, access, mkdir } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -30,6 +31,8 @@ const INPUTS = {
   imageRegister: `${DATA}/game-image-register.json`,
   awardFacts: `${DATA}/sdj-award-facts.json`,
   reviewedGameFacts: `${DATA}/reviewed-game-facts.json`,
+  reviewedIdentities: `${DATA}/bgg-reviewed-identity-map.json`,
+  pilotPlan: `${DATA}/pilot-plan.json`,
 };
 
 const todayBangkok = () => new Intl.DateTimeFormat('en-CA', {
@@ -143,6 +146,10 @@ async function buildReport() {
   const effectiveBase = applyOverlay(base);
   const effectiveSdj = applyOverlay(sdj);
   const effectiveAll = [...effectiveBase, ...effectiveSdj];
+  const imageAdapter = staticImageAdapter(imageRoot,loaded.reviewedIdentities.value);
+  const approvedDisplayGameIds = effectiveAll.filter(g=>imageAdapter.apply(g).external_cover?.display_allowed===true).map(g=>g.game_id);
+  const approvedDisplayCount = new Set(approvedDisplayGameIds).size;
+  const sdjPriority = loaded.pilotPlan.value.current_research_priority;
   const canonicalGames = baseRegister.games ?? [];
 
   const baseIds = recordSets(base);
@@ -332,7 +339,9 @@ async function buildReport() {
       asset_path_populated: count(images, (row) => nonEmpty(row.asset_path)),
       followup_instruction_populated: imageFollowupCount,
       approved_register_images: approvedRegisterImages,
-      approved_cover_count_across_register_and_sdj_candidates: approvedRegisterImages + approvedAwardCovers,
+      approved_display_game_ids: approvedDisplayGameIds,
+      publisher_candidates_checked_with_website_adapter: true,
+      approved_cover_count_across_register_and_sdj_candidates: approvedDisplayCount,
       lead_value: 'Records retain canonical game IDs/names, distinguish 250 existing-register records from 25 research-intake leads, and carry follow-up instructions; pending status means acquisition/edition/rights/readback remain open, not that the leads lack research value.',
     },
     bgg_snapshot: {
@@ -364,12 +373,13 @@ async function buildReport() {
       { area: 'Publisher, organizer, and observed timing', status: 'partial', current: `Original base publisher duration: ${publisherBaseDuration.completeRange}/${base.length}; effective curated base: ${effectivePublisherBaseDuration.completeRange}/${base.length}. Original SDJ publisher duration: ${publisherSdjDuration.completeRange}/${sdj.length}; effective curated SDJ publisher duration: ${effectivePublisherSdjDuration.completeRange}/${sdj.length}; SDJ organizer duration: ${organizerSdjDuration.completeRange}/${sdj.length}; observed full sessions: ${observedSessionsBase + observedSessionsSdj}.`, dependency: 'Publisher source for play-time; organizer listing for award-time; structured field session for observed full session.', acceptance: 'Do not copy organizer time into publisher time; an observed full-session record must identify edition, players, teach/setup/play/scoring and conditions.' },
       { area: 'Reviewed skill examples', status: 'partial; do not infer outcomes', current: `${reviewedGames.length} games / ${bridges.length} bridges across ${activities.length} skills; ${countBy(bridges, (bridge) => bridge.status).supported ?? 0} supported, ${countBy(bridges, (bridge) => bridge.status).conditional ?? 0} conditional; zero observed sessions.`, dependency: 'Rule text, applicable player/role/edition context, and a visible behavior/counter-signal.', acceptance: 'New examples need a relevant rule, required player behavior, context and observable/counter-signal. Empathy/diversity/participation require actual rule-supported behavior; theme or card label alone does not qualify.' },
       { area: 'Wizard Hat 50-card shelf', status: 'structured-ready', current: `${cards.length} stable No IDs; ${count(cards, (card) => Object.keys(card.source_mismatches ?? {}).length === 0)} with no source mismatch; ${whFrontAssets.filter(Boolean).length} front and ${whBackAssets.filter(Boolean).length} back assets found.`, dependency: 'Retain canonical No identity and existing approved production-card assets.', acceptance: 'All 50 IDs unique; workbook comparison stays mismatch-free; front/back relative assets resolve.' },
-      { area: 'Phase 2 box-image sourcing', status: 'intake-ready; publication-blocked', current: `${images.length} leads (${imageStates['existing-register'] ?? 0} existing + ${imageStates['research-intake'] ?? 0} intake); ${approvedRegisterImages + approvedAwardCovers} images approved; ${candidateAwardCovers} SDJ cover candidates lack verified rights.`, dependency: 'Edition match, source URL, usage/rights status and attribution; then local asset path and render/readback.', acceptance: 'Per image, source and edition resolve to the named game; use permission is evidenced; attribution and final asset URL pass readback. Pending records remain useful leads, not publishable images.' },
+      { area: 'Phase 2 box-image sourcing', status: 'partial approved-source coverage', current: `${images.length} leads (${imageStates['existing-register'] ?? 0} existing + ${imageStates['research-intake'] ?? 0} intake); ${approvedDisplayCount} images approved; ${candidateAwardCovers} SDJ cover candidates lack verified rights.`, dependency: 'Edition match, source URL, usage/rights status and attribution; then approved external URL or local asset path and render/readback.', acceptance: 'Per image, source and edition resolve to the named game; use permission is evidenced; attribution and final asset URL pass readback. Pending records remain useful leads, not publishable images.' },
     ],
     next_research_priority: [
+      { priority: 0, area: 'Chief-approved SDJ-first review', basis: `${sdjPriority.summary.reviewed_games}/${sdjPriority.summary.total_games} reviewed, ${sdjPriority.summary.pending_games} pending from the reused2015–2025 snapshot.`, next_action: `Read original base rules for: ${sdjPriority.next_batch_game_ids.join(', ')}. Original100 cohort preserved; source exceptions remain pending.` },
       { priority: 1, area: 'Card/tabletop classification', basis: `Original registers have ${classificationProfile(base).medium.populated} classified base games and ${classificationProfile(sdj).medium.populated} analyst-derived SDJ tabletop labels. The overlay adds ${overlay.length} records with ${count(overlay, (r) => r.medium_provenance?.source_layer === 'primary-source-component-review')} primary-source medium reviews.`, next_action: 'Continue product component or relevant rules research for candidate identity/edition; record medium, format and genre separately with a source locator. Preserve original registers and unknowns.' },
       { priority: 2, area: 'Sparse skill-example coverage', basis: bridgeCounts.filter((item) => item.bridge_count <= 3).map((item) => `${item.name_en}: ${item.unique_game_count} existing game examples`).join('; '), next_action: 'After medium/format eligibility is source-confirmed, prioritize card/tabletop rulebooks for the sparsest skills. For Empathy, Respect for Diversity, and Participation, require actual rules and observable player behavior (including facilitation condition when needed); do not infer from theme or labels.' },
-      { priority: 3, area: 'Phase 2 images', basis: `${images.length} records remain pending and ${imageFollowupCount} carry follow-up guidance; no image use has been reviewed.`, next_action: 'Use the register as the research queue: verify title/edition, find a source with usable rights, record attribution, add an approved local asset, then render/readback. Do not treat a candidate URL as rights clearance.' },
+      { priority: 3, area: 'Phase 2 images', basis: `${images.length} records remain pending and ${imageFollowupCount} carry follow-up guidance; ${approvedDisplayCount} games have approved display candidates checked with the website adapter.`, next_action: 'Use the register as the research queue: verify title/edition, find a source with usable rights, record attribution, use the approved external URL or local asset, then render/readback. Do not treat a candidate URL as rights clearance.' },
       { priority: 4, area: 'Duration evidence', basis: `${publisherBaseDuration.completeRange} base publisher ranges; ${organizerSdjDuration.completeRange} SDJ organizer ranges; zero observed sessions.`, next_action: 'Fill missing publisher durations from publisher sources, retain SDJ organizer durations under their own field, and collect full-session observations as a separate field activity.' },
     ],
     limitations: [
@@ -425,7 +435,7 @@ Generated ${report.generated_on} from the inputs listed below. This report is a 
 - Expanded corpus: ${b.records} base games + ${s.records} SDJ supplement = ${ex.records} unique IDs; base and supplement IDs do not overlap.
 - Skill review: ${report.corpus.reviewed_skill_scope.reviewed_games} games, ${report.corpus.reviewed_skill_scope.bridge_count} bridges and ${report.corpus.reviewed_skill_scope.flow_count} flows; ${report.corpus.reviewed_skill_scope.observed_sessions_in_reviewed_counts} observed sessions.
 - Original registers: base medium ${classifications.base_250.medium.populated}/250; SDJ medium ${classifications.sdj_33.medium.populated}/33 (analyst-derived). The six-record reviewed-facts overlay produces effective primary-source coverage of ${classifications.expanded_counts.medium.primary_component_or_rulebook_verified} games, with effective medium ${classifications.expanded_counts.medium.populated}/${ex.records}, format ${classifications.expanded_counts.format.populated}/${ex.records}, and genre ${classifications.expanded_counts.genre.populated}/${ex.records}.
-- Phase 2 image register: ${images.records} useful research leads, but ${images.approved_cover_count_across_register_and_sdj_candidates} images approved for display; sourcing and rights remain open.
+- Phase 2 image register: ${images.records} useful research leads, with ${images.approved_cover_count_across_register_and_sdj_candidates} games approved for display; sourcing and rights remain open.
 - Award badges: ${awards.records} facts have official source URL, archive URL and locator; cover rights are a separate open gate.
 
 ## Scope and integrity
@@ -481,7 +491,7 @@ Sparse next areas are Empathy, Respect for Diversity and Participation (zero exi
 - Wizard Hat: ${report.wizard_hat.records} stable \`No\` IDs; ${report.wizard_hat.source_mismatch_records} source-mismatch records; ${report.wizard_hat.front_assets_present}/${report.wizard_hat.records} front and ${report.wizard_hat.back_assets_present}/${report.wizard_hat.records} back assets resolve in the existing production app.
 - Phase 2 register: ${images.records} records = ${images.states['existing-register'] ?? 0} existing-register games + ${images.states['research-intake'] ?? 0} intake leads. All ${images.records} remain \`${Object.keys(images.image_statuses)[0] ?? 'pending'}\` and \`${Object.keys(images.use_statuses)[0] ?? 'not-reviewed'}\`; ${images.edition_populated} have an edition value, ${images.source_url_populated} have a source URL, and ${images.asset_path_populated} have an asset path.
 - Against the expanded 283-game corpus, ${report.phase2_image_register.missing_expanded_game_count} game IDs are not yet in the image register (${report.phase2_image_register.missing_base_game_count} base, ${report.phase2_image_register.missing_sdj_game_count} SDJ); ${report.phase2_image_register.intake_extra_id_count} separate intake leads sit outside that corpus. All missing IDs are listed in the JSON report. Pending image records remain useful research leads.
-- Award research has ${awards.cover_candidate_url_populated} cover candidate URLs, but ${awards.covers_rights_approved} are rights-approved. The 275-row image register remains a useful title/ID/follow-up queue; pending means sourcing, edition and rights checks remain, not that the records have no value.
+- Award research has ${awards.cover_candidate_url_populated} cover candidate URLs, but ${awards.covers_rights_approved} are rights-approved. The ${images.records}-row image register remains a useful title/ID/follow-up queue; pending means sourcing, edition and rights checks remain, not that the records have no value.
 - Approved image count for Phase 2 display: **${images.approved_cover_count_across_register_and_sdj_candidates}**.
 
 ## Phase 2 readiness ledger
