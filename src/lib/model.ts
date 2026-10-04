@@ -21,6 +21,8 @@ export const cardName=(id:string|number)=>{const c=cards.find(c=>c.id===String(i
 export function evidence(g:Row,id:string){return g.skills.find((s:Row)=>s.skill_id===id)??{skill_id:id,status:'U',reason:'ยังไม่มีข้อมูลเพียงพอ'};}
 export const evidenceLabel=(e:Row)=>e.status_label_th??({R:'รองรับจากกติกาที่อ่าน',P:'ข้อเสนอให้ตรวจเพิ่มเติม',C:'ใช้ได้เมื่อมีเงื่อนไข',U:'ยังไม่มีข้อมูลเพียงพอ',X:'ไม่พบโอกาสตามเกณฑ์'}[e.status as string]??e.label??'ยังไม่มีข้อมูลเพียงพอ');
 export const supported=(g:Row)=>g.skills.filter((s:Row)=>s.status==='R');
+// A reviewed conditional bridge counts as connected; legacy hypotheses do not.
+export const isGameInResearch=(g:Row)=>!g.skills.some((s:Row)=>s.bridge&&['R','C'].includes(s.status));
 export function skillExamples(id:string,limit=10){const r=data.bridges?.related_games_by_skill?.find((r:Row)=>r.skill_id===id);return [...(r?.supported??[]).map((r:Row)=>({...r,status:'R'})),...(r?.conditional??[]).map((r:Row)=>({...r,status:'C'}))].map((r:Row)=>({...r,game:games.find(g=>g.id===r.game_id)})).filter((r:Row)=>r.game).slice(0,limit);}
 export function packagesForSkill(id:string){const a=data.activities?.skills?.find((a:Row)=>a.skill_id===id);return packages.filter(p=>a?.prototype_pattern_ids?.includes(p.id)||p.skills.includes(id));}
 export const base=import.meta.env.BASE_URL.replace(/\/$/,'');

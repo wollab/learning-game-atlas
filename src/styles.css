@@ -49,3 +49,6 @@ body,.app{font-size:1.125rem;line-height:1.75}h1{font-size:2.625rem;line-height:
 
 /* A card-stack mark identifies mechanisms without repeating a text label. */
 .hat-chip{display:flex;align-items:flex-start;gap:8px}.mechanism-icon{flex-shrink:0;margin-top:2px}.hat-chip>span{min-width:0;overflow-wrap:anywhere}
+
+/* Research visibility is independent of search, skill evidence and comparison selection. */
+.research-controls{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:0 0 14px}.research-toggle{font-size:1rem;min-width:0;text-align:left}.research-controls p{flex:1;min-width:min(240px,100%);margin:0;color:var(--muted);font-size:1rem}.research-hidden-count{color:var(--muted)}.research-badge{display:inline-flex;align-items:center;gap:6px;border-radius:6px;background:#FEC566;color:#414141;padding:4px 9px;font-size:1rem;font-weight:700;margin-top:8px}.research-badge svg{flex-shrink:0}@media(max-width:760px){.research-toggle{width:100%;justify-content:flex-start}.research-controls p{flex-basis:100%}}
