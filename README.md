@@ -10,7 +10,7 @@ Thai-first reference catalogue and prototype builder. Astro/React/TypeScript sta
 
 `npm ci`, `npm run check`, `npm test`, `npm run build`, `npm run dev`.
 
-`node scripts/import-kb.mjs` imports the canonical 250-game/50-card/12-activity/reviewed-bridge exports from the original local KB. `src/data/atlas.json` preserves the complete import. `public-atlas.json` removes repeated internal fields for public rendering without changing evidence. The admin editor loads the complete snapshot separately.
+`node scripts/import-kb.mjs` imports the active 282-game/50-card/12-activity/reviewed-bridge exports from the original local KB. `src/data/atlas.json` preserves the complete import. `public-atlas.json` removes repeated internal fields for public rendering without changing evidence. The admin editor loads the complete snapshot separately.
 
 ## Publishing and revisions
 
@@ -32,14 +32,27 @@ This is an explicit source-merge step; neither localStorage nor a proposal commi
 
 Skills describe opportunities and conditions from game rules, not measured learner scores. Publisher minutes are displayed separately from observed session fields. Unknown classifications remain null. BGG has one edition-verified snapshot with unknown exact votes/statistics date and 249 unknown records at the initial release. Original Wizard Hat artwork and metadata are retained; box art remains Phase 2.
 
-## UX refresh / SDJ supplement — 2026-10-03
+## Historical UX refresh / SDJ supplement — 2026-10-03
 Warm off-white/charcoal theme follows Meta Learning with larger local Bai Jamjuree typography (body18px/control16px/secondary14px). Skill and mechanism labels are English; Thai explanation/search aliases remain. Comparison uses checkboxes and compact selection; WH uses original images grouped by family/category with list view.
 Data now renders250 canonical +33 SDJ2015–2025 award records, with collection filter. Organizer timing and existing WoL interpretation are explicitly separate from publisher duration and reviewed skill bridges. Award badges link official source/category/year. Approved external cover URL support is implemented; 37 approved publisher covers are available; other records use a title fallback. No BGG/Amazon scrape/token or external image downloads.
 
 
 
-## Public static release — 2026-10-04
+## Historical public static release — 2026-10-04
 
 Active corpus:249 base records +33 SDJ records =282. Matter Matters excluded by owner decision.61 source-reviewed learning games/173 bridges;221 remain in research and can be shown with the catalogue toggle.37 source-approved publisher covers are displayed via external URL. Selected BGG references are imported from local static files; independently reviewed metadata remains separately gated. The wrong-game Bus552 join is withheld from the Perplext BUS record. Admin server login/save remains unavailable until its configured endpoint is deployed; public browsing/search/comparison works without it. Blue/orange theme is stored in site.json.
 
 Chief authorized publication in chat on2026-10-04. Deployment uses the existing isolated GitHub repository and Pages workflow; root Codex-AI remains local. No runtime BGG fetch, sync service or new database.
+
+
+## Current static release — 2026-10-05
+
+Chief authorized publishing this revision in chat. Active corpus: 249 base +33 SDJ =282 games; 66 reviewed learning profiles and196 sourced bridges. Of those66 profiles,30 have fresh primary-rule reviews,34 retain stored-summary reviews and2 rely on publisher descriptions;216 games remain in research. The catalogue toggle exposes researching games without turning their hypotheses into reviewed recommendations. Skill mappings describe opportunities, not observed development or transfer.
+
+270 exact external cover URLs (269 BGG thumbnails from the pinned2026-10-02 ranking snapshot and1 approved publisher fallback);12 games have title fallback. Images remain externally hosted; failed links use the existing fallback. BGG is the default source and links credit the matching BGG game page. Image availability is not exact-printing verification; live availability of every remote image has not been certified.
+
+Bus keeps stable local ID `pack-bus` but now refers to Splotter Bus BGG552, with fresh Complete Edition base-rule review,3–5players and90minutes. Old Perplext rules and skill claims were discarded.
+
+`scripts/build_bgg_dataset.py` prepares exact-ID batches and extracts all external metadata, including mechanics and exact image nodes. It uses a real attributed cache or approved authenticated API access; no authenticated live BGG collection has been performed. Website reads local static JSON and never calls BGG at runtime. The admin service remains a separate, unavailable configuration lane.
+
+Verification: TypeScript,41Node tests,20Python importer/collector tests and11static routes pass. Font-resolution and chunk-size build warnings remain; font assets are present in the static output. Future game intake/reviews are manual data revisions in the existing pipeline.

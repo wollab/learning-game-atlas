@@ -6,6 +6,7 @@ const rows=a.catalogue.records??a.catalogue.games;
 if(rows.length!==249||new Set(rows.map(r=>r.game_id??r.id)).size!==249)throw Error('249 unique active canonical games are required');
 const supplement=a.supplement?.records??[];if(supplement.length!==33||new Set([...rows,...supplement].map(r=>r.game_id??r.id)).size!==282)throw Error('SDJ33 must append without replacing active canonical249');
 if(rows.some(r=>r.game_id==='matter-matters'))throw Error('Owner-excluded game present');
+const shownCovers=[...rows,...supplement].filter(r=>r.external_cover?.display_allowed);if(shownCovers.length<269)throw Error('Image coverage regressed below the preceding 269-cover build');const bus=rows.find(r=>r.game_id==='pack-bus');if(bus?.bgg_reference?.bgg_id!==552||bus.publisher.includes('Perplext')||bus.players.includes(2))throw Error('Owner-approved Bus replacement must be Splotter work 552');
 for(const r of [...rows,...supplement]){if(r.bgg_reference?.identity_conflict===true){if(r.bgg_reference.bgg_id||r.bgg_reference.game_url)throw Error('Conflicted BGG join leaked');continue;}if(!Number.isInteger(r.bgg_reference?.bgg_id)||!/^https:\/\/boardgamegeek.com\/boardgame\/\d+/.test(r.bgg_reference.game_url))throw Error('Missing static BGG reference');}
 if(a.wh.cards.length!==50||new Set(a.wh.cards.map(r=>r.id)).size!==50)throw Error('50 unique Wizard Hat cards are required');
 if(a.skills.length!==12||a.activities?.skills.length!==12)throw Error('12 skills and activity definitions are required');

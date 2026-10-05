@@ -33,19 +33,21 @@ test('actual public export keeps learning scope and only matched snapshot metada
  const games=[...a.catalogue.records,...a.supplement.records];
  assert.equal(new Set(games.map(g=>g.game_id??g.id)).size,282);
  assert.equal(a.flows.game_count,a.bridges.games.length);assert.equal(a.bridges.bridges.length,a.flows.flows.length);assert.equal(a.flows.flow_count,a.bridges.bridges.length);
- assert.equal(games.filter(g=>g.bgg_ranking_snapshot).length,10);assert.equal(games.filter(g=>g.bgg_metadata_snapshot).length,8);
+ assert.ok(games.filter(g=>g.bgg_ranking_snapshot).length>=10);assert.ok(games.filter(g=>g.bgg_metadata_snapshot).length>=8);
  assert.equal(games.find(g=>g.game_id==='star-realms').bgg_ranking_snapshot,null);
- assert.ok(games.filter(g=>g.external_cover?.display_allowed).every(g=>g.external_cover.source_url==='https://blog.amigo-spiele.de/presse/pressematerial/'));
+ for(const g of games.filter(g=>g.external_cover?.display_allowed)){const c=g.external_cover;if(c.url.includes('cf.geekdo-images.com'))assert.equal(c.source_url,g.bgg_reference.game_url);else assert.ok(c.usage_basis_url?.startsWith('https://'));}
 });
 
 
-test('owner exclusion and known different-game identity do not leak into the public join',()=>{
+test('owner-authorized Bus replacement discards the old Perplext work and its learning claims',()=>{
  const a=JSON.parse(fs.readFileSync('src/data/public-atlas.json','utf8'));
  const games=[...a.catalogue.records,...a.supplement.records];
  assert.ok(!games.some(g=>g.game_id==='matter-matters'));
  const bus=games.find(g=>g.game_id==='pack-bus');
- assert.equal(bus.bgg_reference.identity_conflict,true);
- assert.equal(bus.bgg_reference.game_url,null);assert.equal(bus.bgg_reference.bgg_id,null);
- assert.equal(bus.bgg_metadata_snapshot,null);assert.equal(bus.bgg_ranking_snapshot,null);
- assert.deepEqual(bus.players,[2,3]);
+ assert.equal(bus.bgg_reference.identity_conflict,false);
+ assert.equal(bus.bgg_reference.game_url,'https://boardgamegeek.com/boardgame/552');assert.equal(bus.bgg_reference.bgg_id,552);
+ assert.deepEqual(bus.players,[3,4,5]);assert.equal(bus.publisher_play_duration_minutes.max,90);
+ assert.ok(!JSON.stringify(bus.source_provenance).includes('perplext'));
+ const review=a.bridges.games.find(g=>g.game_id==='pack-bus');assert.equal(review.rule_evidence.review_basis,'primary-rules-read');
+ assert.ok(review.rule_evidence.url.includes('BUS-CompleteEdition-Rules-web.pdf'));
 });

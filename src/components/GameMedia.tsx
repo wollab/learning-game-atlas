@@ -2,7 +2,7 @@ import {useState,useEffect} from 'react';
 import {Award,ImageOff,ArrowLeftRight,X,ChevronDown,ChevronUp,Trash2} from 'lucide-react';
 import {games,url} from '../lib/model';
 import type {Row} from '../lib/model';
-// Only source-approved, externally hosted covers are rendered. No scraped URLs.
+// Renders approved publisher covers or Chief-authorized exact BGG thumbnails from the pinned snapshot.
 export function GameCover({game}:{game:Row}){
  const [failed,setFailed]=useState(false);
  useEffect(()=>setFailed(false),[game.id,game.external_cover?.url,game.cover_image?.url]);

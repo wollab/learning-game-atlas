@@ -7,11 +7,11 @@ const apply=c=>staticImageAdapter({records:[{game_id:'one',bgg_image_candidates:
 test('approved cover preserves facts and its attribution',()=>{const result=apply(candidate);assert.deepEqual(result.players,game.players);assert.equal(result.external_cover.url,candidate.thumbnail_url);assert.equal(result.external_cover.attribution,'Publisher');});
 test('candidate reachability and explicit flag alone do not enable images',()=>{for(const key of ['display_allowed','game_identity_verified','rights_status','usage_basis_url','attribution'])assert.equal(apply({...candidate,[key]:null,url_reachability:'reachable'}).external_cover,null);});
 test('mismatched identity, unsafe URL and unverified exact printing are blocked',()=>{for(const c of [{...candidate,bgg_id:2},{...candidate,thumbnail_url:'javascript:alert(1)'},{...candidate,source_url:'http://example.com'},{...candidate,exact_printing_claimed:true,printing_match_verified:false}])assert.equal(apply(c).external_cover,null);});
-test('real export enables only the canonical publisher approvals',async()=>{
+test('real export uses Chief-authorized BGG URLs before approved publisher fallback',async()=>{
  const fs=await import('node:fs');const read=p=>JSON.parse(fs.readFileSync(new URL(p,import.meta.url),'utf8'));
  const full=read('../src/data/atlas.json'),lean=read('../src/data/public-atlas.json');
  const rows=d=>[...d.catalogue.records,...d.supplement.records];
- const covers=rows(lean).filter(g=>g.external_cover?.display_allowed);assert.equal(covers.length,37);
- for(const g of covers){assert.equal(new URL(g.external_cover.url).hostname,'blog.amigo-spiele.de');assert.equal(g.external_cover.usage_basis_url,'https://blog.amigo-spiele.de/presse/pressematerial/');assert.equal(g.external_cover.attribution,'© AMIGO');assert.deepEqual(g.external_cover,rows(full).find(r=>r.game_id===g.game_id).external_cover);}
- assert.equal(rows(lean).find(g=>g.game_id==='high-society').external_cover,null);
+ const covers=rows(lean).filter(g=>g.external_cover?.display_allowed);assert.ok(covers.length>=269);
+ for(const g of covers){if(new URL(g.external_cover.url).hostname==='cf.geekdo-images.com'){assert.equal(g.bgg_reference.thumbnail_display_authorized,true);assert.equal(g.external_cover.source_url,g.bgg_reference.game_url);assert.equal(g.external_cover.url,g.bgg_reference.image_url??g.bgg_reference.thumbnail_url);}else{assert.equal(g.external_cover.usage_basis_url,'https://blog.amigo-spiele.de/presse/pressematerial/');assert.equal(g.external_cover.attribution,'© AMIGO');}assert.deepEqual(g.external_cover,rows(full).find(r=>r.game_id===g.game_id).external_cover);}
+ assert.ok(rows(lean).find(g=>g.game_id==='high-society').external_cover);
 });

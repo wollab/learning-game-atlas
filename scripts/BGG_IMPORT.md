@@ -1,3 +1,11 @@
+## Current bulk static collector — 2026-10-05
+
+Use `build_bgg_dataset.py` for exact-ID manual batch collection, not a runtime website API. Input: the canonical KB `data/bgg-metadata-staging.csv`. Start with `--plan`; cached real XML can be tested with `--cache-dir`. Live collection requires approved BGG application access and `BGG_API_TOKEN` in the local environment. See `--help` for the current command arguments.
+
+BGG is the default for all metadata and covers. Verify each expected name or explicit alias against its requested BGG ID. Keep the exact API2 `<image>` and `<thumbnail>` URLs; never change a thumbnail URL to invent an original. The BGG game page is `image_source_url`, while request URL, fetch time and SHA identify the data retrieval. Publisher URLs are fallback only if there is no usable BGG image or the record genuinely has no valid BGG identity. Quarantine name/ID conflicts for review. Retain source descriptions and BGG mechanisms as attributed metadata; these do not automatically establish learning opportunities or Wizard Hat mappings.
+
+Outputs are static JSON, CSV and exceptions. No media download, image URL rewriting, sync service or model call. A planned 282-game catalogue requires 15 requests at 20 IDs per request. Preparation is tested offline; actual authenticated API enrichment remains unverified. The current ChatGPT cover-URL collection is a separate intake, so avoid duplicate requests until it arrives.
+
 # BGG importer and reviewed learning flows
 
 ## Current verification boundary
