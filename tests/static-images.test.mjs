@@ -15,3 +15,13 @@ test('real export uses Chief-authorized BGG URLs before approved publisher fallb
  for(const g of covers){if(new URL(g.external_cover.url).hostname==='cf.geekdo-images.com'){assert.equal(g.bgg_reference.thumbnail_display_authorized,true);assert.equal(g.external_cover.source_url,g.bgg_reference.game_url);assert.equal(g.external_cover.url,g.bgg_reference.image_url??g.bgg_reference.thumbnail_url);}else{assert.equal(g.external_cover.usage_basis_url,'https://blog.amigo-spiele.de/presse/pressematerial/');assert.equal(g.external_cover.attribution,'© AMIGO');}assert.deepEqual(g.external_cover,rows(full).find(r=>r.game_id===g.game_id).external_cover);}
  assert.ok(rows(lean).find(g=>g.game_id==='high-society').external_cover);
 });
+
+test('larger supplied exact BGG URL requires the same work and asset; preserves thumbnail',()=>{
+ const thumbnail='https://cf.geekdo-images.com/key__micro/img/small=/fit-in/64x64/pic123.png',larger='https://cf.geekdo-images.com/key__itemrep/img/actual=/fit-in/246x300/pic123.png',source='https://boardgamegeek.com/boardgame/1';
+ const original={...game,bgg_reference:{bgg_id:1,game_url:source,thumbnail_url:thumbnail,thumbnail_display_authorized:true}};
+ const supplied={bgg_id:1,url:larger,source_url:source,source_kind:'chief-supplied-exact-bgg-url',display_allowed:true};
+ const render=override=>staticImageAdapter({records:[{game_id:'one',bgg_display_image:override}]},identity).apply(original);
+ const result=render(supplied);assert.equal(result.external_cover.url,larger);assert.equal(result.bgg_reference.thumbnail_url,thumbnail);assert.equal(result.bgg_reference.image_url_source,supplied.source_kind);
+ for(const invalid of [{...supplied,bgg_id:2},{...supplied,url:larger.replace('pic123','pic124')},{...supplied,source_url:'https://boardgamegeek.com/boardgame/2'},{...supplied,display_allowed:false}])assert.equal(render(invalid).external_cover.url,thumbnail);
+ assert.equal(staticImageAdapter({records:[{game_id:'one',bgg_display_image:supplied}]},identity).apply({...original,bgg_reference:{...original.bgg_reference,identity_conflict:true}}).external_cover,null);
+});

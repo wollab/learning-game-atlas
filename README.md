@@ -56,3 +56,7 @@ Bus keeps stable local ID `pack-bus` but now refers to Splotter Bus BGG552, with
 `scripts/build_bgg_dataset.py` prepares exact-ID batches and extracts all external metadata, including mechanics and exact image nodes. It uses a real attributed cache or approved authenticated API access; no authenticated live BGG collection has been performed. Website reads local static JSON and never calls BGG at runtime. The admin service remains a separate, unavailable configuration lane.
 
 Verification: TypeScript,41Node tests,20Python importer/collector tests and11static routes pass. Font-resolution and chunk-size build warnings remain; font assets are present in the static output. Future game intake/reviews are manual data revisions in the existing pipeline.
+
+## Atlas revision — M1–M4 and owner feedback (2026-10-05)
+
+Static owner-ranking overlay; evidence/player-safe checkbox/range filters; researchinggray/fixedcompare; sharedmedia+alignedtable/labeledwheel; eightcuratedhypotheses andBuilderv3 causalbindings/sourceexport withlegacyreadback. Chief feedback adds collapsed compact 4-color filters, clearer ANY/ALL modes, a UNICEF skills introduction, and a sourced 210×300 BGG cover for Itchy Feet. TypeScript,50 Node tests,11 static routes, and targeted desktop/mobile browser checks pass. Reviewed game analysis remains66/196 bridges. Detailed evidence and remaining research priorities are recorded in the project TASK_STATE and working checkpoint.

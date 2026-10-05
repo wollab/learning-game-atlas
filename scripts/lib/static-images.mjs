@@ -11,9 +11,17 @@ export function staticImageAdapter(register,identities){
    (!c.exact_printing_claimed||c.printing_match_verified===true)&&
    https(c.url??c.thumbnail_url??c.candidate_url)&&https(c.source_url)&&https(c.usage_basis_url)&&
    typeof c.attribution==='string'&&c.attribution.trim()&&c.rights_status==='approved-source-use');
-  const bgg=game.bgg_reference,bggUrl=https(bgg?.image_url)?bgg.image_url:https(bgg?.thumbnail_url)?bgg.thumbnail_url:null;
+  const originalBgg=game.bgg_reference, supplied=r?.bgg_display_image;
+  const imageKey=url=>{try{const u=new URL(url);return u.hostname==='cf.geekdo-images.com'?u.pathname.match(/^(\/[^/]+?)__(?:micro|itemrep)\/.*\/(pic\d+\.[a-z]+)$/i)?.slice(1).join('|'):null;}catch{return null;}};
+  // Use a supplied exact signed URL only for the same accepted work and image asset.
+  // Preserve the original thumbnail and distinguish this source from API responses.
+  const suppliedValid=supplied?.display_allowed===true&&supplied.source_kind==='chief-supplied-exact-bgg-url'&&
+   Number(supplied.bgg_id)===Number(originalBgg?.bgg_id)&&supplied.source_url===originalBgg?.game_url&&
+   https(supplied.url)&&imageKey(supplied.url)&&imageKey(supplied.url)===imageKey(originalBgg?.thumbnail_url);
+  const bgg=!originalBgg?.image_url&&suppliedValid?{...originalBgg,image_url:supplied.url,image_url_source:supplied.source_kind,image_url_source_url:supplied.source_url}:originalBgg;
+  const bggUrl=https(bgg?.image_url)?bgg.image_url:https(bgg?.thumbnail_url)?bgg.thumbnail_url:null;
   const ownerAuthorizedBgg=bgg?.thumbnail_display_authorized===true&&bgg?.identity_conflict!==true&&bggUrl&&https(bgg.game_url);
   const external_cover=ownerAuthorizedBgg?{url:bggUrl,source_url:bgg.game_url,image_source_url:bgg.game_url,attribution:bgg.image_url?'BGG image · เปิดหน้าเกม':'BGG thumbnail · เปิดหน้าเกม',image_scope:'Representative BGG image; printing and language unverified',display_allowed:true,display_basis:'Chief authorization 2026-10-05; exact source URL; BGG default priority'}:chosen?{url:chosen.url??chosen.thumbnail_url??chosen.candidate_url,source_url:chosen.source_url,image_source_url:chosen.source_url,usage_basis_url:chosen.usage_basis_url,attribution:chosen.attribution,image_scope:chosen.image_scope??'representative cover',display_allowed:true}:null;
-  return {...game,external_cover};
+  return {...game,bgg_reference:bgg,external_cover};
  }};
 }

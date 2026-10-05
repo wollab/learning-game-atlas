@@ -1,0 +1,7 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {matchesFilters} from '../src/lib/catalogue-filter.mjs';
+const g={players:[2,3,4,5,6,7,8],play_max:30,format:['card'],genres:['family'],skills:[{skill_id:'a',status:'R',bridge:{},applicable_player_counts:[2]},{skill_id:'b',status:'C',bridge:{},applicable_player_counts:[4]}]};
+test('any is broad but all skills must share one count',()=>{assert.equal(matchesFilters(g,{skills:['a','b'],players:[2,5]}),true);assert.equal(matchesFilters(g,{skills:['a','b'],players:[2,5],skillMode:'all'}),false);assert.equal(matchesFilters({...g,skills:g.skills.map(s=>({...s,applicable_player_counts:[4]}))},{skills:['a','b'],players:[2,5],skillMode:'all'}),true)});
+test('unknown skill context and legacy unbridged hypotheses fail closed',()=>{assert.equal(matchesFilters({...g,skills:[{skill_id:'a',status:'R',bridge:{}}]},{skills:['a']}),false);assert.equal(matchesFilters({...g,skills:[{skill_id:'a',status:'R',applicable_player_counts:[2]}]},{skills:['a']}),false)});
+test('player overlap, publisher maximum, unknown duration and independent facets',()=>{assert.equal(matchesFilters(g,{players:[2,5]}),true);assert.equal(matchesFilters(g,{players:[9,10]}),false);assert.equal(matchesFilters(g,{minutes:[15,30]}),true);assert.equal(matchesFilters({...g,play_max:null},{}),true);assert.equal(matchesFilters({...g,play_max:null},{minutes:[0,30]}),false);assert.equal(matchesFilters(g,{formats:['card'],genres:['family']}),true);assert.equal(matchesFilters(g,{formats:['board'],genres:['family']}),false)});

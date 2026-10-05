@@ -3,12 +3,12 @@ import {Award,ImageOff,ArrowLeftRight,X,ChevronDown,ChevronUp,Trash2} from 'luci
 import {games,url} from '../lib/model';
 import type {Row} from '../lib/model';
 // Renders approved publisher covers or Chief-authorized exact BGG thumbnails from the pinned snapshot.
-export function GameCover({game}:{game:Row}){
+export function GameCover({game,variant='small'}:{game:Row,variant?:'small'|'hero'|'compare'}){
  const [failed,setFailed]=useState(false);
  useEffect(()=>setFailed(false),[game.id,game.external_cover?.url,game.cover_image?.url]);
  const cover=game.external_cover??game.cover_image;
  const src=cover?.display_allowed===true&&cover?.source_url&&/^https:\/\//.test(cover.url??'')?cover.url:null;
- return src&&!failed?<span className="game-cover-wrap"><img className="game-cover" src={src} alt={`Box cover — ${game.name}`} width="72" height="88" loading="lazy" referrerPolicy="no-referrer" onError={()=>setFailed(true)}/><a className="cover-credit" href={cover.source_url} target="_blank" rel="noreferrer">{cover.attribution}</a></span>:<span className="game-cover cover-fallback" aria-label={`ยังไม่มีภาพกล่อง ${game.name}`}><ImageOff size={18}/><span>{game.name.slice(0,1)}</span></span>;
+ return src&&!failed?<span className={`game-cover-wrap cover-${variant}`}><img className="game-cover" src={src} alt={`Box cover — ${game.name}`} width="72" height="88" loading="lazy" referrerPolicy="no-referrer" onError={()=>setFailed(true)}/><a className="cover-credit" href={cover.source_url} target="_blank" rel="noreferrer" aria-label={`แหล่งภาพ ${game.name}`} title={cover.attribution}>แหล่งภาพ ↗</a></span>:<span className={`game-cover cover-fallback cover-${variant}`} aria-label={`ยังไม่มีภาพกล่อง ${game.name}`}><ImageOff size={18}/><span>{game.name.slice(0,1)}</span></span>;
 }
 export function AwardBadges({game}:{game:Row}){return <div className="award-badges">{(game.awards??[]).filter((a:Row)=>a.source_url&&a.year&&a.category&&a.status==='winner').map((a:Row)=><a key={`${a.category}-${a.year}`} href={a.source_url} target="_blank" rel="noreferrer"><Award size={17}/>{a.category} · {a.year}</a>)}</div>}
 export function SelectionPopover({ids,onRemove,onClear}:{ids:string[],onRemove:(id:string)=>void,onClear:()=>void}){

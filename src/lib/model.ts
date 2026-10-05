@@ -1,13 +1,16 @@
 import raw from '../data/public-atlas.json';
 import siteData from '../data/site.json';
+import {restoreBridgeSources} from './prototype.mjs';
 export type Row=Record<string,any>;
 export const site:Row=siteData;
 export const data:Row=raw;
+// Public data stores shared rule receipts once per game. Restore them before export.
+export const reviewedBridges:Row[]=restoreBridgeSources(data);
 export const skills:Row[]=raw.skills.map(s=>{const a=data.activities?.skills?.find((a:Row)=>a.skill_id===s.id);return {...s,activity:a,thai:a?.name_th??s.thai,name:a?.name_en??s.name};});
 export const groups=['Learning','Employability','Personal Empowerment','Active Citizenship'];
 export const groupNames=['การเรียนรู้','การทำงาน','การพัฒนาตนเอง','การเป็นพลเมือง'];
 export const groupColors=['#4F76BB','#FF774D','#8FC055','#A75BA8'];
-export const skillColors:Record<string,string>={'creativity':'#4F76BB','critical-thinking':'#7CA2DA','problem-solving':'#AAC1E8','cooperation':'#FF774D','negotiation':'#FFA06E','decision-making':'#FFC5A3','communication':'#8FC055','resilience':'#AAD174','self-management':'#C7E49A','respect-for-diversity':'#BE8CC7','empathy':'#D9A6DC','participation':'#A75BA8'};
+export const skillColors:Record<string,string>=Object.fromEntries(skills.map(s=>[s.id,groupColors[groups.indexOf(s.dimension)]??groupColors[0]]));
 export const cards:Row[]=(data.wh.cards||data.wh.records||[]).map((c:Row)=>({...c,id:String(c.id??c.no??c.number),name:c.mechanism_name??c.name??c.name_en??c.english,thai:c.thai_card_name??c.thai??c.name_th,category:c.category??c.group,section:c.family??c.section??c.deck??(['Conflict','Order','Reward','Ending'].includes(c.category)?'CORE':'TASTE'),asset:c.front_asset??c.asset,color:c.background_color?.hex??c.color,examples:c.game_examples??c.examples}));
 export const packages:Row[]=data.packages;
 const annotations=new Map(data.annotations.map((g:Row)=>[g.id,g]));

@@ -1,0 +1,127 @@
+/* Atlas revision: shared readable presentation; evidence metadata stays in the KB. */
+.app .breadcrumb{display:flex;gap:10px;flex-wrap:wrap;font-size:14px;margin:0 0 20px;color:#5d6b7b}
+.app .rank-summary{display:flex;gap:6px 12px;flex-wrap:wrap;font-size:14px!important;color:#526277;margin:6px 0 12px!important;line-height:1.6}
+.app .game-card.in-research,.app .in-research{background:#F0F2F5;border-color:#DCE1E7}
+.app .in-research .game-action{background:#E7EBF0}
+.app .research-badge{background:#E0E5EC;color:#34445B;font-size:14px}
+.app .facet-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:22px;padding:20px 0}
+.app fieldset{min-width:0;border:1px solid #DFE6F0;border-radius:12px;padding:16px;margin:0}
+.app legend{font-size:17px;font-weight:700;padding:0 6px;color:var(--ink)}
+.app .facet-grid h3{font-size:14px;margin:14px 0 8px}
+.app .checkbox-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 12px}
+.app .checkbox-grid label,.app .facet-grid fieldset>label{display:flex;align-items:center;gap:8px;font-size:14px;min-height:38px;font-weight:500;line-height:1.4}
+.app .checkbox-grid input,.app .facet-grid fieldset>label input{margin:0;flex:none}
+.app .match-mode{display:flex;gap:6px;margin:0 0 14px;flex-wrap:wrap}
+.app .match-mode button{font-size:14px}
+.app .match-mode button[aria-pressed=true],.app .skill-buttons button[aria-pressed=true]{background:var(--primary);color:white}
+.app .dual-range{height:40px;position:relative;margin:5px 0 12px}
+.app .dual-range:before{content:'';position:absolute;left:0;right:0;top:18px;height:5px;border-radius:5px;background:linear-gradient(to right,#DCE5F2 var(--from),var(--primary) var(--from),var(--primary) var(--to),#DCE5F2 var(--to))}
+.app .dual-range input{position:absolute;inset:0;width:100%;height:40px;min-height:0;border:0;padding:0;margin:0;background:none;appearance:none;pointer-events:none}
+.app .dual-range input::-webkit-slider-thumb{appearance:none;pointer-events:auto;width:24px;height:24px;border-radius:50%;border:3px solid white;background:var(--primary);box-shadow:0 0 0 1px var(--primary);cursor:ew-resize}
+.app .dual-range input::-moz-range-thumb{pointer-events:auto;width:20px;height:20px;border-radius:50%;border:3px solid white;background:var(--primary);cursor:ew-resize}
+.app .range-values{display:flex;align-items:end;gap:10px}
+.app .range-values label{flex:1;font-size:14px;min-width:0}
+.app .range-values span{padding-bottom:12px;font-size:14px}
+.app .range-reset{margin-top:10px;font-size:14px;padding:6px 12px}
+.app .selection-anchor{position:fixed;top:78px;right:26px;z-index:96;width:min(360px,calc(100vw - 40px));height:auto;display:block;margin:0}
+.app .selection-bar{justify-content:flex-end;gap:8px;padding:5px;background:white;border:1px solid #DDE5F0;border-radius:12px;box-shadow:0 4px 16px #192c4c15}
+.app .selection-summary{font-size:14px;flex:1}
+.app .selection-popover{position:absolute;top:58px;right:0;bottom:auto;width:100%;max-height:60vh;overflow:auto;margin:0;background:white}
+.app .catalogue-view:has(.selection-anchor){padding-top:64px}
+.app .game-hero{display:block}
+.app .game-hero .game-title{margin:18px 0 6px;font-size:32px}
+.app .game-hero h2{font-size:22px;display:flex;gap:8px;align-items:center;margin-top:24px}
+.app .game-cover-wrap.cover-hero{width:100%;display:block;text-align:right}
+.app .cover-hero .game-cover{width:100%;height:auto;max-height:350px;object-fit:contain;background:white;border-radius:12px;display:block}
+.app .cover-fallback.cover-hero{width:100%;height:180px;max-height:350px;background:#F1F5FA;display:flex;gap:12px;align-items:center;justify-content:center}
+.app .cover-credit{display:block;font-size:12px;color:#607085;margin-top:5px}
+.app .game-metadata{display:grid;gap:8px;margin:18px 0;font-size:17px}
+.app .game-metadata>div{display:grid;grid-template-columns:110px minmax(0,1fr);gap:12px}
+.app .game-metadata dt{font-weight:700;color:#526277}
+.app .game-metadata dd{margin:0;overflow-wrap:anywhere}
+.app .game-links dd{display:flex;gap:8px 16px;flex-wrap:wrap}
+.app .skill-map h2{font-size:22px}
+.app .pizza-block{max-width:560px}
+.app .labelled-wheel{width:100%;max-width:540px}
+.app .sources,.app .reference-note{background:#F0F2F5;border:1px solid #E0E5EB;border-radius:10px;padding:12px 14px;font-size:14px!important;color:#4C5B6D;line-height:1.65;margin-top:14px}
+.app .sources p,.app .sources small,.app .reference-note p{font-size:14px!important;line-height:1.6;margin-bottom:6px}
+.app .sources:empty{display:none}
+.app .skill-buttons{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 20px}
+.app .skill-buttons button{font-size:16px}
+.app .game-learning{margin:24px 0 32px}
+.app .skill-flow>div.condition-note{background:#FFF0E3}
+.app .skill-chip{font-weight:700;padding:5px 9px;font-size:14px;border-radius:7px}
+.app .conditional-chip{border:1px dashed #192C4C}
+.app .related-game{display:flex;align-items:flex-start;gap:16px}
+.app .related-game>div{min-width:0}
+.app .related-game h3,.app .skill-example h3{font-size:20px}
+.app .related-game p{font-size:14px;margin:4px 0 8px}
+.app .mini-game{display:flex;align-items:center;gap:12px;font-size:16px;margin-top:12px}
+.app .mini-game .game-cover-wrap{flex:0 0 48px}
+.app .mini-game .game-cover{width:48px;height:60px}
+.app .mini-game .cover-credit{display:none}
+.app .comparison-scroll{overflow:auto;max-width:100%;margin:20px 0;border:1px solid #DDE5EE;border-radius:14px;background:white}
+.app .comparison-table{border-collapse:separate;border-spacing:0;width:100%;table-layout:fixed;font-size:17px}
+.app .comparison-table th,.app .comparison-table td{padding:20px;vertical-align:top;border-bottom:1px solid #DDE5EE;border-right:1px solid #DDE5EE;overflow-wrap:anywhere;min-width:240px}
+.app .comparison-table th:first-child{width:160px;min-width:160px;background:#EDF4FF;font-size:16px}
+.app .comparison-table thead th{background:#F4F8FF}
+.app .comparison-table h2{font-size:22px;margin:12px 0 6px}
+.app .comparison-table h3{font-size:17px;font-weight:700;margin:12px 0 7px}
+.app .comparison-table p{font-size:16px;line-height:1.7}
+.app .comparison-table .game-metadata{font-size:15px}
+.app .comparison-table .game-metadata>div{display:block}
+.app .cover-compare{display:block;text-align:center}
+.app .cover-compare .game-cover{width:100%;height:130px;object-fit:contain;background:white}
+.app .cover-fallback.cover-compare{width:100%;height:130px}
+.app .activity-editor{display:grid;gap:14px;margin-top:18px}
+.app .activity-editor textarea{min-height:90px}
+.app .package-choice{margin:16px 0}
+.app .package-choice .panel{padding:18px}
+.app .package-choice h3{font-size:20px}
+.app .prototype-chain{margin:12px 0;padding:14px;border:1px solid #DDE5EE;border-radius:10px}
+@media(max-width:1150px){.app .comparison-table{width:max-content;min-width:100%;table-layout:auto}.app .comparison-table td,.app .comparison-table thead th:not(:first-child){width:260px;max-width:300px}.app .facet-grid{grid-template-columns:1fr}.app .detail-overview{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.app .selection-anchor{top:auto;bottom:12px;left:12px;right:12px;width:auto}.app .selection-popover{top:auto;bottom:58px;max-height:55vh}.app .catalogue-view:has(.selection-anchor){padding-top:0;padding-bottom:80px}.app .facet-grid{gap:14px}.app .checkbox-grid{grid-template-columns:1fr}.app .detail-overview{grid-template-columns:1fr;gap:16px}.app .cover-hero .game-cover{max-height:500px}.app .game-hero .game-title{font-size:28px}.app .game-metadata>div{grid-template-columns:85px minmax(0,1fr)}.app .comparison-table th,.app .comparison-table td{padding:14px}.app .comparison-table th:first-child{width:110px;min-width:110px}.app .comparison-table td,.app .comparison-table thead th:not(:first-child){width:230px;min-width:230px}.app .skill-buttons{gap:6px}.app .skill-buttons button{font-size:14px}.app .related-game{gap:12px}.app .labelled-wheel{max-width:540px}.app .match-mode button{flex:1}.app .game-hero{padding:18px}}
+@media print{.app .selection-anchor,.app .prototype-tools,.app .builder-actions,.app .builder-steps,.app .builder .actions{display:none}.app .builder{border:0;padding:0}.app .comparison-scroll{overflow:visible}}
+
+/* Keep column identities visible while scrolling long comparisons. */
+.app .comparison-scroll{max-height:calc(100dvh - 155px)}
+.app .comparison-table thead th{position:sticky;top:0;z-index:2}
+.app .comparison-table tbody th{position:sticky;left:0;z-index:1}
+.app .comparison-table thead th:first-child{left:0;z-index:3}
+.app .game-metadata dt{word-break:keep-all}
+.app .mechanism-reasons{margin:14px 0;font-size:15px}
+
+@media(max-width:760px){.app .labelled-wheel text{font-size:22px}.app .game-metadata>div{grid-template-columns:100px minmax(0,1fr)}}
+@media print{.app .skip,.app .page-heading,.app p[role=status],.app footer{display:none!important}.app .prototype-review{background:white;border:0}.app .prototype-review article{break-inside:avoid}.app main{background:white}.app .builder p,.app .builder li{font-size:14px}.app .reference-note,.app .sources{font-size:12px!important}}
+/* Chief review: compact opt-in filters and shared UNICEF dimension colors. */
+.app .facet-grid{gap:12px;padding:12px 0;align-items:start}
+.app .facet-grid fieldset{padding:10px 12px}
+.app .facet-grid .checkbox-grid{display:flex;flex-wrap:wrap;gap:4px 12px}
+.app .facet-grid .checkbox-grid label,.app .facet-grid fieldset>label{min-height:32px;font-size:14px}
+.app .skill-filter-groups{display:grid;gap:10px}
+.app .skill-filter-group{border-left:4px solid var(--skill-color);padding-left:10px}
+.app .skill-filter-group h3{display:flex;align-items:center;gap:6px;margin:0 0 5px;font-size:14px}
+.app .skill-filter-group h3 small{font-size:12px;font-weight:500;color:#526277}
+.app .skill-filter-group h3 i{width:9px;height:9px;border-radius:50%;background:var(--skill-color);flex:none}
+.app .skill-options{display:flex;flex-wrap:wrap;gap:4px 6px}
+.app .skill-options label{display:flex;align-items:center;gap:5px;min-height:32px;padding:4px 7px;border-radius:6px;font-size:13px;line-height:1.3;border:1px solid #dfe6ef;background:#fff;cursor:pointer}
+.app .skill-options label.is-selected{border-color:var(--skill-color);background:color-mix(in srgb,var(--skill-color) 18%,white);font-weight:700}
+.app .skill-options input{margin:0;accent-color:var(--skill-color);width:15px;height:15px;flex:none}
+.app .match-mode{margin-bottom:12px}
+.app .match-mode button{display:flex;flex-direction:column;align-items:start;gap:2px;padding:8px 12px;border:2px solid transparent}
+.app .match-mode small{font-size:12px;font-weight:500}
+.app .match-mode .match-any{background:#edf4ff;color:#173f77}
+.app .match-mode .match-all{background:#fff0e5;color:#713815}
+.app .match-mode .match-any[aria-pressed=true]{background:#1267c9;color:white;border-color:#104c91;box-shadow:0 0 0 2px #1267c91a}
+.app .match-mode .match-all[aria-pressed=true]{background:#ff9b4c;color:#392315;border-color:#a64c00;box-shadow:0 0 0 2px #ff9b4c26}
+.app .skill-buttons button{border:2px solid var(--skill-color);background:color-mix(in srgb,var(--skill-color) 15%,white);color:#192c4c}
+.app .skill-buttons button[aria-pressed=true]{background:color-mix(in srgb,var(--skill-color) 45%,white);color:#192c4c;outline:2px solid var(--skill-color);outline-offset:2px;font-weight:700}
+.app .skills-intro{margin-bottom:24px}
+.app .skills-intro h2{font-size:24px;margin-top:0}
+.app .skills-intro p{font-size:17px;line-height:1.8}
+.app .intro-source{font-size:14px}
+@media(max-width:760px){.app .skill-filter-group h3{flex-wrap:wrap}.app .skill-options label{min-height:36px}.app .facet-grid .checkbox-grid label{min-height:36px}.app .skills-intro{padding:18px}.app .skills-intro h2{font-size:22px}}
+
+.app .skill-picker label{border-left:4px solid var(--skill-color);border-radius:6px;padding-left:8px}
+.app .skill-picker input{accent-color:var(--skill-color)}
+.app .skill-picker input:checked+span{background:color-mix(in srgb,var(--skill-color) 25%,white);color:#192c4c}
