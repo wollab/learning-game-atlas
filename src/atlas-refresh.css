@@ -133,3 +133,4 @@
 .app .feedback-button:hover{background:#104c91}.app .feedback-button:focus-visible{outline:3px solid #ff9b4c;outline-offset:3px}
 @media(max-width:760px){.app .feedback-link .feedback-button{right:12px;bottom:calc(12px + env(safe-area-inset-bottom));padding:10px 12px}.app main{padding-bottom:80px}}
 @media print{.app .feedback-link .feedback-button{display:none}}
+.app .feedback-link .feedback-button,.app .feedback-link .feedback-button span,.app .feedback-link .feedback-button svg{color:#fffdf5}.app .feedback-link .feedback-button:hover{color:#fffdf5}
