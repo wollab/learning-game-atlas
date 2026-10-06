@@ -134,3 +134,9 @@
 @media(max-width:760px){.app .feedback-link .feedback-button{right:12px;bottom:calc(12px + env(safe-area-inset-bottom));padding:10px 12px}.app main{padding-bottom:80px}}
 @media print{.app .feedback-link .feedback-button{display:none}}
 .app .feedback-link .feedback-button,.app .feedback-link .feedback-button span,.app .feedback-link .feedback-button svg{color:#fffdf5}.app .feedback-link .feedback-button:hover{color:#fffdf5}
+
+.app .skill-chip,.app .hat-chip{font-size:14px;line-height:1.4;padding:7px 9px;min-height:34px;display:inline-flex;align-items:center;gap:6px}
+.app .chip-group-label{font-size:10px;font-weight:500;line-height:1.5;color:#627186;margin:12px 0 4px}.app .mechanism-group .hats{margin-top:0}
+.app .builder .reference-note,.app .builder .muted,.app .builder .condition-note,.app .builder .mechanism-reasons p{font-size:14px;line-height:1.65}.app .learning-guidance{margin:12px 0 18px}.app .learning-guidance summary{font-size:14px;cursor:pointer}.app .learning-guidance .activity{border:0;padding:12px 0}.app .learning-guidance .activity>h3{display:none}.app .builder-example{margin:12px 0;padding:12px;background:#f2f4f7;border-radius:10px;overflow:auto}.app .builder-example .game-cover{float:left;margin:0 14px 8px 0}
+.app .atlas-art-note{margin-bottom:14px;font-size:14px}.app .atlas-art-note summary{cursor:pointer}.app .atlas-art-note img{display:block;width:min(420px,100%);height:auto;border-radius:12px;margin-top:10px}.app .skills-art{float:right;width:38%;max-width:380px;height:auto;border-radius:12px;margin:0 0 12px 22px}.app .skills-intro{display:flow-root}
+@media(max-width:760px){.app .skills-art{float:none;width:100%;max-width:320px;display:block;margin:0 auto 18px}.app .builder-example .game-cover{float:none;margin:0 0 10px}}
