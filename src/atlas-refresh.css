@@ -129,3 +129,7 @@
 .app .skill-flow p.learning-note{font-size:14px;line-height:1.65;color:#627186;margin:8px 0;max-width:85ch}
 
 .app footer .bgg-credit{display:inline-block;margin:12px 0}.app .bgg-credit img{width:200px;height:auto;max-width:100%}.app .feedback-link{display:grid;gap:6px;margin:14px 0}.app .feedback-link a{display:flex;gap:8px;align-items:center;font-weight:600}.app .feedback-link small{font-size:14px;color:#627186}
+.app .feedback-link .feedback-button{position:fixed;right:20px;bottom:20px;z-index:90;min-height:44px;padding:10px 15px;border:1px solid #fff;border-radius:999px;background:#1267c9;color:#fff;font-size:14px;line-height:1.4;text-decoration:none;box-shadow:0 3px 12px #192c4c30;justify-content:center}
+.app .feedback-button:hover{background:#104c91}.app .feedback-button:focus-visible{outline:3px solid #ff9b4c;outline-offset:3px}
+@media(max-width:760px){.app .feedback-link .feedback-button{right:12px;bottom:calc(12px + env(safe-area-inset-bottom));padding:10px 12px}.app main{padding-bottom:80px}}
+@media print{.app .feedback-link .feedback-button{display:none}}

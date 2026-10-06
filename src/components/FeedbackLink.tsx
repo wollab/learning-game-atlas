@@ -8,5 +8,5 @@ export default function FeedbackLink({route,params}:{route:string,params:URLSear
  const pageUrl=new URL(url(route,allowed),'https://wollab.github.io').href;
  const href=feedbackLink(integrations.feedback,{pageUrl,gameName:game?.name??''});
  if(!href)return null;
- return <div className="feedback-link"><a href={href} target="_blank" rel="noreferrer"><MessageSquarePlus size={18}/>แนะนำหรือแก้ไขข้อมูล</a><small>{integrations.feedback.provider==='github'?'ส่งผ่าน GitHub · ข้อเสนอแนะเปิดเผยต่อสาธารณะ':'เปิดแบบฟอร์มข้อเสนอแนะ'} · ทีม WoL ทบทวนก่อนแก้ข้อมูล</small></div>;
+ return <div className="feedback-link"><a className="feedback-button" href={href} target="_blank" rel="noreferrer" aria-label="Feedback — เปิดแบบฟอร์มแนะนำหรือแก้ไขข้อมูล"><MessageSquarePlus size={18} aria-hidden="true"/><span>Feedback</span></a></div>;
 }
