@@ -125,3 +125,7 @@
 .app .skill-picker label{border-left:4px solid var(--skill-color);border-radius:6px;padding-left:8px}
 .app .skill-picker input{accent-color:var(--skill-color)}
 .app .skill-picker input:checked+span{background:color-mix(in srgb,var(--skill-color) 25%,white);color:#192c4c}
+
+.app .skill-flow p.learning-note{font-size:14px;line-height:1.65;color:#627186;margin:8px 0;max-width:85ch}
+
+.app footer .bgg-credit{display:inline-block;margin:12px 0}.app .bgg-credit img{width:200px;height:auto;max-width:100%}.app .feedback-link{display:grid;gap:6px;margin:14px 0}.app .feedback-link a{display:flex;gap:8px;align-items:center;font-weight:600}.app .feedback-link small{font-size:14px;color:#627186}

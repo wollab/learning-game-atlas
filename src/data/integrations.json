@@ -1,0 +1,4 @@
+{
+  "feedback": {"enabled": true, "provider": "google-forms", "url": "https://docs.google.com/forms/d/e/1FAIpQLSevv5yqp9PktYx2CvNL9C_eeoiuVP-Ra1v-WnBYYlhOve85pQ/viewform", "pageEntry": "entry.1491826453", "gameEntry": "entry.998515362"},
+  "analytics": {"enabled": false, "provider": null, "siteId": null, "scriptUrl": null, "events": false}
+}

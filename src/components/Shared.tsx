@@ -25,7 +25,7 @@ export function SkillFlow({game,skillId}:{game:Row,skillId:string}){
 
    <div><h4><Brain/>1. Skill — ทักษะที่ต้องการ</h4>
     <p>{f?.skill_definition_th??definition?.summary_th}</p>
-    <p className="muted">สรุปนิยาม UNICEF เป็นภาษาไทยโดยผู้วิเคราะห์</p>
+    <p className="muted learning-note">สรุปนิยาม UNICEF เป็นภาษาไทยโดยผู้วิเคราะห์</p>
     {definitionSource&&<Sources sources={[{...definitionSource,locator:definition?.locator}]}/>}
    </div><ArrowDown className="flow-arrow"/>
    <div><h4><Brain/>2. กิจกรรมสร้างการเรียนรู้</h4>
@@ -43,10 +43,10 @@ export function SkillFlow({game,skillId}:{game:Row,skillId:string}){
      {b.wizard_hat.filter((w:Row)=>w.framework_role===section).map((w:Row)=><div className="bridge-hat" key={w.card_no}><HatChip id={w.card_no}/><p>{w.explanation_th}</p></div>)}
     </section>):<p className="muted">{b?.wizard_hat_gap_th??'ยังไม่มีสะพานกติกาถึง Wizard Hat ที่ตรวจเพียงพอสำหรับทักษะนี้'}</p>}
    </div>
-   {f?.debrief_question_th&&<div><h4>คำถามหลังเล่น</h4><p>{f.debrief_question_th}</p><p className="muted">ข้อเสนอการชวนสะท้อนจาก WoL ไม่ใช่กิจกรรมที่ UNICEF กำหนด</p></div>}
+   {f?.debrief_question_th&&<div><h4>คำถามหลังเล่น</h4><p>{f.debrief_question_th}</p><p className="muted learning-note">ข้อเสนอการชวนสะท้อนจาก WoL ไม่ใช่กิจกรรมที่ UNICEF กำหนด</p></div>}
    {b?.observation_method_th&&<p>วิธีชวนสังเกต: {b.observation_method_th}</p>}
-   <p className="muted">สัญญาณที่ยังไม่เพียงพอ: {cleanText(e.counter_signal??'ยังไม่มีข้อมูลเพียงพอ')}</p>
-   <p className="muted">ข้อมูลนี้อธิบายโอกาสตามกติกา ยังไม่ยืนยันผลพัฒนาหรือการถ่ายโอนทักษะ</p>
+   <p className="muted learning-note">สัญญาณที่ยังไม่เพียงพอ: {cleanText(e.counter_signal??'ยังไม่มีข้อมูลเพียงพอ')}</p>
+   <p className="muted learning-note">ข้อมูลนี้อธิบายโอกาสตามกติกา ยังไม่ยืนยันผลพัฒนาหรือการถ่ายโอนทักษะ</p>
   </>:<p>{cleanText(e.reason??'ยังไม่มีข้อมูลเพียงพอ')}</p>}
  </section>
 }

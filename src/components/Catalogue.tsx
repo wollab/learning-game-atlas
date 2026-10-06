@@ -3,6 +3,7 @@ import {Search,LayoutGrid,List,Users,Clock,Brain,Hourglass,Eye,EyeOff} from 'luc
 import {games,skills,cards,site,url,searchGames,isGameInResearch,cleanText,groups,groupNames,groupColors} from '../lib/model';
 import type {Row} from '../lib/model';
 import {connectedSkills,matchesFilters} from '../lib/catalogue-filter.mjs';
+import {byBggRank} from '../lib/catalogue-sort.mjs';
 import {GameCover,AwardBadges,SelectionPopover} from './GameMedia';
 import {SkillBadge,RankSummary} from './GameSummary';
 import {HatChip} from './Shared';
@@ -13,7 +14,7 @@ export default function Catalogue(){const [q,setQ]=useState(''),[chosenSkills,se
  useEffect(()=>{const p=new URLSearchParams(location.search);setQ(p.get('q')??'');if(p.get('skill'))setSkills([p.get('skill')!]);const n=Number(p.get('players'));if(n>0)setPlayers([n,n]);try{setSelected(JSON.parse(sessionStorage.getItem('atlas-selection')??'[]').filter((id:string)=>games.some(g=>g.id===id)).slice(0,4))}catch{}if(innerWidth<760)setView('rows')},[]);
  useEffect(()=>{try{sessionStorage.setItem('atlas-selection',JSON.stringify(selected))}catch{}},[selected]);
  useEffect(()=>setPage(1),[q,chosenSkills,skillMode,players,minutes,formats,genres,sdj,showResearch,size]);
- const matching=searchGames(q).filter(g=>matchesFilters(g,{skills:chosenSkills,skillMode,players,minutes,formats,genres,sdj}));
+ const matching=searchGames(q).filter(g=>matchesFilters(g,{skills:chosenSkills,skillMode,players,minutes,formats,genres,sdj})).sort(byBggRank);
  const researchCount=matching.filter(isGameInResearch).length;const results=showResearch?matching:matching.filter(g=>!isGameInResearch(g));
  const maxPage=Math.max(1,Math.ceil(results.length/size));const current=Math.min(page,maxPage);const shown=results.slice((current-1)*size,current*size);
  const playerBounds:[number,number]=[1,Math.max(2,...games.flatMap(g=>g.players))];const timeBounds:[number,number]=[0,Math.max(30,...games.map(g=>g.play_max??0))];

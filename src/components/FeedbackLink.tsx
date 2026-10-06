@@ -1,0 +1,12 @@
+import {MessageSquarePlus} from 'lucide-react';
+import integrations from '../data/integrations.json';
+import {feedbackLink} from '../lib/feedback-link.mjs';
+import {games,url} from '../lib/model';
+export default function FeedbackLink({route,params}:{route:string,params:URLSearchParams}){
+ const id=params.get('id'),game=route==='game'?games.find(g=>g.id===id):null;
+ const allowed:Record<string,string>=route==='game'||route==='skill'||route==='wizard-hat'?{id:id??''}:route==='compare'?{ids:params.get('ids')??''}:{};
+ const pageUrl=new URL(url(route,allowed),'https://wollab.github.io').href;
+ const href=feedbackLink(integrations.feedback,{pageUrl,gameName:game?.name??''});
+ if(!href)return null;
+ return <div className="feedback-link"><a href={href} target="_blank" rel="noreferrer"><MessageSquarePlus size={18}/>แนะนำหรือแก้ไขข้อมูล</a><small>{integrations.feedback.provider==='github'?'ส่งผ่าน GitHub · ข้อเสนอแนะเปิดเผยต่อสาธารณะ':'เปิดแบบฟอร์มข้อเสนอแนะ'} · ทีม WoL ทบทวนก่อนแก้ข้อมูล</small></div>;
+}

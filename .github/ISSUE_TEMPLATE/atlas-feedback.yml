@@ -1,0 +1,36 @@
+name: Atlas — เสริมหรือแก้ไขข้อมูล
+description: แจ้งข้อมูลเกม ทักษะ กลไก หรือปัญหาการใช้งาน เพื่อให้ทีมตรวจหลักฐานก่อนแก้ไข
+title: "[Atlas feedback] "
+body:
+  - type: input
+    id: page
+    attributes:
+      label: หน้าเว็บ
+  - type: input
+    id: game
+    attributes:
+      label: ชื่อเกม / ทักษะ / กลไก
+  - type: dropdown
+    id: category
+    attributes:
+      label: ประเภทข้อเสนอแนะ
+      options:
+        - แก้ข้อมูลเกม
+        - เสริมกติกาหรือฉบับเกม
+        - ทบทวนการเชื่อมทักษะหรือ Wizard Hat
+        - แจ้งภาพหรือปัญหาการใช้งาน
+        - เสนอเกมใหม่
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: ข้อมูลเดิมและสิ่งที่เสนอให้เปลี่ยน
+      description: ระบุฉบับเกมหรือเงื่อนไขผู้เล่นเมื่อเกี่ยวข้อง ไม่ใส่ข้อมูลส่วนบุคคลหรือ token
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: แหล่งอ้างอิง
+      description: ลิงก์กติกา ผู้ผลิต หรือหลักฐานที่ช่วยตรวจข้อเสนอแนะ
